@@ -1,0 +1,40 @@
+{
+  "title": "اتصل بنا",
+  "subtitle": "تواصل مع فريقنا",
+  "form": {
+    "name": "اسمك",
+    "namePlaceholder": "أحمد محمد",
+    "email": "البريد الإلكتروني",
+    "emailPlaceholder": "ahmad.mohamed@example.com",
+    "topic": "الموضوع",
+    "topicPlaceholder": "اختر موضوعًا",
+    "message": "الرسالة",
+    "messagePlaceholder": "أخبرنا كيف يمكننا المساعدة...",
+    "submit": "إرسال الرسالة",
+    "submitting": "جاري الإرسال..."
+  },
+  "topics": {
+    "general": "استفسار عام",
+    "research": "تعاون بحثي",
+    "training": "التدريب وبناء القدرات",
+    "partnership": "فرص الشراكة",
+    "media": "استفسار إعلامي",
+    "technical": "الدعم الفني"
+  },
+  "success": {
+    "title": "تم إرسال الرسالة!",
+    "message": "شكرًا لاتصالك بنا. سنرد عليك قريبًا."
+  },
+  "error": {
+    "title": "خطأ",
+    "message": "فشل إرسال الرسالة. يرجى المحاولة مرة أخرى."
+  },
+  "info": {
+    "title": "معلومات الاتصال",
+    "email": "البريد الإلكتروني",
+    "phone": "الهاتف",
+    "address": "العنوان",
+    "hours": "ساعات العمل",
+    "hoursValue": "الاثنين - الجمعة، 9:00 صباحًا - 5:00 مساءً (EAT)"
+  }
+}

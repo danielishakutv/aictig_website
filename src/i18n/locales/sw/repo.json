@@ -1,0 +1,66 @@
+{
+  "title": "Hifadhi ya Sera",
+  "subtitle": "Chunguza sera za usalama wa mtandao na kanuni kutoka kote Afrika",
+  "filters": {
+    "title": "Vichujio",
+    "search": "Tafuta sera...",
+    "country": "Nchi",
+    "sector": "Sekta",
+    "theme": "Sekta",
+    "year": "Mwaka",
+    "type": "Aina ya Hati",
+    "language": "Lugha",
+    "clearAll": "Futa Yote",
+    "apply": "Tekeleza Vichujio"
+  },
+  "search": {
+    "placeholder": "Tafuta sera kwa kichwa, nchi, au maneno muhimu..."
+  },
+  "empty": {
+    "title": "Hakuna sera zilizopatikana",
+    "description": "Jaribu kurekebisha vichujio au utafutaji wako",
+    "action": "Futa vichujio"
+  },
+  "meta": {
+    "title": "Hifadhi ya Sera",
+    "description": "Vinjari na utafute sera na kanuni za usalama wa mtandao za Afrika"
+  },
+  "sort": {
+    "label": "Panga kwa",
+    "newest": "Mpya Kwanza",
+    "oldest": "Ya Zamani Kwanza",
+    "title": "Kichwa A-Z",
+    "country": "Nchi"
+  },
+  "types": {
+    "policy": "Sera",
+    "regulation": "Kanuni",
+    "law": "Sheria",
+    "strategy": "Mkakati",
+    "framework": "Mfumo",
+    "amendment": "Marekebisho"
+  },
+  "card": {
+    "viewDetails": "Tazama Maelezo",
+    "download": "Pakua PDF",
+    "themes": "Mada",
+    "year": "Mwaka",
+    "type": "Aina",
+    "languages": "Inapatikana kwa"
+  },
+  "detail": {
+    "summary": "Muhtasari",
+    "keyPoints": "Vidokezo Muhimu",
+    "relatedDocuments": "Hati Zinazohusiana",
+    "citation": "Nukuu",
+    "metadata": "Data ya Metadata",
+    "downloadPdf": "Pakua PDF",
+    "country": "Nchi",
+    "region": "Mkoa",
+    "year": "Mwaka",
+    "type": "Aina",
+    "languages": "Lugha",
+    "themes": "Mada",
+    "tags": "Lebo"
+  }
+}

@@ -1,0 +1,24 @@
+{
+  "title": "News & Updates",
+  "subtitle": "Latest news, announcements, and insights from AICTiG",
+  "filters": {
+    "search": "Search news...",
+    "all": "All News"
+  },
+  "card": {
+    "readMore": "Read More",
+    "by": "By",
+    "tags": "Tags"
+  },
+  "detail": {
+    "by": "By",
+    "publishedOn": "Published on",
+    "tags": "Tags",
+    "share": "Share this article",
+    "relatedNews": "Related News"
+  },
+  "empty": {
+    "title": "No news articles found",
+    "description": "Check back later for updates"
+  }
+}

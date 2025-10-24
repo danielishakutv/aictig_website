@@ -1,0 +1,59 @@
+{
+  "siteName": "AICTiG",
+  "siteFullName": "Taasisi ya Kiafrika ya Usalama wa Mtandao na Utawala wa Tele-Informatics",
+  "navigation": {
+    "home": "Nyumbani",
+    "repository": "Hifadhi",
+    "publications": "Machapisho",
+    "gallery": "Picha",
+    "news": "Habari",
+    "about": "Kuhusu",
+    "contact": "Wasiliana"
+  },
+  "actions": {
+    "search": "Tafuta",
+    "filter": "Chuja",
+    "download": "Pakua",
+    "readMore": "Soma Zaidi",
+    "viewAll": "Tazama Yote",
+    "submit": "Wasilisha",
+    "reset": "Weka Upya",
+    "close": "Funga",
+    "back": "Rudi",
+    "next": "Ifuatayo",
+    "previous": "Iliyopita",
+    "share": "Shiriki",
+    "loading": "Inapakia...",
+    "skipToContent": "Ruka kwenda maudhui"
+  },
+  "footer": {
+    "quickLinks": "Viungo vya Haraka",
+    "contactInfo": "Maelezo ya Mawasiliano",
+    "followUs": "Tufuate",
+    "copyright": "© {{year}} Taasisi ya Kiafrika ya Usalama wa Mtandao na Utawala wa Tele-Informatics. Haki zote zimehifadhiwa.",
+    "privacy": "Sera ya Faragha",
+    "terms": "Masharti ya Huduma",
+    "email": "info@aictig.org"
+  },
+  "languages": {
+    "en": "Kiingereza",
+    "ar": "Kiarabu",
+    "sw": "Kiswahili",
+    "fr": "Kifaransa",
+    "ru": "Kirusi",
+    "zh": "Kichina",
+    "pt": "Kireno"
+  },
+  "errors": {
+    "notFound": "Ukurasa haujapatikana",
+    "serverError": "Kosa la seva limetokea",
+    "noResults": "Hakuna matokeo yaliyopatikana",
+    "tryAgain": "Tafadhali jaribu tena"
+  },
+  "pagination": {
+    "page": "Ukurasa",
+    "of": "wa",
+    "showing": "Inaonyesha",
+    "results": "matokeo"
+  }
+}

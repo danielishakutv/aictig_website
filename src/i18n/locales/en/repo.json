@@ -1,0 +1,66 @@
+{
+  "title": "Policy Repository",
+  "subtitle": "Explore cybersecurity policies and regulations from across Africa",
+  "filters": {
+    "title": "Filters",
+    "search": "Search policies...",
+    "country": "Country",
+    "sector": "Theme/Sector",
+    "theme": "Theme/Sector",
+    "year": "Year",
+    "type": "Document Type",
+    "language": "Language",
+    "clearAll": "Clear All",
+    "apply": "Apply Filters"
+  },
+  "search": {
+    "placeholder": "Search policies by title, country, or keywords..."
+  },
+  "empty": {
+    "title": "No policies found",
+    "description": "Try adjusting your filters or search query",
+    "action": "Clear filters"
+  },
+  "meta": {
+    "title": "Policy Repository",
+    "description": "Browse and search African cybersecurity policies and regulations"
+  },
+  "sort": {
+    "label": "Sort by",
+    "newest": "Newest First",
+    "oldest": "Oldest First",
+    "title": "Title A-Z",
+    "country": "Country"
+  },
+  "types": {
+    "policy": "Policy",
+    "regulation": "Regulation",
+    "law": "Law",
+    "strategy": "Strategy",
+    "framework": "Framework",
+    "amendment": "Amendment"
+  },
+  "card": {
+    "viewDetails": "View Details",
+    "download": "Download PDF",
+    "themes": "Themes",
+    "year": "Year",
+    "type": "Type",
+    "languages": "Available in"
+  },
+  "detail": {
+    "summary": "Summary",
+    "keyPoints": "Key Points",
+    "relatedDocuments": "Related Documents",
+    "citation": "Citation",
+    "metadata": "Metadata",
+    "downloadPdf": "Download PDF",
+    "country": "Country",
+    "region": "Region",
+    "year": "Year",
+    "type": "Type",
+    "languages": "Languages",
+    "themes": "Themes",
+    "tags": "Tags"
+  }
+}

@@ -1,0 +1,77 @@
+[
+  {
+    "id": "theme-001",
+    "label": "Cybersecurity",
+    "icon": "shield-check"
+  },
+  {
+    "id": "theme-002",
+    "label": "Data Protection",
+    "icon": "lock-closed"
+  },
+  {
+    "id": "theme-003",
+    "label": "Privacy",
+    "icon": "eye-slash"
+  },
+  {
+    "id": "theme-004",
+    "label": "Telecommunications",
+    "icon": "signal"
+  },
+  {
+    "id": "theme-005",
+    "label": "Digital Transformation",
+    "icon": "arrow-trending-up"
+  },
+  {
+    "id": "theme-006",
+    "label": "E-Government",
+    "icon": "building-library"
+  },
+  {
+    "id": "theme-007",
+    "label": "Artificial Intelligence",
+    "icon": "cpu-chip"
+  },
+  {
+    "id": "theme-008",
+    "label": "Cybercrime",
+    "icon": "exclamation-triangle"
+  },
+  {
+    "id": "theme-009",
+    "label": "Critical Infrastructure",
+    "icon": "server-stack"
+  },
+  {
+    "id": "theme-010",
+    "label": "Digital Identity",
+    "icon": "identification"
+  },
+  {
+    "id": "theme-011",
+    "label": "E-Commerce",
+    "icon": "shopping-cart"
+  },
+  {
+    "id": "theme-012",
+    "label": "Capacity Building",
+    "icon": "academic-cap"
+  },
+  {
+    "id": "theme-013",
+    "label": "Innovation",
+    "icon": "light-bulb"
+  },
+  {
+    "id": "theme-014",
+    "label": "Digital Inclusion",
+    "icon": "users"
+  },
+  {
+    "id": "theme-015",
+    "label": "5G",
+    "icon": "wifi"
+  }
+]

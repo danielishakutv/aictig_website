@@ -1,0 +1,46 @@
+{
+  "title": "Publications & Research",
+  "subtitle": "Access our latest research, policy briefs, and reports",
+  "search": {
+    "label": "Search publications",
+    "placeholder": "Search by title, author, or keywords..."
+  },
+  "filters": {
+    "type": "Publication Type",
+    "year": "Year",
+    "all": "All Types",
+    "allTypes": "All Types",
+    "allYears": "All Years"
+  },
+  "results": "Showing {{count}} publications",
+  "empty": {
+    "title": "No publications found",
+    "description": "Try adjusting your search or filters",
+    "action": "Clear filters"
+  },
+  "meta": {
+    "title": "Publications & Research",
+    "description": "Browse research publications, policy briefs, and reports from AICTiG"
+  },
+  "types": {
+    "brief": "Policy Brief",
+    "report": "Research Report",
+    "paper": "Research Paper",
+    "whitepaper": "White Paper"
+  },
+  "card": {
+    "authors": "Authors",
+    "year": "Year",
+    "readMore": "Read More",
+    "download": "Download"
+  },
+  "detail": {
+    "abstract": "Abstract",
+    "authors": "Authors",
+    "year": "Year",
+    "type": "Type",
+    "tags": "Tags",
+    "downloadPdf": "Download PDF",
+    "relatedPublications": "Related Publications"
+  }
+}

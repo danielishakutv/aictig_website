@@ -1,0 +1,102 @@
+[
+  {
+    "name": "Nigeria",
+    "iso2": "NG",
+    "region": "West Africa"
+  },
+  {
+    "name": "Kenya",
+    "iso2": "KE",
+    "region": "East Africa"
+  },
+  {
+    "name": "South Africa",
+    "iso2": "ZA",
+    "region": "Southern Africa"
+  },
+  {
+    "name": "Ghana",
+    "iso2": "GH",
+    "region": "West Africa"
+  },
+  {
+    "name": "Rwanda",
+    "iso2": "RW",
+    "region": "East Africa"
+  },
+  {
+    "name": "Senegal",
+    "iso2": "SN",
+    "region": "West Africa"
+  },
+  {
+    "name": "Morocco",
+    "iso2": "MA",
+    "region": "North Africa"
+  },
+  {
+    "name": "Tanzania",
+    "iso2": "TZ",
+    "region": "East Africa"
+  },
+  {
+    "name": "Côte d'Ivoire",
+    "iso2": "CI",
+    "region": "West Africa"
+  },
+  {
+    "name": "Egypt",
+    "iso2": "EG",
+    "region": "North Africa"
+  },
+  {
+    "name": "Uganda",
+    "iso2": "UG",
+    "region": "East Africa"
+  },
+  {
+    "name": "Botswana",
+    "iso2": "BW",
+    "region": "Southern Africa"
+  },
+  {
+    "name": "Ethiopia",
+    "iso2": "ET",
+    "region": "East Africa"
+  },
+  {
+    "name": "Tunisia",
+    "iso2": "TN",
+    "region": "North Africa"
+  },
+  {
+    "name": "Zambia",
+    "iso2": "ZM",
+    "region": "Southern Africa"
+  },
+  {
+    "name": "Cameroon",
+    "iso2": "CM",
+    "region": "Central Africa"
+  },
+  {
+    "name": "Algeria",
+    "iso2": "DZ",
+    "region": "North Africa"
+  },
+  {
+    "name": "Angola",
+    "iso2": "AO",
+    "region": "Southern Africa"
+  },
+  {
+    "name": "Benin",
+    "iso2": "BJ",
+    "region": "West Africa"
+  },
+  {
+    "name": "Burkina Faso",
+    "iso2": "BF",
+    "region": "West Africa"
+  }
+]

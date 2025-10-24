@@ -1,0 +1,28 @@
+{
+  "title": "About AICTiG",
+  "mission": {
+    "title": "Our Mission",
+    "content": "To advance cybersecurity governance and tele-informatics across Africa through research, policy analysis, capacity building, and regional cooperation."
+  },
+  "vision": {
+    "title": "Our Vision",
+    "content": "A digitally secure and resilient Africa where effective governance frameworks enable safe and inclusive digital transformation."
+  },
+  "values": {
+    "title": "Our Values",
+    "excellence": "Excellence in research and analysis",
+    "collaboration": "Collaboration across borders and sectors",
+    "independence": "Independence and objectivity",
+    "inclusion": "Inclusion and accessibility",
+    "innovation": "Innovation and forward thinking"
+  },
+  "team": {
+    "title": "Our Team",
+    "leadership": "Leadership",
+    "researchers": "Researchers"
+  },
+  "partners": {
+    "title": "Our Partners",
+    "subtitle": "Working together to strengthen cybersecurity governance across Africa"
+  }
+}

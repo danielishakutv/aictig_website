@@ -1,0 +1,59 @@
+{
+  "siteName": "AICTiG",
+  "siteFullName": "African Institute for Cybersecurity & Tele-Informatics Governance",
+  "navigation": {
+    "home": "Home",
+    "repository": "Repository",
+    "publications": "Publications",
+    "gallery": "Gallery",
+    "news": "News",
+    "about": "About",
+    "contact": "Contact"
+  },
+  "actions": {
+    "search": "Search",
+    "filter": "Filter",
+    "download": "Download",
+    "readMore": "Read More",
+    "viewAll": "View All",
+    "submit": "Submit",
+    "reset": "Reset",
+    "close": "Close",
+    "back": "Back",
+    "next": "Next",
+    "previous": "Previous",
+    "share": "Share",
+    "loading": "Loading...",
+    "skipToContent": "Skip to content"
+  },
+  "footer": {
+    "quickLinks": "Quick Links",
+    "contactInfo": "Contact Information",
+    "followUs": "Follow Us",
+    "copyright": "© {{year}} African Institute for Cybersecurity & Tele-Informatics Governance. All rights reserved.",
+    "privacy": "Privacy Policy",
+    "terms": "Terms of Service",
+    "email": "info@aictig.org"
+  },
+  "languages": {
+    "en": "English",
+    "ar": "Arabic",
+    "sw": "Swahili",
+    "fr": "French",
+    "ru": "Russian",
+    "zh": "Chinese",
+    "pt": "Portuguese"
+  },
+  "errors": {
+    "notFound": "Page not found",
+    "serverError": "Server error occurred",
+    "noResults": "No results found",
+    "tryAgain": "Please try again"
+  },
+  "pagination": {
+    "page": "Page",
+    "of": "of",
+    "showing": "Showing",
+    "results": "results"
+  }
+}

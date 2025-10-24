@@ -1,0 +1,90 @@
+[
+  {
+    "id": "news-001",
+    "title": "AICTiG Launches Pan-African Cybersecurity Training Initiative",
+    "slug": "pan-african-cybersecurity-training-launch",
+    "date": "2025-10-15",
+    "excerpt": "New program aims to train 10,000 cybersecurity professionals across 20 African countries by 2027, addressing the continent's critical skills gap.",
+    "body": "The African Institute for Cybersecurity & Tele-Informatics Governance (AICTiG) today announced the launch of its ambitious Pan-African Cybersecurity Training Initiative, a comprehensive program designed to develop the next generation of cybersecurity professionals across the continent.\n\nThe initiative, funded through partnerships with international development organizations and private sector technology companies, will establish regional training centers in five strategic locations and provide scholarships to 10,000 aspiring cybersecurity experts by 2027.\n\n\"Africa faces a severe shortage of skilled cybersecurity professionals,\" said Dr. Amina Okafor, AICTiG's Director of Capacity Building. \"This initiative represents a significant step toward building the workforce needed to secure our digital future.\"\n\nThe program will focus on practical skills development, industry certifications, and fostering connections between trainees and potential employers across both public and private sectors.",
+    "image": "/images/news/training-initiative.jpg",
+    "author": "AICTiG Communications Team",
+    "tags": ["Training", "Capacity Building", "Announcement"]
+  },
+  {
+    "id": "news-002",
+    "title": "New Research: Data Protection Compliance Challenges in West Africa",
+    "slug": "data-protection-compliance-west-africa",
+    "date": "2025-09-28",
+    "excerpt": "Latest AICTiG study reveals implementation gaps in data protection regulations across West African nations, with recommendations for improvement.",
+    "body": "A comprehensive research report published today by AICTiG highlights significant challenges in implementing data protection regulations across West African countries, despite the adoption of modern legislative frameworks.\n\nThe study, which examined compliance practices in eight countries, found that while legislation is increasingly aligned with international standards like GDPR, enforcement mechanisms remain weak and awareness among both businesses and citizens is limited.\n\nKey findings include:\n- Only 35% of surveyed businesses have appointed data protection officers as required by law\n- Cross-border data transfer mechanisms remain unclear in most jurisdictions\n- Data protection authorities are severely under-resourced\n- Public awareness of data rights is below 40% in all countries studied\n\nThe report recommends increased funding for regulatory bodies, regional cooperation on enforcement, and public education campaigns to raise awareness of data protection rights and obligations.",
+    "image": "/images/news/data-protection-study.jpg",
+    "author": "Dr. Sarah Kimani",
+    "tags": ["Research", "Data Protection", "West Africa"]
+  },
+  {
+    "id": "news-003",
+    "title": "AICTiG Hosts Regional Cybersecurity Summit in Nairobi",
+    "slug": "regional-cybersecurity-summit-nairobi",
+    "date": "2025-09-10",
+    "excerpt": "Government officials, industry leaders, and researchers gathered to discuss collaborative approaches to cyber threats and policy harmonization.",
+    "body": "The 2025 East African Cybersecurity Summit, hosted by AICTiG in Nairobi, Kenya, concluded today after three days of intensive discussions on regional cooperation, threat intelligence sharing, and policy harmonization.\n\nOver 300 delegates from 15 countries participated in the summit, including government ministers, cybersecurity agency heads, private sector leaders, and academic researchers.\n\nKey outcomes included:\n- Agreement to establish a Regional Cybersecurity Incident Response Network\n- Commitments to harmonize cybercrime legislation across the East African Community\n- Launch of a regional threat intelligence sharing platform\n- Establishment of a working group on AI governance\n\n\"The threats we face in cyberspace don't respect borders,\" noted Kenya's Cabinet Secretary for ICT. \"Regional cooperation isn't optional—it's essential for our collective security.\"\n\nThe next summit will be hosted by Rwanda in 2026.",
+    "image": "/images/news/nairobi-summit.jpg",
+    "author": "Emmanuel Nkrumah",
+    "tags": ["Event", "Regional Cooperation", "Summit"]
+  },
+  {
+    "id": "news-004",
+    "title": "Mobile Banking Security Guidelines Released for African Markets",
+    "slug": "mobile-banking-security-guidelines",
+    "date": "2025-08-22",
+    "excerpt": "AICTiG publishes comprehensive security standards for mobile financial services, addressing growing concerns about digital fraud.",
+    "body": "In response to the rapid growth of mobile banking across Africa and increasing incidents of digital fraud, AICTiG has released comprehensive security guidelines tailored for African mobile financial service providers.\n\nThe guidelines, developed in consultation with central banks, telecommunications regulators, and industry stakeholders across 12 countries, provide practical recommendations for securing mobile money platforms, protecting customer data, and preventing fraud.\n\nWith over 500 million mobile money accounts active across the continent, securing these services is critical for financial inclusion and economic development.\n\nThe guidelines cover:\n- Multi-factor authentication requirements\n- Encryption standards for data in transit and at rest\n- Fraud detection and prevention mechanisms\n- Incident response protocols\n- Customer education and awareness programs\n\nSeveral mobile network operators and financial institutions have already committed to implementing the guidelines.",
+    "image": "/images/news/mobile-banking.jpg",
+    "author": "AICTiG Financial Services Working Group",
+    "tags": ["Mobile Banking", "Security", "Guidelines"]
+  },
+  {
+    "id": "news-005",
+    "title": "Partnership Announcement: AICTiG and AU Cyber Defense Initiative",
+    "slug": "partnership-au-cyber-defense",
+    "date": "2025-08-05",
+    "excerpt": "Strategic partnership will support African Union member states in strengthening national cyber defense capabilities.",
+    "body": "AICTiG announced today a strategic partnership with the African Union's Cyber Defense Initiative, aimed at supporting member states in developing robust national cyber defense capabilities.\n\nThe partnership will facilitate:\n- Technical assistance for establishing national cybersecurity agencies\n- Development of cyber defense training curricula for military and civilian personnel\n- Coordination of regional cyber exercises and simulations\n- Research on emerging cyber threats targeting critical infrastructure\n\nThe collaboration builds on AICTiG's existing research and policy advisory work and the AU's continental-level coordination mechanisms.\n\n\"This partnership represents a significant step toward a more secure and resilient digital Africa,\" said the AU Commissioner for Infrastructure and Energy. \"By working together, we can more effectively address the cyber threats facing our continent.\"",
+    "image": "/images/news/au-partnership.jpg",
+    "author": "AICTiG Communications Team",
+    "tags": ["Partnership", "African Union", "Cyber Defense"]
+  },
+  {
+    "id": "news-006",
+    "title": "Quarterly Threat Report: Ransomware Attacks Surge 45% Across Africa",
+    "slug": "q3-threat-report-ransomware-surge",
+    "date": "2025-07-18",
+    "excerpt": "AICTiG's Q3 2025 threat intelligence report shows significant increase in ransomware targeting African organizations.",
+    "body": "AICTiG's Cyber Intelligence Unit has published its Q3 2025 threat report, revealing a 45% increase in ransomware attacks targeting African organizations compared to the previous quarter.\n\nThe report identifies several concerning trends:\n- Healthcare and education sectors most frequently targeted\n- Average ransom demands increased from $85,000 to $150,000\n- Attackers increasingly using double-extortion tactics (encryption + data leak threats)\n- Attacks originating from diverse geographic sources, indicating coordinated criminal networks\n\nMost affected countries include South Africa, Kenya, Nigeria, Egypt, and Morocco.\n\nThe report recommends organizations prioritize:\n- Regular offline backups\n- Employee security awareness training\n- Network segmentation\n- Incident response planning\n- Timely security patching\n\n\"Prevention and preparedness are far more cost-effective than paying ransoms,\" emphasized the report's lead author.",
+    "image": "/images/news/ransomware-report.jpg",
+    "author": "AICTiG Cyber Intelligence Unit",
+    "tags": ["Threat Intelligence", "Ransomware", "Security"]
+  },
+  {
+    "id": "news-007",
+    "title": "Digital Identity Workshop Series Begins in Southern Africa",
+    "slug": "digital-identity-workshop-series",
+    "date": "2025-07-01",
+    "excerpt": "AICTiG launches hands-on workshops for government officials on implementing secure and inclusive digital identity systems.",
+    "body": "AICTiG launched the first in a series of hands-on workshops focused on digital identity systems implementation, with the inaugural session taking place in Gaborone, Botswana.\n\nThe workshops bring together government officials, technical staff, and policymakers to explore best practices for implementing digital identity systems that are secure, privacy-respecting, and inclusive.\n\nTopics covered include:\n- Biometric system design and security\n- Privacy by design principles\n- Ensuring accessibility for rural and vulnerable populations\n- Interoperability with existing systems\n- Legal and regulatory frameworks\n- Governance and accountability mechanisms\n\nThe workshop series will continue with sessions in Zambia, Namibia, and Zimbabwe throughout the coming months.\n\n\"Digital identity is foundational for accessing government services, financial inclusion, and participating in the digital economy,\" noted the workshop facilitator. \"Getting implementation right is critical.\"",
+    "image": "/images/news/digital-identity-workshop.jpg",
+    "author": "Dr. Kwame Boateng",
+    "tags": ["Digital Identity", "Workshop", "Capacity Building"]
+  },
+  {
+    "id": "news-008",
+    "title": "AICTiG Receives Funding for AI Ethics Research Initiative",
+    "slug": "ai-ethics-research-funding",
+    "date": "2025-06-15",
+    "excerpt": "Major grant will support three-year research program on culturally-relevant AI ethics frameworks for African contexts.",
+    "body": "AICTiG has been awarded a significant grant to conduct a comprehensive three-year research program on AI ethics frameworks tailored for African contexts, cultures, and values.\n\nThe initiative will bring together ethicists, technologists, legal scholars, and community representatives from across the continent to develop principles and practical guidelines for responsible AI development and deployment.\n\n\"Much of the global conversation around AI ethics has been dominated by Western perspectives,\" explained the research program director. \"This initiative will center African voices and values in shaping how AI should be developed and used across our continent.\"\n\nThe research program will examine:\n- Cultural values and how they should inform AI design\n- Community consent mechanisms for AI training data\n- Fairness and bias in AI systems deployed in African contexts\n- Governance frameworks appropriate for African institutions\n- Public engagement and education on AI\n\nResults will be published as open-access research papers and policy briefs throughout the program duration.",
+    "image": "/images/news/ai-ethics.jpg",
+    "author": "Prof. Jean Mukendi",
+    "tags": ["AI", "Ethics", "Research"]
+  }
+]

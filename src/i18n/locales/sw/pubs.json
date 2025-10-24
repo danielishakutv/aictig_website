@@ -1,0 +1,30 @@
+{
+  "title": "Machapisho na Utafiti",
+  "subtitle": "Fikia utafiti wetu wa hivi karibuni, muhtasari wa sera, na ripoti",
+  "filters": {
+    "type": "Aina ya Chapisho",
+    "year": "Mwaka",
+    "all": "Aina Zote"
+  },
+  "types": {
+    "brief": "Muhtasari wa Sera",
+    "report": "Ripoti ya Utafiti",
+    "paper": "Karatasi ya Utafiti",
+    "whitepaper": "Karatasi Nyeupe"
+  },
+  "card": {
+    "authors": "Waandishi",
+    "year": "Mwaka",
+    "readMore": "Soma Zaidi",
+    "download": "Pakua"
+  },
+  "detail": {
+    "abstract": "Muhtasari",
+    "authors": "Waandishi",
+    "year": "Mwaka",
+    "type": "Aina",
+    "tags": "Lebo",
+    "downloadPdf": "Pakua PDF",
+    "relatedPublications": "Machapisho Yanayohusiana"
+  }
+}

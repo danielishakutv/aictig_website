@@ -1,0 +1,39 @@
+{
+  "hero": {
+    "title": "Advancing Cybersecurity Governance Across Africa",
+    "subtitle": "Research, policy analysis, and capacity building for digital resilience in the African continent",
+    "cta": {
+      "repository": "Explore Repository",
+      "updates": "Read Updates"
+    }
+  },
+  "features": {
+    "title": "What We Offer",
+    "repository": {
+      "title": "Policy Repository",
+      "description": "Comprehensive database of cybersecurity policies, regulations, and frameworks from across Africa"
+    },
+    "multilingual": {
+      "title": "Multilingual Access",
+      "description": "Content available in multiple languages to ensure broad accessibility across the continent"
+    },
+    "openAccess": {
+      "title": "Open Access Research",
+      "description": "Free access to research publications, policy briefs, and technical reports"
+    }
+  },
+  "latestPublications": {
+    "title": "Latest Publications",
+    "viewAll": "View All Publications"
+  },
+  "recentPolicies": {
+    "title": "Recent Policies & Regulations",
+    "viewAll": "View All Policies"
+  },
+  "stats": {
+    "countries": "Countries Covered",
+    "policies": "Policies Indexed",
+    "languages": "Languages Supported",
+    "publications": "Research Publications"
+  }
+}

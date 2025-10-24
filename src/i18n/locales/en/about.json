@@ -1,0 +1,55 @@
+{
+  "title": "About AICTiG",
+  "hero": {
+    "title": "About AICTiG",
+    "subtitle": "Advancing cybersecurity governance and tele-informatics across Africa through research, policy analysis, and regional cooperation"
+  },
+  "mission": {
+    "title": "Our Mission",
+    "description": "To advance cybersecurity governance and tele-informatics across Africa through research, policy analysis, capacity building, and regional cooperation."
+  },
+  "vision": {
+    "title": "Our Vision",
+    "description": "A digitally secure and resilient Africa where effective governance frameworks enable safe and inclusive digital transformation."
+  },
+  "values": {
+    "title": "Our Values",
+    "subtitle": "The principles that guide our work",
+    "integrity": {
+      "title": "Integrity",
+      "description": "Maintaining the highest standards of honesty and ethics in all our work"
+    },
+    "excellence": {
+      "title": "Excellence",
+      "description": "Pursuing excellence in research, analysis, and policy recommendations"
+    },
+    "collaboration": {
+      "title": "Collaboration",
+      "description": "Working together across borders, sectors, and disciplines"
+    },
+    "innovation": {
+      "title": "Innovation",
+      "description": "Embracing innovative approaches to address emerging challenges"
+    }
+  },
+  "impact": {
+    "title": "Our Impact",
+    "subtitle": "Making a difference across the continent",
+    "countries": "African Countries",
+    "partners": "Partner Organizations",
+    "policies": "Policy Documents",
+    "researchers": "Researchers & Experts"
+  },
+  "team": {
+    "title": "Our Team",
+    "subtitle": "Meet the people driving our mission forward"
+  },
+  "partners": {
+    "title": "Our Partners",
+    "subtitle": "Working together to strengthen cybersecurity governance across Africa"
+  },
+  "meta": {
+    "title": "About AICTiG",
+    "description": "Learn about AICTiG's mission, vision, values, and impact on African cybersecurity governance"
+  }
+}

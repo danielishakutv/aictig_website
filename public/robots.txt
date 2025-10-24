@@ -1,0 +1,11 @@
+User-agent: *
+Allow: /
+
+# Sitemap
+Sitemap: https://www.aictig.org/sitemap.xml
+
+# Crawl delays
+Crawl-delay: 1
+
+# Block access to API endpoints (if any in future)
+Disallow: /api/

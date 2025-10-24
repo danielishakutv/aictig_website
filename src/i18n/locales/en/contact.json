@@ -1,0 +1,40 @@
+{
+  "title": "Contact Us",
+  "subtitle": "Get in touch with our team",
+  "form": {
+    "name": "Your Name",
+    "namePlaceholder": "John Doe",
+    "email": "Email Address",
+    "emailPlaceholder": "john.doe@example.com",
+    "topic": "Topic",
+    "topicPlaceholder": "Select a topic",
+    "message": "Message",
+    "messagePlaceholder": "Tell us how we can help...",
+    "submit": "Send Message",
+    "submitting": "Sending..."
+  },
+  "topics": {
+    "general": "General Inquiry",
+    "research": "Research Collaboration",
+    "training": "Training & Capacity Building",
+    "partnership": "Partnership Opportunities",
+    "media": "Media Inquiry",
+    "technical": "Technical Support"
+  },
+  "success": {
+    "title": "Message Sent!",
+    "message": "Thank you for contacting us. We'll get back to you soon."
+  },
+  "error": {
+    "title": "Error",
+    "message": "Failed to send message. Please try again."
+  },
+  "info": {
+    "title": "Contact Information",
+    "email": "Email",
+    "phone": "Phone",
+    "address": "Address",
+    "hours": "Office Hours",
+    "hoursValue": "Monday - Friday, 9:00 AM - 5:00 PM (EAT)"
+  }
+}

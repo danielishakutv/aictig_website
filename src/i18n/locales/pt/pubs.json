@@ -1,0 +1,30 @@
+{
+  "title": "Publications & Research",
+  "subtitle": "Access our latest research, policy briefs, and reports",
+  "filters": {
+    "type": "Publication Type",
+    "year": "Year",
+    "all": "All Types"
+  },
+  "types": {
+    "brief": "Policy Brief",
+    "report": "Research Report",
+    "paper": "Research Paper",
+    "whitepaper": "White Paper"
+  },
+  "card": {
+    "authors": "Authors",
+    "year": "Year",
+    "readMore": "Read More",
+    "download": "Download"
+  },
+  "detail": {
+    "abstract": "Abstract",
+    "authors": "Authors",
+    "year": "Year",
+    "type": "Type",
+    "tags": "Tags",
+    "downloadPdf": "Download PDF",
+    "relatedPublications": "Related Publications"
+  }
+}

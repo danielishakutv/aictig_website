@@ -1,0 +1,24 @@
+{
+  "title": "Habari na Masasisho",
+  "subtitle": "Habari za hivi karibuni, matangazo, na maarifa kutoka AICTiG",
+  "filters": {
+    "search": "Tafuta habari...",
+    "all": "Habari Zote"
+  },
+  "card": {
+    "readMore": "Soma Zaidi",
+    "by": "Na",
+    "tags": "Lebo"
+  },
+  "detail": {
+    "by": "Na",
+    "publishedOn": "Imechapishwa tarehe",
+    "tags": "Lebo",
+    "share": "Shiriki makala hii",
+    "relatedNews": "Habari Zinazohusiana"
+  },
+  "empty": {
+    "title": "Hakuna makala ya habari zilizopatikana",
+    "description": "Angalia tena baadaye kwa masasisho"
+  }
+}

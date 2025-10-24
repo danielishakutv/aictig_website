@@ -1,0 +1,40 @@
+{
+  "title": "Wasiliana Nasi",
+  "subtitle": "Ungana na timu yetu",
+  "form": {
+    "name": "Jina Lako",
+    "namePlaceholder": "Juma Mohamed",
+    "email": "Barua Pepe",
+    "emailPlaceholder": "juma.mohamed@example.com",
+    "topic": "Mada",
+    "topicPlaceholder": "Chagua mada",
+    "message": "Ujumbe",
+    "messagePlaceholder": "Tuambie jinsi tunavyoweza kusaidia...",
+    "submit": "Tuma Ujumbe",
+    "submitting": "Inatuma..."
+  },
+  "topics": {
+    "general": "Maswali ya Jumla",
+    "research": "Ushirikiano wa Utafiti",
+    "training": "Mafunzo na Ujenzi wa Uwezo",
+    "partnership": "Fursa za Ushirikiano",
+    "media": "Maswali ya Vyombo vya Habari",
+    "technical": "Msaada wa Kiufundi"
+  },
+  "success": {
+    "title": "Ujumbe Umetumwa!",
+    "message": "Asante kwa kuwasiliana nasi. Tutakujibu hivi karibuni."
+  },
+  "error": {
+    "title": "Kosa",
+    "message": "Imeshindwa kutuma ujumbe. Tafadhali jaribu tena."
+  },
+  "info": {
+    "title": "Maelezo ya Mawasiliano",
+    "email": "Barua Pepe",
+    "phone": "Simu",
+    "address": "Anwani",
+    "hours": "Saa za Ofisi",
+    "hoursValue": "Jumatatu - Ijumaa, 9:00 AM - 5:00 PM (EAT)"
+  }
+}

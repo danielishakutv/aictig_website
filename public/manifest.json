@@ -1,0 +1,27 @@
+{
+  "name": "AICTiG - African Institute for Cybersecurity & Tele-Informatics Governance",
+  "short_name": "AICTiG",
+  "description": "African Institute for Cybersecurity & Tele-Informatics Governance - Research, policies, and publications",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#0A5BD3",
+  "orientation": "portrait-primary",
+  "icons": [
+    {
+      "src": "/logo-aictig.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "/logo-aictig.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ],
+  "categories": ["education", "research", "government"],
+  "lang": "en",
+  "dir": "ltr"
+}

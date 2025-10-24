@@ -1,0 +1,112 @@
+[
+  {
+    "id": "pub-101",
+    "title": "AI Readiness in African Public Sector",
+    "authors": ["AICTiG Research Team", "Dr. Amina Okafor", "Prof. Jean Mukendi"],
+    "year": 2025,
+    "type": "Brief",
+    "abstract": "Comprehensive snapshot of AI policy adoption and implementation readiness across 12 African countries, examining regulatory frameworks, infrastructure gaps, and capacity building initiatives.",
+    "fileUrl": "/files/publications/pub-101.pdf",
+    "cover": "/images/covers/pub-101.jpg",
+    "tags": ["AI", "Policy", "Governance"]
+  },
+  {
+    "id": "pub-102",
+    "title": "State of Data Protection in East Africa 2024",
+    "authors": ["Dr. Sarah Kimani", "Ahmed Hassan"],
+    "year": 2024,
+    "type": "Report",
+    "abstract": "Annual report analyzing data protection legislation implementation across East African Community member states, highlighting enforcement challenges and cross-border data flow issues.",
+    "fileUrl": "/files/publications/pub-102.pdf",
+    "cover": "/images/covers/pub-102.jpg",
+    "tags": ["Data Protection", "East Africa", "Compliance"]
+  },
+  {
+    "id": "pub-103",
+    "title": "Cybersecurity Capacity Building: A Pan-African Approach",
+    "authors": ["AICTiG Working Group"],
+    "year": 2024,
+    "type": "Policy Brief",
+    "abstract": "Strategic recommendations for developing cybersecurity talent pipelines, establishing regional training centers, and fostering public-private partnerships across the continent.",
+    "fileUrl": "/files/publications/pub-103.pdf",
+    "cover": "/images/covers/pub-103.jpg",
+    "tags": ["Capacity Building", "Education", "Workforce"]
+  },
+  {
+    "id": "pub-104",
+    "title": "Digital Identity Systems: African Case Studies",
+    "authors": ["Dr. Kwame Boateng", "Fatima El-Masri"],
+    "year": 2024,
+    "type": "Research Paper",
+    "abstract": "Comparative analysis of digital identity initiatives in Ghana, Rwanda, and Morocco, examining privacy safeguards, inclusion strategies, and interoperability standards.",
+    "fileUrl": "/files/publications/pub-104.pdf",
+    "cover": "/images/covers/pub-104.jpg",
+    "tags": ["Digital Identity", "Privacy", "Inclusion"]
+  },
+  {
+    "id": "pub-105",
+    "title": "Telecommunications Regulation in the 5G Era",
+    "authors": ["Prof. Olumide Adeyemi"],
+    "year": 2025,
+    "type": "White Paper",
+    "abstract": "Analysis of regulatory adaptations needed for 5G deployment across Africa, addressing spectrum management, infrastructure sharing, and security considerations.",
+    "fileUrl": "/files/publications/pub-105.pdf",
+    "cover": "/images/covers/pub-105.jpg",
+    "tags": ["5G", "Telecommunications", "Regulation"]
+  },
+  {
+    "id": "pub-106",
+    "title": "E-Government Services: Accessibility and Adoption",
+    "authors": ["Dr. Nadia Mansour", "Emmanuel Nkrumah"],
+    "year": 2024,
+    "type": "Brief",
+    "abstract": "Study on barriers to e-government adoption in rural and underserved communities, with recommendations for improving digital literacy and service design.",
+    "fileUrl": "/files/publications/pub-106.pdf",
+    "cover": "/images/covers/pub-106.jpg",
+    "tags": ["E-Government", "Accessibility", "Digital Divide"]
+  },
+  {
+    "id": "pub-107",
+    "title": "Cybercrime Trends in West Africa 2024",
+    "authors": ["AICTiG Cyber Intelligence Unit"],
+    "year": 2024,
+    "type": "Report",
+    "abstract": "Annual cybercrime threat landscape report covering financial fraud, phishing campaigns, ransomware incidents, and coordinated law enforcement responses.",
+    "fileUrl": "/files/publications/pub-107.pdf",
+    "cover": "/images/covers/pub-107.jpg",
+    "tags": ["Cybercrime", "Threat Intelligence", "Law Enforcement"]
+  },
+  {
+    "id": "pub-108",
+    "title": "Blockchain for Public Service Delivery",
+    "authors": ["Dr. Chinwe Okonkwo", "Tariq Benali"],
+    "year": 2025,
+    "type": "Research Paper",
+    "abstract": "Exploration of blockchain technology applications in land registry, health records, and supply chain transparency, with pilot program results from three countries.",
+    "fileUrl": "/files/publications/pub-108.pdf",
+    "cover": "/images/covers/pub-108.jpg",
+    "tags": ["Blockchain", "Innovation", "Public Services"]
+  },
+  {
+    "id": "pub-109",
+    "title": "Regional Cybersecurity Cooperation Frameworks",
+    "authors": ["AICTiG Policy Team"],
+    "year": 2024,
+    "type": "Policy Brief",
+    "abstract": "Assessment of existing regional cooperation mechanisms (AU, ECOWAS, EAC, SADC) and proposals for strengthening information sharing and joint response capabilities.",
+    "fileUrl": "/files/publications/pub-109.pdf",
+    "cover": "/images/covers/pub-109.jpg",
+    "tags": ["Regional Cooperation", "Policy", "Information Sharing"]
+  },
+  {
+    "id": "pub-110",
+    "title": "Privacy by Design in African Context",
+    "authors": ["Dr. Aisha Mohammed", "Prof. Thabo Mbeki"],
+    "year": 2025,
+    "type": "White Paper",
+    "abstract": "Practical guide for implementing privacy-by-design principles in African tech startups and government digital services, with culturally-relevant examples.",
+    "fileUrl": "/files/publications/pub-110.pdf",
+    "cover": "/images/covers/pub-110.jpg",
+    "tags": ["Privacy", "Design", "Best Practices"]
+  }
+]
