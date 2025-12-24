@@ -1,10 +1,8 @@
 import { useTranslation } from 'react-i18next';
 import {
   AcademicCapIcon,
-  UsersIcon,
   GlobeAltIcon,
   LightBulbIcon,
-  ShieldCheckIcon,
   BookOpenIcon,
   BuildingLibraryIcon,
   BeakerIcon,
@@ -34,6 +32,51 @@ export default function About() {
       icon: BookOpenIcon,
       title: t('about:mission.publications.title'),
       description: t('about:mission.publications.description'),
+    },
+  ];
+
+  const teamMembers = [
+    {
+      id: 1,
+      name: 'Dr. Anaya Okafor',
+      role: 'Executive Director',
+      bio: 'Leading cybersecurity policy research and African digital governance initiatives.',
+      image: 'https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=400&h=400&fit=crop',
+    },
+    {
+      id: 2,
+      name: 'Prof. Kwame Mensah',
+      role: 'Head of Research',
+      bio: 'Expert in AI governance and digital policy frameworks across Africa.',
+      image: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&h=400&fit=crop',
+    },
+    {
+      id: 3,
+      name: 'Dr. Fatima Al-Rashid',
+      role: 'Policy Lead',
+      bio: 'Specializes in cybersecurity legislation and regulatory compliance.',
+      image: 'https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=400&h=400&fit=crop',
+    },
+    {
+      id: 4,
+      name: 'James Osei',
+      role: 'Senior Research Fellow',
+      bio: 'Focuses on data protection and privacy frameworks for African nations.',
+      image: 'https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=400&h=400&fit=crop',
+    },
+    {
+      id: 5,
+      name: 'Dr. Amina Hassan',
+      role: 'Consultant - Capacity Building',
+      bio: 'Leads training programs and stakeholder engagement initiatives.',
+      image: 'https://images.unsplash.com/photo-1507038957979-e6b06c41ec3d?w=400&h=400&fit=crop',
+    },
+    {
+      id: 6,
+      name: 'Marcus Juma',
+      role: 'Communications Director',
+      bio: 'Manages publications and knowledge dissemination across the continent.',
+      image: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&h=400&fit=crop',
     },
   ];
 
@@ -134,7 +177,7 @@ export default function About() {
           </div>
         </section>
 
-        {/* Team section placeholder */}
+        {/* Team section */}
         <section className="py-16 bg-neutral-100">
           <div className="container-custom">
             <h2 className="text-3xl font-bold text-neutral-900 mb-4 text-center">
@@ -143,8 +186,32 @@ export default function About() {
             <p className="text-lg text-neutral-600 text-center max-w-2xl mx-auto mb-12">
               {t('about:team.subtitle')}
             </p>
-            <div className="text-center">
-              <p className="text-neutral-600">{t('about:team.comingSoon')}</p>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+              {teamMembers.map((member) => (
+                <div
+                  key={member.id}
+                  className="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-shadow"
+                >
+                  <div className="aspect-square overflow-hidden bg-neutral-200">
+                    <img
+                      src={member.image}
+                      alt={member.name}
+                      className="w-full h-full object-cover hover:scale-105 transition-transform"
+                    />
+                  </div>
+                  <div className="p-6">
+                    <h3 className="text-xl font-bold text-neutral-900 mb-1">
+                      {member.name}
+                    </h3>
+                    <p className="text-primary-600 font-semibold text-sm mb-3">
+                      {member.role}
+                    </p>
+                    <p className="text-neutral-600 text-sm leading-relaxed">
+                      {member.bio}
+                    </p>
+                  </div>
+                </div>
+              ))}
             </div>
           </div>
         </section>

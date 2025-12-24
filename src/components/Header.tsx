@@ -126,17 +126,11 @@ export default function Header() {
     },
   ];
   
-  const handleSearch = (e: React.FormEvent) => {
-    e.preventDefault();
-    if (searchQuery.trim()) {
-      navigate(`/repository?query=${encodeURIComponent(searchQuery.trim())}`);
-      setSearchQuery('');
-    }
-  };
+  
   
   return (
     <Disclosure as="header" className="sticky top-0 z-40">
-      {({ open }: { open: boolean }) => (
+      {({ open, close }: { open: boolean; close: () => void }) => (
         <>
           <a href="#main-content" className="skip-link">
             {t('actions.skipToContent')}
@@ -353,12 +347,13 @@ export default function Header() {
           </div>
           
           {/* Mobile menu */}
-          <Disclosure.Panel className="lg:hidden border-t border-neutral-200 bg-white">
-            <div className="space-y-1 px-4 pb-3 pt-2">
+          <Disclosure.Panel className="lg:hidden border-t border-neutral-200 bg-white" onClick={() => close()}>
+            <div className="space-y-1 px-4 pb-3 pt-2" onClick={(e) => e.stopPropagation()}>
               {navigation.map((item) => (
                 <Link
                   key={item.name}
                   to={item.href}
+                  onClick={() => close()}
                   className="block px-3 py-2 text-base font-medium text-neutral-700 hover:bg-neutral-100 hover:text-neutral-900 rounded-md"
                 >
                   {item.name}
