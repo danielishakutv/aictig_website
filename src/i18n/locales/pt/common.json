@@ -29,11 +29,15 @@
   "footer": {
     "quickLinks": "Quick Links",
     "contactInfo": "Contact Information",
+    "nigeriaOffice": "Escritório da Nigéria",
+    "southAfricaOffice": "Escritório da África do Sul",
+    "nigeriaAddress": "Abuja: 18 Bendel Street, Garki, Abuja, Nigeria\nLagos: 111B Ikeja Way, Dolphin Estate, Ikoyi, Lagos State",
+    "southAfricaAddress": "Suite 3B, Hatfield Bridge, Stanza Bopape St & Richard, Hatfield, Pretoria, 0147, South Africa",
+    "email": "E-mail",
     "followUs": "Follow Us",
     "copyright": "© {{year}} African Institute for Cybersecurity & Tele-Informatics Governance. All rights reserved.",
     "privacy": "Privacy Policy",
-    "terms": "Terms of Service",
-    "email": "info@aictig.org"
+    "terms": "Terms of Service"
   },
   "languages": {
     "en": "English",

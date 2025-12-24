@@ -2,54 +2,46 @@
   "title": "About AICTiG",
   "hero": {
     "title": "About AICTiG",
-    "subtitle": "Advancing cybersecurity governance and tele-informatics across Africa through research, policy analysis, and regional cooperation"
+    "subtitle": "The African Institute for Cybersecurity and Tele-Informatics Governance (AICTiG) is a research think tank and educational institution promoting cutting-edge research on policy, legal and regulatory issues affecting Cybersecurity and ICTs in Africa."
   },
-  "mission": {
-    "title": "Our Mission",
-    "description": "To advance cybersecurity governance and tele-informatics across Africa through research, policy analysis, capacity building, and regional cooperation."
+  "about": {
+    "title": "About the Institute",
+    "paragraph1": "The African Institute for Cybersecurity and Tele-Informatics Governance (AICTiG) is a research think tank and educational institution licensed to promote, conduct and disseminate cutting-edge research on policy, legal and regulatory issues affecting Cybersecurity and Information Communications Technologies (ICTs) within the African region.",
+    "paragraph2": "AICTiG adopts a multidisciplinary approach to produce policy-oriented research and its focus areas include the governance of artificial intelligence, cybersecurity, cybercrime, telecommunications, critical infrastructure protection, cryptocurrencies, data protection, digital rights, digital identity, digital trade, electronic commerce, taxation of digital services, ICT for development (ICT4D) and regional integration.",
+    "paragraph3": "The Institute conducts training and education programs on the governance of ICTs and cybersecurity with the aim of building capacity in the African region, and renders consultancy services for national and international organizations, and private sector organizations.",
+    "incorporation": "AICTiG is incorporated as a Company Limited by Guarantee by the Corporate Affairs Commission of the Federal Republic of Nigeria in 2025."
   },
   "vision": {
     "title": "Our Vision",
-    "description": "A digitally secure and resilient Africa where effective governance frameworks enable safe and inclusive digital transformation."
+    "description": "To position AICTiG as a leading institution for cutting-edge, evidence-based research and education on the governance of cybersecurity and ICTs in Africa."
   },
-  "values": {
-    "title": "Our Values",
-    "subtitle": "The principles that guide our work",
-    "integrity": {
-      "title": "Integrity",
-      "description": "Maintaining the highest standards of honesty and ethics in all our work"
+  "mission": {
+    "title": "Our Mission",
+    "intro": "AICTiG's mission encompasses multiple strategic objectives: Research Dissemination, Repository Creation, Capacity Building, and Publications",
+    "research": {
+      "title": "Research Dissemination",
+      "description": "Conducting and disseminating high-quality, policy-oriented research on cybersecurity and ICT governance"
     },
-    "excellence": {
-      "title": "Excellence",
-      "description": "Pursuing excellence in research, analysis, and policy recommendations"
+    "repository": {
+      "title": "Repository Creation",
+      "description": "Building comprehensive databases of policy documents, legislation, and best practices"
     },
-    "collaboration": {
-      "title": "Collaboration",
-      "description": "Working together across borders, sectors, and disciplines"
+    "capacity": {
+      "title": "Capacity Building",
+      "description": "Delivering training and education programs to strengthen regional expertise"
     },
-    "innovation": {
-      "title": "Innovation",
-      "description": "Embracing innovative approaches to address emerging challenges"
+    "publications": {
+      "title": "Publications",
+      "description": "Publishing journals, policy briefs, blogs, and thought leadership content"
     }
-  },
-  "impact": {
-    "title": "Our Impact",
-    "subtitle": "Making a difference across the continent",
-    "countries": "African Countries",
-    "partners": "Partner Organizations",
-    "policies": "Policy Documents",
-    "researchers": "Researchers & Experts"
   },
   "team": {
     "title": "Our Team",
-    "subtitle": "Meet the people driving our mission forward"
-  },
-  "partners": {
-    "title": "Our Partners",
-    "subtitle": "Working together to strengthen cybersecurity governance across Africa"
+    "subtitle": "Meet the experts driving our mission forward",
+    "comingSoon": "Team profiles coming soon"
   },
   "meta": {
-    "title": "About AICTiG",
-    "description": "Learn about AICTiG's mission, vision, values, and impact on African cybersecurity governance"
+    "title": "About AICTiG - African Institute for Cybersecurity & Tele-Informatics Governance",
+    "description": "Learn about AICTiG's mission to advance cybersecurity and ICT governance across Africa through research, policy analysis, and capacity building"
   }
 }

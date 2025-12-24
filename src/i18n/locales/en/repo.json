@@ -1,10 +1,34 @@
 {
   "title": "Policy Repository",
-  "subtitle": "Explore cybersecurity policies and regulations from across Africa",
+  "subtitle": "Explore cybersecurity and ICT policies, regulations, and legal instruments from across Africa",
+  "tabs": {
+    "all": "All Documents",
+    "regional": "African Regional Instruments",
+    "national": "National Instruments"
+  },
+  "regional": {
+    "title": "African Regional Instruments",
+    "subtitle": "Policy and legal frameworks from African regional organizations",
+    "organizations": {
+      "au": "African Union (AU)",
+      "amu": "Arab Maghreb Union (AMU)",
+      "ecowas": "Economic Community of West African States (ECOWAS)",
+      "eccas": "Economic Community of Central African States (ECCAS)",
+      "comesa": "Common Market for Eastern and Southern Africa (COMESA)",
+      "sadc": "Southern African Development Community (SADC)",
+      "eac": "East African Community (EAC)",
+      "igad": "Intergovernmental Authority on Development (IGAD)"
+    }
+  },
+  "national": {
+    "title": "National Instruments",
+    "subtitle": "Country-specific policies and legislation on cybersecurity and ICTs"
+  },
   "filters": {
     "title": "Filters",
     "search": "Search policies...",
     "country": "Country",
+    "organization": "Regional Organization",
     "sector": "Theme/Sector",
     "theme": "Theme/Sector",
     "year": "Year",
@@ -22,8 +46,8 @@
     "action": "Clear filters"
   },
   "meta": {
-    "title": "Policy Repository",
-    "description": "Browse and search African cybersecurity policies and regulations"
+    "title": "Policy Repository - African Cybersecurity & ICT Governance",
+    "description": "Browse and search African cybersecurity policies, regulations, and legal instruments from regional and national bodies"
   },
   "sort": {
     "label": "Sort by",
@@ -38,7 +62,10 @@
     "law": "Law",
     "strategy": "Strategy",
     "framework": "Framework",
-    "amendment": "Amendment"
+    "amendment": "Amendment",
+    "convention": "Convention",
+    "protocol": "Protocol",
+    "directive": "Directive"
   },
   "card": {
     "viewDetails": "View Details",

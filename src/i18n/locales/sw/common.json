@@ -29,11 +29,15 @@
   "footer": {
     "quickLinks": "Viungo vya Haraka",
     "contactInfo": "Maelezo ya Mawasiliano",
+    "nigeriaOffice": "Ofisi ya Nigeria",
+    "southAfricaOffice": "Ofisi ya Afrika Kusini",
+    "nigeriaAddress": "Abuja: 18 Bendel Street, Garki, Abuja, Nigeria\nLagos: 111B Ikeja Way, Dolphin Estate, Ikoyi, Lagos State",
+    "southAfricaAddress": "Suite 3B, Hatfield Bridge, Stanza Bopape St & Richard, Hatfield, Pretoria, 0147, South Africa",
+    "email": "Barua pepe",
     "followUs": "Tufuate",
     "copyright": "© {{year}} Taasisi ya Kiafrika ya Usalama wa Mtandao na Utawala wa Tele-Informatics. Haki zote zimehifadhiwa.",
     "privacy": "Sera ya Faragha",
-    "terms": "Masharti ya Huduma",
-    "email": "info@aictig.org"
+    "terms": "Masharti ya Huduma"
   },
   "languages": {
     "en": "Kiingereza",

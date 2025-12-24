@@ -20,6 +20,7 @@ interface FilterSidebarProps {
   onFilterChange: (filterId: string, value: string) => void;
   onClearFilters: () => void;
   resultCount?: number;
+  isMobile?: boolean;
 }
 
 export default function FilterSidebar({
@@ -28,11 +29,16 @@ export default function FilterSidebar({
   onFilterChange,
   onClearFilters,
   resultCount,
+  isMobile = false,
 }: FilterSidebarProps) {
   const hasActiveFilters = Object.values(activeFilters).some((values) => values.length > 0);
 
+  const containerClasses = isMobile
+    ? 'bg-white rounded-lg shadow-lg p-4 max-h-[70vh] overflow-y-auto'
+    : 'bg-white rounded-lg shadow-md p-6 sticky top-24';
+
   return (
-    <aside className="bg-white rounded-lg shadow-md p-6 sticky top-24">
+    <aside className={containerClasses}>
       {/* Header */}
       <div className="flex items-center justify-between mb-6">
         <div className="flex items-center gap-2">

@@ -45,65 +45,68 @@ export default function Pagination({
   
   return (
     <nav
-      className="flex items-center justify-between border-t border-neutral-200 px-4 sm:px-0 py-4"
+      className="flex flex-col gap-4 border-t border-neutral-200 px-4 sm:px-0 pt-4"
       aria-label="Pagination"
     >
-      <div className="-mt-px flex w-0 flex-1">
-        <button
-          onClick={() => onPageChange(currentPage - 1)}
-          disabled={currentPage === 1}
-          className="inline-flex items-center border-t-2 border-transparent pr-1 pt-4 text-sm font-medium text-neutral-500 hover:border-neutral-300 hover:text-neutral-700 disabled:opacity-50 disabled:cursor-not-allowed focus-ring"
-        >
-          {isRTL ? (
-            <ChevronRightIcon className="mr-3 h-5 w-5" aria-hidden="true" />
-          ) : (
-            <ChevronLeftIcon className="mr-3 h-5 w-5" aria-hidden="true" />
-          )}
-          {t('actions.previous')}
-        </button>
-      </div>
-      <div className="hidden md:-mt-px md:flex">
-        {getPageNumbers().map((page, index) => (
-          <span key={index}>
-            {page === '...' ? (
-              <span className="inline-flex items-center border-t-2 border-transparent px-4 pt-4 text-sm font-medium text-neutral-500">
-                ...
-              </span>
+      <div className="flex flex-col gap-3 md:flex-row md:items-center md:justify-between">
+        <div className="flex items-center gap-2 md:gap-3">
+          <button
+            onClick={() => onPageChange(currentPage - 1)}
+            disabled={currentPage === 1}
+            className="inline-flex items-center gap-2 rounded-lg border border-neutral-200 px-3 py-2 text-sm font-medium text-neutral-700 transition hover:border-primary-300 hover:text-primary-700 disabled:opacity-50 disabled:cursor-not-allowed focus-ring"
+          >
+            {isRTL ? (
+              <ChevronRightIcon className="h-5 w-5" aria-hidden="true" />
             ) : (
-              <button
-                onClick={() => onPageChange(page as number)}
-                className={`inline-flex items-center border-t-2 px-4 pt-4 text-sm font-medium focus-ring ${
-                  currentPage === page
-                    ? 'border-primary-500 text-primary-600'
-                    : 'border-transparent text-neutral-500 hover:border-neutral-300 hover:text-neutral-700'
-                }`}
-                aria-current={currentPage === page ? 'page' : undefined}
-              >
-                {page}
-              </button>
+              <ChevronLeftIcon className="h-5 w-5" aria-hidden="true" />
             )}
-          </span>
-        ))}
-      </div>
-      <div className="-mt-px flex w-0 flex-1 justify-end">
-        <button
-          onClick={() => onPageChange(currentPage + 1)}
-          disabled={currentPage === totalPages}
-          className="inline-flex items-center border-t-2 border-transparent pl-1 pt-4 text-sm font-medium text-neutral-500 hover:border-neutral-300 hover:text-neutral-700 disabled:opacity-50 disabled:cursor-not-allowed focus-ring"
-        >
-          {t('actions.next')}
-          {isRTL ? (
-            <ChevronLeftIcon className="ml-3 h-5 w-5" aria-hidden="true" />
-          ) : (
-            <ChevronRightIcon className="ml-3 h-5 w-5" aria-hidden="true" />
-          )}
-        </button>
-      </div>
-      {itemsPerPage && totalItems && (
-        <div className="text-sm text-neutral-700 mt-4 md:mt-0 md:ml-4">
-          {t('pagination.showing')} {startItem}-{endItem} {t('pagination.of')} {totalItems} {t('pagination.results')}
+            {t('actions.previous')}
+          </button>
+
+          <div className="hidden md:flex items-center gap-2">
+            {getPageNumbers().map((page, index) => (
+              <span key={index}>
+                {page === '...' ? (
+                  <span className="inline-flex items-center px-3 py-2 text-sm font-medium text-neutral-500">
+                    ...
+                  </span>
+                ) : (
+                  <button
+                    onClick={() => onPageChange(page as number)}
+                    className={`inline-flex items-center justify-center rounded-lg px-3 py-2 text-sm font-medium transition focus-ring ${
+                      currentPage === page
+                        ? 'bg-primary-50 text-primary-700 ring-1 ring-primary-200'
+                        : 'text-neutral-600 hover:bg-neutral-100'
+                    }`}
+                    aria-current={currentPage === page ? 'page' : undefined}
+                  >
+                    {page}
+                  </button>
+                )}
+              </span>
+            ))}
+          </div>
+
+          <button
+            onClick={() => onPageChange(currentPage + 1)}
+            disabled={currentPage === totalPages}
+            className="inline-flex items-center gap-2 rounded-lg border border-neutral-200 px-3 py-2 text-sm font-medium text-neutral-700 transition hover:border-primary-300 hover:text-primary-700 disabled:opacity-50 disabled:cursor-not-allowed focus-ring"
+          >
+            {t('actions.next')}
+            {isRTL ? (
+              <ChevronLeftIcon className="h-5 w-5" aria-hidden="true" />
+            ) : (
+              <ChevronRightIcon className="h-5 w-5" aria-hidden="true" />
+            )}
+          </button>
         </div>
-      )}
+
+        {itemsPerPage && totalItems && (
+          <div className="text-sm text-neutral-700 md:ml-4">
+            {t('pagination.showing')} {startItem}-{endItem} {t('pagination.of')} {totalItems} {t('pagination.results')}
+          </div>
+        )}
+      </div>
     </nav>
   );
 }

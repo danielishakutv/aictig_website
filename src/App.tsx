@@ -17,6 +17,8 @@ const Gallery = lazy(() => import('./pages/Gallery'));
 const News = lazy(() => import('./pages/News'));
 const NewsDetail = lazy(() => import('./pages/NewsDetail'));
 const About = lazy(() => import('./pages/About'));
+const FocusAreas = lazy(() => import('./pages/FocusAreas'));
+const Consultancy = lazy(() => import('./pages/Consultancy'));
 const Contact = lazy(() => import('./pages/Contact'));
 const Legal = lazy(() => import('./pages/Legal'));
 
@@ -50,6 +52,10 @@ function AppRoutes() {
         <Suspense fallback={<LoadingFallback />}>
           <Routes>
             <Route path="/" element={<Home />} />
+            <Route path="/about" element={<About />} />
+            <Route path="/focus-areas" element={<FocusAreas />} />
+            <Route path="/focus-areas/:id" element={<PolicyDetail />} />
+            <Route path="/consultancy" element={<Consultancy />} />
             <Route path="/repository" element={<Repository />} />
             <Route path="/repository/:id" element={<PolicyDetail />} />
             <Route path="/publications" element={<Publications />} />
@@ -57,7 +63,6 @@ function AppRoutes() {
             <Route path="/gallery" element={<Gallery />} />
             <Route path="/news" element={<News />} />
             <Route path="/news/:slug" element={<NewsDetail />} />
-            <Route path="/about" element={<About />} />
             <Route path="/contact" element={<Contact />} />
             <Route path="/legal/:page" element={<Legal />} />
             <Route path="*" element={<NotFound />} />

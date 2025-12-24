@@ -7,6 +7,7 @@ export interface Policy {
   region: string;
   year: number;
   type: string;
+  organization?: string; // For regional instruments: 'au', 'ecowas', 'sadc', etc.
   languages: string[];
   summary: string;
   themes: string[];

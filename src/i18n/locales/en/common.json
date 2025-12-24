@@ -1,13 +1,18 @@
 {
   "siteName": "AICTiG",
   "siteFullName": "African Institute for Cybersecurity & Tele-Informatics Governance",
+  "tagline": "Research, Policy & Legal Excellence in Cybersecurity and ICT Governance",
+  "topBar": {
+    "updates": "New publications and research available"
+  },
   "navigation": {
     "home": "Home",
+    "about": "About",
+    "focusAreas": "Focus Areas",
+    "consultancy": "Consultancy",
     "repository": "Repository",
     "publications": "Publications",
-    "gallery": "Gallery",
     "news": "News",
-    "about": "About",
     "contact": "Contact"
   },
   "actions": {
@@ -31,13 +36,19 @@
   "backToNews": "Back to News",
   "loading": "Loading...",
   "footer": {
+    "fullName": "African Institute for Cybersecurity & Tele-Informatics Governance",
+    "tagline": "Advancing Cybersecurity and ICT Governance in Africa",
     "quickLinks": "Quick Links",
     "contactInfo": "Contact Information",
+    "nigeriaOffice": "Nigeria Office",
+    "southAfricaOffice": "South Africa Office",
+    "nigeriaAddress": "Abuja: 18 Bendel Street, Garki, Abuja, Nigeria\nLagos: 111B Ikeja Way, Dolphin Estate, Ikoyi, Lagos State",
+    "southAfricaAddress": "Suite 3B, Hatfield Bridge, Stanza Bopape St & Richard, Hatfield, Pretoria, 0147, South Africa",
+    "email": "Email",
     "followUs": "Follow Us",
     "copyright": "© {{year}} African Institute for Cybersecurity & Tele-Informatics Governance. All rights reserved.",
     "privacy": "Privacy Policy",
-    "terms": "Terms of Service",
-    "email": "info@aictig.org"
+    "terms": "Terms of Service"
   },
   "languages": {
     "en": "English",
@@ -59,5 +70,212 @@
     "of": "of",
     "showing": "Showing",
     "results": "results"
+  },
+  "focusAreas": {
+    "meta": {
+      "title": "Focus Areas",
+      "description": "Explore AICTiG's research and policy focus areas in cybersecurity and ICT governance"
+    },
+    "hero": {
+      "title": "Our Focus Areas",
+      "subtitle": "AICTiG adopts a multidisciplinary approach to produce policy-oriented research across key areas of cybersecurity and ICT governance in Africa."
+    },
+    "learnMore": "Learn more",
+    "ai": {
+      "title": "Artificial Intelligence",
+      "description": "Governance frameworks and policy development for AI systems in Africa"
+    },
+    "autonomousWeapons": {
+      "title": "Autonomous Weapons",
+      "description": "Legal and ethical frameworks for autonomous weapons systems"
+    },
+    "broadband": {
+      "title": "Broadband Policy",
+      "description": "Broadband infrastructure development and universal access policies"
+    },
+    "5g": {
+      "title": "5G Technology",
+      "description": "5G deployment strategies and regulatory frameworks"
+    },
+    "cybersecurity": {
+      "title": "Cybersecurity & Cybercrime",
+      "description": "Comprehensive cybersecurity policies and cybercrime legislation"
+    },
+    "criticalInfrastructure": {
+      "title": "Critical Infrastructure Protection",
+      "description": "Protection frameworks for critical national infrastructure"
+    },
+    "cyberwarfare": {
+      "title": "Cyberwarfare",
+      "description": "National cyber defense strategies and international cyber norms"
+    },
+    "childProtection": {
+      "title": "Child Online Protection",
+      "description": "Safeguarding children in digital environments"
+    },
+    "crypto": {
+      "title": "Cryptocurrencies",
+      "description": "Regulation and governance of digital currencies and blockchain"
+    },
+    "dataProtection": {
+      "title": "Data Protection",
+      "description": "Privacy laws and data protection frameworks"
+    },
+    "digitalSovereignty": {
+      "title": "Digital Sovereignty",
+      "description": "National sovereignty in cyberspace and data localization"
+    },
+    "digitalIdentity": {
+      "title": "Digital Identity",
+      "description": "Digital identity systems and authentication frameworks"
+    },
+    "digitalTrade": {
+      "title": "Digital Trade",
+      "description": "Cross-border e-commerce and digital trade agreements"
+    },
+    "ecommerce": {
+      "title": "Electronic Commerce",
+      "description": "E-commerce regulation and consumer protection"
+    },
+    "electronicEvidence": {
+      "title": "Electronic Evidence",
+      "description": "Legal frameworks for electronic evidence in judicial proceedings"
+    },
+    "digitalTaxation": {
+      "title": "Taxation of Digital Services",
+      "description": "Tax policies for digital economy and online services"
+    },
+    "telecom": {
+      "title": "Telecommunications",
+      "description": "Telecommunications regulation and spectrum management"
+    },
+    "techRights": {
+      "title": "Technology & Human Rights",
+      "description": "Digital rights, freedom of expression, and privacy"
+    },
+    "space": {
+      "title": "Space Policy",
+      "description": "Satellite communications and space technology governance"
+    },
+    "regionalIntegration": {
+      "title": "Regional Integration & ICTs",
+      "description": "Harmonization of ICT policies across African regions"
+    },
+    "intlCooperation": {
+      "title": "International Cooperation on Cybercrime",
+      "description": "Cross-border collaboration on cybercrime prevention"
+    },
+    "cta": {
+      "title": "Interested in Our Research?",
+      "description": "Explore our publications and get in touch to learn more about our work",
+      "publications": "View Publications",
+      "contact": "Contact Us"
+    }
+  },
+  "consultancy": {
+    "meta": {
+      "title": "Consultancy Services",
+      "description": "Professional consultancy services in cybersecurity policy, ICT law, and regulatory compliance"
+    },
+    "hero": {
+      "title": "Consultancy Services",
+      "subtitle": "AICTiG provides expert consultancy services to governments, international organizations, and private sector entities across Africa and beyond."
+    },
+    "overview": {
+      "title": "Our Services",
+      "description": "We offer comprehensive consultancy services tailored to your organization's needs in cybersecurity, ICT governance, and legal compliance."
+    },
+    "services": {
+      "policyDevelopment": {
+        "title": "Policy Development & Analysis",
+        "description": "Expert assistance in developing and analyzing ICT and cybersecurity policies aligned with international best practices.",
+        "feature1": "National cybersecurity strategy development",
+        "feature2": "ICT policy framework design",
+        "feature3": "Policy gap analysis and recommendations"
+      },
+      "legalAnalysis": {
+        "title": "Legal Analysis",
+        "description": "Comprehensive legal analysis of cybersecurity and ICT legislation for alignment with regional and international standards.",
+        "feature1": "Legislative gap analysis",
+        "feature2": "Comparative legal research",
+        "feature3": "Compliance assessment"
+      },
+      "legalDrafting": {
+        "title": "Legal Drafting",
+        "description": "Professional drafting of cybersecurity and ICT legislation, regulations, and legal instruments.",
+        "feature1": "Cybersecurity law drafting",
+        "feature2": "Data protection legislation",
+        "feature3": "Regulatory framework development"
+      },
+      "regulatoryCompliance": {
+        "title": "Regulatory Compliance & Monitoring",
+        "description": "Support for regulatory compliance and ongoing monitoring of ICT and cybersecurity regulations.",
+        "feature1": "Compliance audits and assessments",
+        "feature2": "Regulatory monitoring systems",
+        "feature3": "Implementation support"
+      },
+      "dataProtectionTraining": {
+        "title": "Data Protection Compliance Training",
+        "description": "Specialized training programs on data protection laws, GDPR, and privacy compliance.",
+        "feature1": "GDPR compliance training",
+        "feature2": "Data protection officer certification",
+        "feature3": "Privacy impact assessments"
+      },
+      "mappingStudies": {
+        "title": "Mapping Studies",
+        "description": "Comprehensive mapping of ICT and cybersecurity landscapes across countries and regions.",
+        "feature1": "Legal and regulatory mapping",
+        "feature2": "Institutional capacity assessments",
+        "feature3": "Stakeholder mapping"
+      },
+      "policyEvaluation": {
+        "title": "Policy Evaluation",
+        "description": "Independent evaluation of existing policies and their effectiveness in achieving stated objectives.",
+        "feature1": "Policy impact assessment",
+        "feature2": "Performance evaluation",
+        "feature3": "Recommendations for improvement"
+      },
+      "awarenessTraining": {
+        "title": "Legal & Policy Awareness Training",
+        "description": "Capacity building programs for government officials, policymakers, and stakeholders.",
+        "feature1": "Cybersecurity awareness programs",
+        "feature2": "Policy workshop facilitation",
+        "feature3": "Customized training modules"
+      },
+      "electronicEvidence": {
+        "title": "Electronic Evidence Management",
+        "description": "Training and consultancy on handling, preserving, and presenting electronic evidence.",
+        "feature1": "Digital forensics procedures",
+        "feature2": "Chain of custody protocols",
+        "feature3": "Court presentation techniques"
+      },
+      "breachManagement": {
+        "title": "Data Breach Management & Risk Mitigation",
+        "description": "Strategic guidance on data breach response, incident management, and risk mitigation.",
+        "feature1": "Incident response planning",
+        "feature2": "Breach notification procedures",
+        "feature3": "Risk assessment and mitigation"
+      }
+    },
+    "whyChoose": {
+      "title": "Why Choose AICTiG?",
+      "expertise": {
+        "title": "Deep Expertise",
+        "description": "Our team combines legal, technical, and policy expertise with extensive experience in African contexts."
+      },
+      "regional": {
+        "title": "Regional Knowledge",
+        "description": "In-depth understanding of African regional frameworks, challenges, and opportunities in ICT governance."
+      },
+      "evidenceBased": {
+        "title": "Evidence-Based Approach",
+        "description": "Our consultancy is grounded in rigorous research and evidence-based policy recommendations."
+      }
+    },
+    "cta": {
+      "title": "Ready to Work With Us?",
+      "description": "Contact us today to discuss how we can support your organization's cybersecurity and ICT governance needs.",
+      "button": "Get in Touch"
+    }
   }
 }

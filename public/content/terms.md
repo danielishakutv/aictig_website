@@ -104,8 +104,12 @@ If any provision of these Terms of Service is found to be unenforceable, the rem
 For questions about these Terms of Service, please contact:
 
 **AICTiG Legal Department**  
-Email: legal@aictig.org  
-Address: [Organization Address]
+Email: privacy@aictig.org  
+Address:
+
+- **Abuja:** 18 Bendel Street, Garki, Abuja, Nigeria
+- **Lagos:** 111B Ikeja Way, Dolphin Estate, Ikoyi, Lagos State
+- **Pretoria:** Suite 3B, Hatfield Bridge, Stanza Bopape St & Richard, Hatfield, Pretoria, 0147, South Africa
 
 ---
 

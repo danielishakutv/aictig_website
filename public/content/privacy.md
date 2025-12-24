@@ -75,7 +75,11 @@ For questions about this Privacy Policy or to exercise your rights, please conta
 
 **AICTiG Data Protection Officer**  
 Email: privacy@aictig.org  
-Address: [Organization Address]
+Address:
+
+- **Abuja:** 18 Bendel Street, Garki, Abuja, Nigeria
+- **Lagos:** 111B Ikeja Way, Dolphin Estate, Ikoyi, Lagos State
+- **Pretoria:** Suite 3B, Hatfield Bridge, Stanza Bopape St & Richard, Hatfield, Pretoria, 0147, South Africa
 
 ---
 

@@ -29,11 +29,15 @@
   "footer": {
     "quickLinks": "روابط سريعة",
     "contactInfo": "معلومات الاتصال",
+    "nigeriaOffice": "مكتب نيجيريا",
+    "southAfricaOffice": "مكتب جنوب أفريقيا",
+    "nigeriaAddress": "Abuja: 18 Bendel Street, Garki, Abuja, Nigeria\nLagos: 111B Ikeja Way, Dolphin Estate, Ikoyi, Lagos State",
+    "southAfricaAddress": "Suite 3B, Hatfield Bridge, Stanza Bopape St & Richard, Hatfield, Pretoria, 0147, South Africa",
+    "email": "البريد الإلكتروني",
     "followUs": "تابعنا",
     "copyright": "© {{year}} المعهد الأفريقي للأمن السيبراني وحوكمة المعلوماتية الاتصالية. جميع الحقوق محفوظة.",
     "privacy": "سياسة الخصوصية",
-    "terms": "شروط الخدمة",
-    "email": "info@aictig.org"
+    "terms": "شروط الخدمة"
   },
   "languages": {
     "en": "الإنجليزية",
