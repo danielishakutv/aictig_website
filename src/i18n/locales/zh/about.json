@@ -3,6 +3,11 @@
   "mission": {
     "title": "Our Mission",
     "content": "To advance cybersecurity governance and tele-informatics across Africa through research, policy analysis, capacity building, and regional cooperation."
+    ,
+    "repository": {
+      "title": "Policy Creation",
+      "description": "Supporting the development and curation of policy documents, legislation, and implementation guidance to assist governments and institutions."
+    }
   },
   "vision": {
     "title": "Our Vision",

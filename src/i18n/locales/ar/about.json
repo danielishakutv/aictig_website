@@ -3,6 +3,11 @@
   "mission": {
     "title": "مهمتنا",
     "content": "تعزيز حوكمة الأمن السيبراني والمعلوماتية الاتصالية في جميع أنحاء أفريقيا من خلال البحث وتحليل السياسات وبناء القدرات والتعاون الإقليمي."
+    ,
+    "repository": {
+      "title": "Policy Creation",
+      "description": "Supporting the development and curation of policy documents, legislation, and implementation guidance to assist governments and institutions."
+    }
   },
   "vision": {
     "title": "رؤيتنا",

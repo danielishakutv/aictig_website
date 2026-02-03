@@ -165,6 +165,10 @@
       "title": "International Cooperation on Cybercrime",
       "description": "Cross-border collaboration on cybercrime prevention"
     },
+    "ict4d": {
+      "title": "ICT for Development (ICT4D)",
+      "description": "Measuring the development impact of ICTs."
+    },
     "cta": {
       "title": "Interested in Our Research?",
       "description": "Explore our publications and get in touch to learn more about our work",
@@ -183,42 +187,43 @@
     },
     "overview": {
       "title": "Our Services",
-      "description": "We offer comprehensive consultancy services tailored to your organization's needs in cybersecurity, ICT governance, and legal compliance."
+      "description": "We offer expert consultancy services in the governance of cybersecurity and ICTs."
     },
+
     "services": {
       "policyDevelopment": {
         "title": "Policy Development & Analysis",
-        "description": "Expert assistance in developing and analyzing ICT and cybersecurity policies aligned with international best practices.",
-        "feature1": "National cybersecurity strategy development",
+        "description": "Expert assistance in developing and analyzing ICT and cybersecurity policy frameworks.",
+        "feature1": "National cybersecurity policy and strategy development",
         "feature2": "ICT policy framework design",
         "feature3": "Policy gap analysis and recommendations"
       },
       "legalAnalysis": {
         "title": "Legal Analysis",
-        "description": "Comprehensive legal analysis of cybersecurity and ICT legislation for alignment with regional and international standards.",
+        "description": "Expert analysis of national, regional and international cybersecurity and ICT legislations.",
         "feature1": "Legislative gap analysis",
         "feature2": "Comparative legal research",
         "feature3": "Compliance assessment"
       },
       "legalDrafting": {
         "title": "Legal Drafting",
-        "description": "Professional drafting of cybersecurity and ICT legislation, regulations, and legal instruments.",
+        "description": "Drafting of cybersecurity and ICT legislations, regulations, and legal instruments.",
         "feature1": "Cybersecurity law drafting",
         "feature2": "Data protection legislation",
         "feature3": "Regulatory framework development"
       },
       "regulatoryCompliance": {
         "title": "Regulatory Compliance & Monitoring",
-        "description": "Support for regulatory compliance and ongoing monitoring of ICT and cybersecurity regulations.",
+        "description": "Support for regulatory compliance and monitoring the implementation of ICT and cybersecurity regulations.",
         "feature1": "Compliance audits and assessments",
-        "feature2": "Regulatory monitoring systems",
+        "feature2": "Regulatory monitoring",
         "feature3": "Implementation support"
       },
       "dataProtectionTraining": {
         "title": "Data Protection Compliance Training",
-        "description": "Specialized training programs on data protection laws, GDPR, and privacy compliance.",
+        "description": "Specialized compliance training programs on national, regional and international data protection laws.",
         "feature1": "GDPR compliance training",
-        "feature2": "Data protection officer certification",
+        "feature2": "NDPA compliance training",
         "feature3": "Privacy impact assessments"
       },
       "mappingStudies": {
@@ -228,16 +233,9 @@
         "feature2": "Institutional capacity assessments",
         "feature3": "Stakeholder mapping"
       },
-      "policyEvaluation": {
-        "title": "Policy Evaluation",
-        "description": "Independent evaluation of existing policies and their effectiveness in achieving stated objectives.",
-        "feature1": "Policy impact assessment",
-        "feature2": "Performance evaluation",
-        "feature3": "Recommendations for improvement"
-      },
       "awarenessTraining": {
         "title": "Legal & Policy Awareness Training",
-        "description": "Capacity building programs for government officials, policymakers, and stakeholders.",
+        "description": "Capacity building programs to facilitate stakeholder awareness of policy and regulatory developments.",
         "feature1": "Cybersecurity awareness programs",
         "feature2": "Policy workshop facilitation",
         "feature3": "Customized training modules"
@@ -261,11 +259,11 @@
       "title": "Why Choose AICTiG?",
       "expertise": {
         "title": "Deep Expertise",
-        "description": "Our team combines legal, technical, and policy expertise with extensive experience in African contexts."
+        "description": "Our team combines legal, technical, and policy expertise with extensive experience in African and international contexts."
       },
       "regional": {
         "title": "Regional Knowledge",
-        "description": "In-depth understanding of African regional frameworks, challenges, and opportunities in ICT governance."
+        "description": "In-depth understanding of African national and regional frameworks, challenges, and opportunities in ICT and cybersecurity governance."
       },
       "evidenceBased": {
         "title": "Evidence-Based Approach",

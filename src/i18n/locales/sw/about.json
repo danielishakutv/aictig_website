@@ -3,6 +3,11 @@
   "mission": {
     "title": "Dhamira Yetu",
     "content": "Kuendeleza utawala wa usalama wa mtandao na tele-informatics kote Afrika kupitia utafiti, uchambuzi wa sera, ujenzi wa uwezo, na ushirikiano wa kikanda."
+    ,
+    "repository": {
+      "title": "Policy Creation",
+      "description": "Supporting the development and curation of policy documents, legislation, and implementation guidance to assist governments and institutions."
+    }
   },
   "vision": {
     "title": "Dira Yetu",

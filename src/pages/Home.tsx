@@ -36,10 +36,10 @@ export default function Home() {
       
       <main id="main-content">
         {/* Hero Section */}
-        <section className="bg-gradient-to-br from-primary-600 to-primary-800 text-white py-20">
+        <section className="bg-gradient-to-br from-secondary-500 to-secondary-800 text-white py-20">
           <div className="container-custom">
-            <div className="max-w-3xl">
-              <h1 className="text-4xl md:text-5xl font-bold mb-6">
+            <div className="max-w-4xl">
+              <h1 className="text-4xl md:text-5xl font-bold mb-6 md:whitespace-pre-line">
                 {t('hero.title')}
               </h1>
               <p className="text-xl text-primary-100 mb-8">

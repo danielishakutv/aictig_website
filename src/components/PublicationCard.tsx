@@ -40,6 +40,10 @@ export default function PublicationCard({ publication }: PublicationCardProps) {
         <p className="text-sm text-neutral-600 mb-2">
           {publication.authors.join(', ')} • {publication.year}
         </p>
+
+        <div className="text-xs text-neutral-500 italic mb-3">
+          Demo document — this is sample content provided for demonstration purposes only. It does not represent a real publication or official guidance and should not be cited or relied upon as factual, legal, or professional advice.
+        </div>
         
         <p className="text-sm text-neutral-700 line-clamp-3 mb-4">{publication.abstract}</p>
         

@@ -6,7 +6,7 @@
   },
   "about": {
     "title": "About the Institute",
-    "paragraph1": "The African Institute for Cybersecurity and Tele-Informatics Governance (AICTiG) is a research think tank and educational institution licensed to promote, conduct and disseminate cutting-edge research on policy, legal and regulatory issues affecting Cybersecurity and Information Communications Technologies (ICTs) within the African region.",
+    "paragraph1": "The African Institute for Cybersecurity and Tele-Informatics Governance (AICTiG) is an independent research think tank and educational institution licensed to promote, conduct and disseminate cutting-edge research on policy, legal and regulatory issues affecting Cybersecurity and Information Communications Technologies (ICTs) within the African region.",
     "paragraph2": "AICTiG adopts a multidisciplinary approach to produce policy-oriented research and its focus areas include the governance of artificial intelligence, cybersecurity, cybercrime, telecommunications, critical infrastructure protection, cryptocurrencies, data protection, digital rights, digital identity, digital trade, electronic commerce, taxation of digital services, ICT for development (ICT4D) and regional integration.",
     "paragraph3": "The Institute conducts training and education programs on the governance of ICTs and cybersecurity with the aim of building capacity in the African region, and renders consultancy services for national and international organizations, and private sector organizations.",
     "incorporation": "AICTiG is incorporated as a Company Limited by Guarantee by the Corporate Affairs Commission of the Federal Republic of Nigeria in 2025."
@@ -17,14 +17,14 @@
   },
   "mission": {
     "title": "Our Mission",
-    "intro": "AICTiG's mission encompasses multiple strategic objectives: Research Dissemination, Repository Creation, Capacity Building, and Publications",
+    "intro": "AICTiG's mission encompasses multiple strategic objectives such as promoting capacity building for the governance of cybersecurity and ICTs in Africa; and providing an African regional platform for the conduct and dissemination of research on emerging issues affecting the governance of cybersecurity and ICTs.",
     "research": {
       "title": "Research Dissemination",
       "description": "Conducting and disseminating high-quality, policy-oriented research on cybersecurity and ICT governance"
     },
     "repository": {
-      "title": "Repository Creation",
-      "description": "Building comprehensive databases of policy documents, legislation, and best practices"
+      "title": "Policy Creation",
+      "description": "Supporting the development and curation of policy documents, legislation, and implementation guidance to assist governments and institutions."
     },
     "capacity": {
       "title": "Capacity Building",

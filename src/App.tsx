@@ -17,6 +17,7 @@ const Gallery = lazy(() => import('./pages/Gallery'));
 const News = lazy(() => import('./pages/News'));
 const NewsDetail = lazy(() => import('./pages/NewsDetail'));
 const About = lazy(() => import('./pages/About'));
+const Expert = lazy(() => import('./pages/Expert'));
 const FocusAreas = lazy(() => import('./pages/FocusAreas'));
 const Consultancy = lazy(() => import('./pages/Consultancy'));
 const Contact = lazy(() => import('./pages/Contact'));
@@ -53,6 +54,7 @@ function AppRoutes() {
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/about" element={<About />} />
+            <Route path="/experts/:id" element={<Expert />} />
             <Route path="/focus-areas" element={<FocusAreas />} />
             <Route path="/focus-areas/:id" element={<PolicyDetail />} />
             <Route path="/consultancy" element={<Consultancy />} />

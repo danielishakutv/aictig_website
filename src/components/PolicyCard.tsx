@@ -29,6 +29,10 @@ export default function PolicyCard({ policy }: PolicyCardProps) {
             <p className="text-sm text-neutral-600 mt-1">
               {policy.country} • {policy.year}
             </p>
+
+            <div className="text-xs text-neutral-500 italic mt-2">
+              Demo document — this is sample content provided for demonstration purposes only. It does not represent a real policy or official document and should not be cited or relied upon as factual, legal, or professional advice.
+            </div>
           </div>
         </div>
       </div>

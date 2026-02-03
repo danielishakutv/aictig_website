@@ -166,6 +166,13 @@ export default function FocusAreas() {
       icon: GlobeAltIcon,
       color: 'secondary',
     },
+    {
+      id: 'ict4d',
+      title: t('focusAreas.ict4d.title'),
+      description: t('focusAreas.ict4d.description'),
+      icon: GlobeAltIcon,
+      color: 'secondary',
+    },
   ];
 
   const getColorClasses = (color: string) => {
