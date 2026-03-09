@@ -1,6 +1,5 @@
 import { Link } from 'react-router-dom';
-import { useTranslation } from 'react-i18next';
-import { ArrowDownTrayIcon } from '@heroicons/react/24/outline';
+import { ArrowDownTrayIcon, EyeIcon } from '@heroicons/react/24/outline';
 import Tag from './Tag';
 import CountryFlag from './CountryFlag';
 import { Policy } from '../types';
@@ -10,8 +9,6 @@ interface PolicyCardProps {
 }
 
 export default function PolicyCard({ policy }: PolicyCardProps) {
-  const { t } = useTranslation('repo');
-  
   return (
     <article className="card p-6 hover:shadow-xl transition-shadow">
       <div className="flex items-start justify-between mb-3">
@@ -29,10 +26,6 @@ export default function PolicyCard({ policy }: PolicyCardProps) {
             <p className="text-sm text-neutral-600 mt-1">
               {policy.country} • {policy.year}
             </p>
-
-            <div className="text-xs text-neutral-500 italic mt-2">
-              Demo document — this is sample content provided for demonstration purposes only. It does not represent a real policy or official document and should not be cited or relied upon as factual, legal, or professional advice.
-            </div>
           </div>
         </div>
       </div>
@@ -55,20 +48,29 @@ export default function PolicyCard({ policy }: PolicyCardProps) {
           <span>{policy.languages.join(', ').toUpperCase()}</span>
         </div>
         <div className="flex space-x-2">
-          <Link
-            to={`/repository/${policy.id}`}
-            className="text-sm text-primary-600 hover:text-primary-700 font-medium focus-ring rounded px-2 py-1"
-          >
-            {t('card.viewDetails')}
-          </Link>
-          <button
-            disabled
-            className="inline-flex items-center text-sm text-neutral-400 cursor-not-allowed px-2 py-1"
-            title="Download functionality coming soon"
-          >
-            <ArrowDownTrayIcon className="h-4 w-4 mr-1" />
-            PDF
-          </button>
+          {policy.fileUrl && (
+            <a
+              href={policy.fileUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center text-sm text-primary-600 hover:text-primary-700 font-medium focus-ring rounded px-2 py-1"
+              title="Preview document"
+            >
+              <EyeIcon className="h-4 w-4 mr-1" />
+              Preview
+            </a>
+          )}
+          {policy.fileUrl && (
+            <a
+              href={policy.fileUrl}
+              download
+              className="inline-flex items-center text-sm text-primary-600 hover:text-primary-700 font-medium px-2 py-1"
+              title="Download document"
+            >
+              <ArrowDownTrayIcon className="h-4 w-4 mr-1" />
+              PDF
+            </a>
+          )}
         </div>
       </div>
     </article>

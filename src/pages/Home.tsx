@@ -5,6 +5,7 @@ import Seo from '../components/Seo';
 import PolicyCard from '../components/PolicyCard';
 import PublicationCard from '../components/PublicationCard';
 import { SkeletonCard } from '../components/Skeleton';
+import { fetchAllDocuments } from '../utils/graphql';
 import { Policy, Publication } from '../types';
 
 export default function Home() {
@@ -14,25 +15,27 @@ export default function Home() {
   const [loading, setLoading] = useState(true);
   
   useEffect(() => {
-    // Load demo data
     Promise.all([
-      fetch('/data/policies.json').then((r) => r.json()),
+      fetchAllDocuments(),
       fetch('/data/publications.json').then((r) => r.json()),
     ])
       .then(([policiesData, pubsData]) => {
         setPolicies(policiesData.slice(0, 3));
         setPublications(pubsData.slice(0, 3));
-        setLoading(false);
       })
       .catch((error) => {
         console.error('Error loading data:', error);
-        setLoading(false);
-      });
+      })
+      .finally(() => setLoading(false));
   }, []);
   
   return (
     <>
-      <Seo title={t('common:navigation.home')} />
+      <Seo
+        title={t('common:navigation.home')}
+        description="African Institute for Cybersecurity & Tele-Informatics Governance - Advancing cybersecurity governance across Africa through research, policy analysis, and regional cooperation."
+        keywords={['cybersecurity', 'Africa', 'ICT governance', 'policy repository', 'digital transformation', 'data protection', 'AICTiG']}
+      />
       
       <main id="main-content">
         {/* Hero Section */}

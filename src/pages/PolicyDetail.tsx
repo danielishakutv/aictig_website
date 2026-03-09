@@ -5,6 +5,7 @@ import {
   ArrowDownTrayIcon,
   CalendarIcon,
   DocumentTextIcon,
+  EyeIcon,
   GlobeAltIcon,
   TagIcon,
 } from '@heroicons/react/24/outline';
@@ -14,6 +15,7 @@ import CountryFlag from '../components/CountryFlag';
 import Tag from '../components/Tag';
 import PolicyCard from '../components/PolicyCard';
 import { TextSkeleton } from '../components/Skeleton';
+import { fetchAllDocuments } from '../utils/graphql';
 import type { Policy } from '../types';
 
 export default function PolicyDetail() {
@@ -24,9 +26,8 @@ export default function PolicyDetail() {
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    fetch('/data/policies.json')
-      .then((r) => r.json())
-      .then((data: Policy[]) => {
+    fetchAllDocuments()
+      .then((data) => {
         const found = data.find((p) => p.id === id);
         setPolicy(found || null);
 
@@ -43,7 +44,7 @@ export default function PolicyDetail() {
           setRelatedPolicies(related);
         }
       })
-      .catch((err) => console.error('Failed to fetch policy:', err))
+      .catch((err) => console.error('Failed to fetch document:', err))
       .finally(() => setLoading(false));
   }, [id]);
 
@@ -80,8 +81,9 @@ export default function PolicyDetail() {
     <>
       <Seo
         title={policy.title}
-        description={policy.summary}
-        image={`/api/og-image?title=${encodeURIComponent(policy.title)}`}
+        description={policy.summary || `${policy.title} — ${policy.country} (${policy.year})`}
+        keywords={['policy', policy.country, ...policy.themes].filter(Boolean)}
+        type="article"
       />
       <main className="bg-neutral-50 min-h-screen py-16">
         <div className="container-custom">
@@ -159,16 +161,28 @@ export default function PolicyDetail() {
                   {t('repo:detail.metadata')}
                 </h2>
 
-                {/* Download button */}
-                <a
-                  href={policy.fileUrl}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="btn-primary w-full mb-6"
-                >
-                  <ArrowDownTrayIcon className="w-5 h-5" />
-                  {t('repo:detail.downloadPdf')}
-                </a>
+                {/* Preview & Download buttons */}
+                {policy.fileUrl && (
+                  <div className="space-y-3 mb-6">
+                    <a
+                      href={policy.fileUrl}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="btn-primary w-full inline-flex items-center justify-center gap-2"
+                    >
+                      <EyeIcon className="w-5 h-5" />
+                      Preview Document
+                    </a>
+                    <a
+                      href={policy.fileUrl}
+                      download
+                      className="w-full inline-flex items-center justify-center gap-2 rounded-lg border border-primary-600 px-4 py-2.5 text-sm font-semibold text-primary-600 transition hover:bg-primary-50"
+                    >
+                      <ArrowDownTrayIcon className="w-5 h-5" />
+                      {t('repo:detail.downloadPdf')}
+                    </a>
+                  </div>
+                )}
 
                 {/* Metadata */}
                 <dl className="space-y-4 text-sm">

@@ -60,11 +60,4 @@ export interface GalleryImage {
   country: string;
 }
 
-export interface FilterState {
-  query: string;
-  countries: string[];
-  themes: string[];
-  yearRange: [number, number];
-  type: string;
-  languages: string[];
-}
+

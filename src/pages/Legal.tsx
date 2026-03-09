@@ -29,7 +29,7 @@ export default function Legal() {
   
   return (
     <>
-      <Seo title={title} />
+      <Seo title={title} description={`${title} for the African Institute for Cybersecurity & Tele-Informatics Governance (AICTiG).`} />
       <main className="container-custom py-16">
         <div className="max-w-4xl mx-auto">
           {loading ? (

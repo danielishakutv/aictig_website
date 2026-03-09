@@ -32,7 +32,7 @@ export default function Contact() {
   
   return (
     <>
-      <Seo title={t('title')} />
+      <Seo title={t('title')} description="Get in touch with the African Institute for Cybersecurity & Tele-Informatics Governance. Contact us for research collaboration, consultancy, or partnership inquiries." />
       <main className="container-custom py-16">
         <div className="max-w-3xl mx-auto">
           <h1 className="text-4xl font-bold mb-4">{t('title')}</h1>

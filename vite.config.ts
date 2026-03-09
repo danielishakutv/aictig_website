@@ -10,6 +10,22 @@ export default defineConfig({
       '@': path.resolve(__dirname, './src'),
     },
   },
+  server: {
+    proxy: {
+      '/wp-graphql': {
+        target: 'https://be.aictig.org',
+        changeOrigin: true,
+        secure: true,
+        rewrite: (path) => path.replace(/^\/wp-graphql/, '/index.php?graphql'),
+      },
+      '/documents': {
+        target: 'https://be.aictig.org',
+        changeOrigin: true,
+        secure: true,
+        rewrite: (path) => path.replace(/^\/documents/, '/wp-content/uploads'),
+      },
+    },
+  },
   test: {
     globals: true,
     environment: 'jsdom',

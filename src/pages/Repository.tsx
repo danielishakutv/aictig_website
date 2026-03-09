@@ -7,15 +7,14 @@ import PolicyCard from '../components/PolicyCard';
 import Pagination from '../components/Pagination';
 import EmptyState from '../components/EmptyState';
 import { CardSkeleton } from '../components/Skeleton';
-import type { Policy, Country, Theme } from '../types';
+import { fetchAllDocuments } from '../utils/graphql';
+import type { Policy } from '../types';
 
 const ITEMS_PER_PAGE = 9;
 
 export default function Repository() {
   const { t } = useTranslation(['repo', 'common']);
   const [policies, setPolicies] = useState<Policy[]>([]);
-  const [countries, setCountries] = useState<Country[]>([]);
-  const [themes, setThemes] = useState<Theme[]>([]);
   const [loading, setLoading] = useState(true);
   const [searchQuery, setSearchQuery] = useState('');
   const [activeTab, setActiveTab] = useState<'all' | 'regional' | 'national'>('all');
@@ -34,19 +33,11 @@ export default function Repository() {
     [activeFilters]
   );
 
-  // Fetch data
+  // Fetch documents from WordPress GraphQL backend
   useEffect(() => {
-    Promise.all([
-      fetch('/data/policies.json').then((r) => r.json()),
-      fetch('/data/countries.json').then((r) => r.json()),
-      fetch('/data/themes.json').then((r) => r.json()),
-    ])
-      .then(([policiesData, countriesData, themesData]) => {
-        setPolicies(policiesData);
-        setCountries(countriesData);
-        setThemes(themesData);
-      })
-      .catch((err) => console.error('Failed to fetch data:', err))
+    fetchAllDocuments()
+      .then((docs) => setPolicies(docs))
+      .catch((err) => console.error('Failed to fetch documents:', err))
       .finally(() => setLoading(false));
   }, []);
 
@@ -105,6 +96,23 @@ export default function Repository() {
   const filterGroups = useMemo(() => {
     if (loading) return [];
 
+    // Build country options from the data itself
+    const countryMap = new Map<string, { name: string; count: number }>();
+    policies.forEach((p) => {
+      if (p.countryCode && p.country) {
+        const existing = countryMap.get(p.countryCode);
+        if (existing) existing.count++;
+        else countryMap.set(p.countryCode, { name: p.country, count: 1 });
+      }
+    });
+
+    // Build theme/sector options from the data
+    const themeMap = new Map<string, number>();
+    policies.forEach((p) => {
+      p.themes.forEach((theme) => themeMap.set(theme, (themeMap.get(theme) || 0) + 1));
+    });
+
+    // Years
     const years = Array.from(new Set(policies.map((p) => p.year)))
       .sort((a, b) => b - a)
       .map((year) => ({
@@ -113,34 +121,26 @@ export default function Repository() {
         count: policies.filter((p) => p.year === year).length,
       }));
 
-    const languagesSet = new Set<string>();
-    policies.forEach((p) => p.languages.forEach((lang) => languagesSet.add(lang)));
-    const languages = Array.from(languagesSet)
-      .sort()
-      .map((lang) => ({
-        label: lang.toUpperCase(),
-        value: lang,
-        count: policies.filter((p) => p.languages.includes(lang)).length,
-      }));
+    // Languages
+    const langMap = new Map<string, number>();
+    policies.forEach((p) => {
+      p.languages.forEach((lang) => langMap.set(lang, (langMap.get(lang) || 0) + 1));
+    });
 
     return [
       {
         id: 'country',
         label: t('repo:filters.country'),
-        options: countries.map((country) => ({
-          label: country.name,
-          value: country.iso2,
-          count: policies.filter((p) => p.countryCode === country.iso2).length,
-        })),
+        options: Array.from(countryMap.entries())
+          .sort(([, a], [, b]) => a.name.localeCompare(b.name))
+          .map(([code, { name, count }]) => ({ label: name, value: code, count })),
       },
       {
         id: 'sector',
         label: t('repo:filters.sector'),
-        options: themes.map((theme) => ({
-          label: theme.label,
-          value: theme.id,
-          count: policies.filter((p) => p.themes.includes(theme.id)).length,
-        })),
+        options: Array.from(themeMap.entries())
+          .sort(([a], [b]) => a.localeCompare(b))
+          .map(([theme, count]) => ({ label: theme, value: theme, count })),
       },
       {
         id: 'year',
@@ -150,10 +150,12 @@ export default function Repository() {
       {
         id: 'language',
         label: t('repo:filters.language'),
-        options: languages,
+        options: Array.from(langMap.entries())
+          .sort(([a], [b]) => a.localeCompare(b))
+          .map(([lang, count]) => ({ label: lang.toUpperCase(), value: lang, count })),
       },
     ];
-  }, [policies, countries, themes, loading, t]);
+  }, [policies, loading, t]);
 
   const handleFilterChange = (filterId: string, value: string) => {
     setActiveFilters((prev) => {

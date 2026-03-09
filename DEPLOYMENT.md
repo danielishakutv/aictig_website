@@ -1,462 +1,344 @@
-# AICTiG Website - VPS Deployment Guide
+# AICTiG Website — Deployment Guide
 
-## Server Setup for /home/aictig/public_html
-
-### Prerequisites
-- VPS with root/sudo access
-- Webmin installed
-- Domain `aictig.org` pointing to your server IP
-- Node.js 18+ installed
+**Stack:** Vite + React SPA → Contabo VPS → Apache (Virtualmin) → `/home/aictig/public_html`  
+**Backend:** WordPress + WPGraphQL at `be.aictig.org` (proxied, never exposed to browser)
 
 ---
 
-## Step-by-Step Deployment
+## Architecture Overview
 
-### 1. Prepare Server Directories
-
-SSH into your VPS or use Webmin's terminal:
-
-```bash
-# Create necessary directories
-sudo mkdir -p /home/aictig/public_html
-sudo mkdir -p /home/aictig/logs
-
-# Set proper ownership (replace 'aictig' with actual user if different)
-sudo chown -R aictig:aictig /home/aictig
-
-# Navigate to deployment directory
-cd /home/aictig/public_html
+```
+Browser → https://www.aictig.org
+                │
+           Apache (port 443)
+                │
+      ┌─────────┼─────────────────────────┐
+      │         │                         │
+  /wp-graphql   /documents/*        Everything else
+      │         │                         │
+  ProxyPass   ProxyPass            Serve static files
+  → be.aictig  → be.aictig         from dist/
+    .org         .org/wp-content
+    /index.php   /uploads/
+    ?graphql
 ```
 
-### 2. Install Node.js (if not already installed)
+The WordPress backend domain (`be.aictig.org`) is **never** exposed to the browser.  
+All requests go through your own domain via Apache reverse proxy.
+
+---
+
+## Prerequisites
+
+- Contabo VPS with Virtualmin/Webmin installed
+- Domain `aictig.org` / `www.aictig.org` DNS pointing to your VPS IP
+- SSH access (root or sudo user)
+- Node.js 18+ installed on the server
+- Git installed on the server
+
+---
+
+## 1. Server Preparation (one-time)
+
+### 1.1 Install Node.js (if not already installed)
 
 ```bash
-# Check current version
-node -v
-
-# If Node.js is not installed or version < 18:
 curl -fsSL https://deb.nodesource.com/setup_20.x | sudo -E bash -
 sudo apt-get install -y nodejs
-
-# Verify installation
-node -v
+node -v   # should be 20.x
 npm -v
 ```
 
-### 3. Clone Repository
+### 1.2 Enable required Apache modules
 
 ```bash
-cd /home/aictig/public_html
-
-# If directory is not empty, remove contents first:
-# rm -rf *
-
-# Clone the repository
-git clone https://github.com/danielishakutv/aictig_website.git .
-
-# Or if already cloned, pull latest changes:
-git pull origin main
+sudo a2enmod proxy proxy_http rewrite headers ssl
+sudo systemctl restart apache2
 ```
 
-### 4. Install Dependencies
+### 1.3 Create the virtual server in Virtualmin
 
-```bash
-# Install project dependencies
-npm install
-
-# This will install all packages from package.json
-# Should take 1-2 minutes
-```
-
-### 5. Build the Production Bundle
-
-```bash
-# Build optimized production files
-npm run build
-
-# This creates the dist/ folder with optimized assets
-# Build time: ~5-10 seconds
-```
-
-### 6. Install PM2 Process Manager
-
-```bash
-# Install PM2 globally
-sudo npm install -g pm2
-
-# Verify installation
-pm2 -v
-```
-
-### 7. Start Application with PM2
-
-```bash
-# Copy ecosystem config (should already be in repo)
-# The ecosystem.config.js file is already in the root
-
-# Start the application
-pm2 start ecosystem.config.js
-
-# Check status
-pm2 status
-
-# View logs
-pm2 logs aictig-website
-
-# Monitor in real-time
-pm2 monit
-```
-
-### 8. Configure PM2 to Auto-Start on Server Reboot
-
-```bash
-# Save current PM2 process list
-pm2 save
-
-# Generate startup script (run the command PM2 outputs)
-pm2 startup
-
-# Example output will be something like:
-# sudo env PATH=$PATH:/usr/bin pm2 startup systemd -u aictig --hp /home/aictig
-# Copy and run that command
-```
-
-### 9. Configure Web Server (Choose Apache OR Nginx)
-
-#### Option A: Apache Configuration (if using Apache)
-
-1. **Via Webmin:**
-   - Navigate to: **Servers → Apache Webserver**
-   - Click **Create virtual host**
-   - Set:
-     - **Document Root**: `/home/aictig/public_html`
-     - **Server Name**: `aictig.org`
-     - **Server Aliases**: `www.aictig.org`
-   
-2. **Enable required modules:**
-   ```bash
-   sudo a2enmod proxy
-   sudo a2enmod proxy_http
-   sudo a2enmod rewrite
-   sudo a2enmod headers
-   sudo systemctl restart apache2
-   ```
-
-3. **Copy .htaccess to document root:**
-   ```bash
-   cp /home/aictig/public_html/.htaccess /home/aictig/public_html/.htaccess
-   ```
-
-4. **Allow .htaccess overrides** in Apache virtual host:
-   - In Webmin: Edit the virtual host
-   - Add under Directory section:
-     ```apache
-     <Directory /home/aictig/public_html>
-         AllowOverride All
-         Require all granted
-     </Directory>
-     ```
-
-#### Option B: Nginx Configuration (if using Nginx)
-
-1. **Create site configuration:**
-   ```bash
-   sudo cp /home/aictig/public_html/nginx-aictig.conf /etc/nginx/sites-available/aictig.org
-   ```
-
-2. **Enable the site:**
-   ```bash
-   sudo ln -s /etc/nginx/sites-available/aictig.org /etc/nginx/sites-enabled/
-   ```
-
-3. **Test configuration:**
-   ```bash
-   sudo nginx -t
-   ```
-
-4. **Reload Nginx:**
-   ```bash
-   sudo systemctl reload nginx
-   ```
-
-### 10. Install SSL Certificate (Let's Encrypt)
-
-#### Via Certbot (Recommended):
-
-```bash
-# Install Certbot
-sudo apt-get update
-sudo apt-get install certbot
-
-# For Apache:
-sudo apt-get install python3-certbot-apache
-sudo certbot --apache -d aictig.org -d www.aictig.org
-
-# For Nginx:
-sudo apt-get install python3-certbot-nginx
-sudo certbot --nginx -d aictig.org -d www.aictig.org
-
-# Follow the prompts to:
-# 1. Enter email address
-# 2. Agree to terms
-# 3. Choose to redirect HTTP to HTTPS (recommended: Yes)
-```
-
-#### Via Webmin Let's Encrypt Module:
-
-1. **Webmin → Un-used Modules → Let's Encrypt**
-2. Click **Request Certificate**
-3. Enter domains: `aictig.org, www.aictig.org`
-4. Choose web server (Apache/Nginx)
-5. Click **Request**
-
-### 11. Test the Deployment
-
-```bash
-# Check if app is running on port 3001
-curl http://localhost:3001
-
-# Check if domain resolves
-curl https://aictig.org
-
-# View PM2 status
-pm2 status
-
-# View logs
-pm2 logs aictig-website --lines 50
-```
-
-### 12. Verify Other Sites Still Work
-
-```bash
-# List all virtual hosts
-# Apache:
-apache2ctl -S
-
-# Nginx:
-sudo nginx -T | grep server_name
-```
-
-Visit your other websites to ensure they're still functioning.
+1. Log in to **Virtualmin** (`https://your-ip:10000`)
+2. **Create Virtual Server** (or select existing one for `aictig.org`)
+   - Domain: `aictig.org`
+   - Home directory: `/home/aictig`
+   - Document root will be: `/home/aictig/public_html`
 
 ---
 
-## Maintenance Commands
+## 2. Push Code to GitHub (from your local machine)
 
-### Update the Website
+On your local Windows machine:
+
+```powershell
+cd C:\Users\USER\Desktop\AICTIG\Website
+
+# Initialize git if not done already
+git init
+git remote add origin https://github.com/YOUR_USERNAME/aictig-website.git
+
+# Add and commit
+git add .
+git commit -m "Production deploy"
+
+# Push
+git push -u origin main
+```
+
+---
+
+## 3. Clone & Build on the Server
+
+SSH into your VPS:
 
 ```bash
+# Clone the repo into public_html
+cd /home/aictig
+rm -rf public_html   # remove default Virtualmin placeholder
+git clone https://github.com/YOUR_USERNAME/aictig-website.git public_html
+
+# Install dependencies and build
 cd /home/aictig/public_html
-
-# Pull latest changes
-git pull origin main
-
-# Install any new dependencies
 npm install
-
-# Rebuild
 npm run build
-
-# Restart PM2
-pm2 restart aictig-website
-
-# Or reload without downtime
-pm2 reload aictig-website
 ```
 
-### View Logs
+The `npm run build` command produces a `dist/` folder containing the optimized static SPA.
+
+---
+
+## 4. Apache Virtual Host Configuration
+
+This is the most important step. Go to **Virtualmin → Select `aictig.org` → Server Configuration → Edit Directives** and replace the content with:
+
+```apache
+<VirtualHost *:80>
+    ServerName aictig.org
+    ServerAlias www.aictig.org
+
+    # Redirect all HTTP to HTTPS
+    RewriteEngine On
+    RewriteCond %{HTTPS} off
+    RewriteRule ^ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
+</VirtualHost>
+
+<VirtualHost *:443>
+    ServerName aictig.org
+    ServerAlias www.aictig.org
+
+    # ─── Document Root (serves the built SPA) ───────────────
+    DocumentRoot /home/aictig/public_html/dist
+
+    <Directory /home/aictig/public_html/dist>
+        Options -Indexes +FollowSymLinks
+        AllowOverride None
+        Require all granted
+
+        # SPA routing: serve index.html for all non-file routes
+        RewriteEngine On
+        RewriteBase /
+        RewriteRule ^index\.html$ - [L]
+        RewriteCond %{REQUEST_FILENAME} !-f
+        RewriteCond %{REQUEST_FILENAME} !-d
+        RewriteRule . /index.html [L]
+    </Directory>
+
+    # ─── Reverse Proxy: GraphQL API ─────────────────────────
+    # Browser requests /wp-graphql → proxied to WordPress backend
+    ProxyPass /wp-graphql https://be.aictig.org/index.php?graphql
+    ProxyPassReverse /wp-graphql https://be.aictig.org/index.php?graphql
+
+    # ─── Reverse Proxy: Document files ──────────────────────
+    # Browser requests /documents/... → proxied to WP uploads
+    ProxyPass /documents/ https://be.aictig.org/wp-content/uploads/
+    ProxyPassReverse /documents/ https://be.aictig.org/wp-content/uploads/
+
+    # ─── Security Headers ───────────────────────────────────
+    Header always set X-Content-Type-Options "nosniff"
+    Header always set X-Frame-Options "SAMEORIGIN"
+    Header always set Referrer-Policy "strict-origin-when-cross-origin"
+    Header always set X-XSS-Protection "1; mode=block"
+
+    # ─── Caching for static assets ──────────────────────────
+    <LocationMatch "\.(js|css|png|jpg|jpeg|gif|ico|svg|woff2?|ttf|eot)$">
+        Header set Cache-Control "public, max-age=31536000, immutable"
+    </LocationMatch>
+
+    # ─── Gzip compression ───────────────────────────────────
+    <IfModule mod_deflate.c>
+        AddOutputFilterByType DEFLATE text/html text/plain text/css
+        AddOutputFilterByType DEFLATE application/javascript application/json
+        AddOutputFilterByType DEFLATE image/svg+xml
+    </IfModule>
+
+    # ─── SSL (Let's Encrypt — managed by Virtualmin) ────────
+    SSLEngine on
+    SSLCertificateFile /home/aictig/ssl.cert
+    SSLCertificateKeyFile /home/aictig/ssl.key
+    SSLCertificateChainFile /home/aictig/ssl.ca
+
+    # ─── Logging ────────────────────────────────────────────
+    ErrorLog /home/aictig/logs/error.log
+    CustomLog /home/aictig/logs/access.log combined
+</VirtualHost>
+```
+
+> **Note on SSL paths:** The paths above (`/home/aictig/ssl.cert`, etc.) are defaults for Virtualmin-managed SSL. After requesting a Let's Encrypt certificate (Step 5), Virtualmin will set the correct paths automatically. You can verify them under **Server Configuration → Manage SSL Certificate**.
+
+---
+
+## 5. SSL Certificate (Let's Encrypt via Virtualmin)
+
+1. In Virtualmin, select your domain `aictig.org`
+2. Go to **Server Configuration → Manage SSL Certificate → Let's Encrypt**
+3. Enter domain names: `aictig.org` and `www.aictig.org`
+4. Click **Request Certificate**
+5. Enable **Auto-renewal** (checkbox)
+
+Virtualmin will automatically update the SSL paths in your Apache config.
+
+---
+
+## 6. Verify & Restart
 
 ```bash
-# Real-time logs
-pm2 logs aictig-website
+# Test Apache config for syntax errors
+sudo apachectl configtest
 
-# Last 100 lines
-pm2 logs aictig-website --lines 100
+# Restart Apache
+sudo systemctl restart apache2
 
-# Error logs only
-pm2 logs aictig-website --err
-
-# Clear logs
-pm2 flush
+# Verify the site
+curl -I https://www.aictig.org       # should return 200
+curl -s https://www.aictig.org/wp-graphql -X POST \
+  -H "Content-Type: application/json" \
+  -d '{"query":"{ mediaItems(first:1) { nodes { title } } }"}' | head -c 200
+# should return GraphQL JSON data
 ```
 
-### Monitor Performance
+---
+
+## 7. Update / Redeploy
+
+When you push new code to GitHub, deploy with a single command:
 
 ```bash
-# Real-time monitoring
-pm2 monit
-
-# Detailed info
-pm2 info aictig-website
-
-# Resource usage
-pm2 list
+cd /home/aictig/public_html && git pull && npm install && npm run build
 ```
 
-### Stop/Start/Restart
+No restart needed — Apache serves the `dist/` folder directly (static files).
+
+### Quick deploy script (optional)
+
+Create `/home/aictig/deploy.sh`:
 
 ```bash
-# Stop
-pm2 stop aictig-website
-
-# Start
-pm2 start aictig-website
-
-# Restart
-pm2 restart aictig-website
-
-# Reload (0-downtime)
-pm2 reload aictig-website
-
-# Delete from PM2
-pm2 delete aictig-website
+#!/bin/bash
+set -e
+cd /home/aictig/public_html
+echo "Pulling latest code..."
+git pull origin main
+echo "Installing dependencies..."
+npm install --production=false
+echo "Building..."
+npm run build
+echo "✓ Deployed successfully at $(date)"
 ```
+
+Make it executable:
+
+```bash
+chmod +x /home/aictig/deploy.sh
+```
+
+Run it anytime: `bash /home/aictig/deploy.sh`
+
+---
+
+## Proxy Summary
+
+| Browser URL | Proxied To | Purpose |
+|---|---|---|
+| `www.aictig.org/wp-graphql` | `be.aictig.org/index.php?graphql` | GraphQL API queries |
+| `www.aictig.org/documents/*` | `be.aictig.org/wp-content/uploads/*` | PDF preview & download |
+| `www.aictig.org/*` (all other) | Served from `dist/` | React SPA |
+
+The backend domain `be.aictig.org` is **never visible** in the browser — not in the address bar, not in network requests, not in page source.
 
 ---
 
 ## Troubleshooting
 
-### Port 3001 Already in Use
+### Site shows default Virtualmin page
+
+Apache is serving from `/home/aictig/public_html` instead of `/home/aictig/public_html/dist`.  
+Verify `DocumentRoot` in the VirtualHost config points to `.../dist`.
+
+### 404 on page refresh (e.g. /repository/123)
+
+The SPA rewrite rule is not active. Ensure `mod_rewrite` is enabled:
 
 ```bash
-# Find process using port 3001
-sudo lsof -i :3001
-
-# Kill the process
-sudo kill -9 <PID>
-
-# Restart PM2
-pm2 restart aictig-website
+sudo a2enmod rewrite && sudo systemctl restart apache2
 ```
 
-### PM2 App Crashes
+### GraphQL returns 502 or 503
+
+Apache can't reach the backend. Check:
 
 ```bash
-# View error logs
-pm2 logs aictig-website --err --lines 50
-
-# Check app status
-pm2 info aictig-website
-
-# Restart with fresh logs
-pm2 delete aictig-website
-pm2 start ecosystem.config.js
+# Test from the server directly
+curl -s https://be.aictig.org/index.php?graphql -X POST \
+  -H "Content-Type: application/json" \
+  -d '{"query":"{ generalSettings { title } }"}'
 ```
 
-### SSL Certificate Issues
+If this fails, the WordPress backend may be down or blocking the VPS IP.
+
+### Documents not loading (PDF preview/download)
 
 ```bash
-# Renew certificate manually
-sudo certbot renew
+# Test the proxy route
+curl -I https://www.aictig.org/documents/
+# Should return a response (even if 403 for directory listing)
 
-# Test renewal
-sudo certbot renew --dry-run
-
-# Check certificate expiry
-sudo certbot certificates
+# Test from server directly
+curl -I https://be.aictig.org/wp-content/uploads/
 ```
 
-### Site Not Loading
+### SSL certificate errors
+
+In Virtualmin: **Server Configuration → Manage SSL Certificate** → verify the cert is valid.  
+Re-request if expired: **Let's Encrypt → Request Certificate**.
+
+### Check Apache error logs
 
 ```bash
-# Check if Node.js app is running
-curl http://localhost:3001
-
-# Check web server status
-# Apache:
-sudo systemctl status apache2
-
-# Nginx:
-sudo systemctl status nginx
-
-# Check web server error logs
-# Apache:
+sudo tail -f /home/aictig/logs/error.log
+# or
 sudo tail -f /var/log/apache2/error.log
-
-# Nginx:
-sudo tail -f /var/log/nginx/error.log
 ```
 
 ---
 
-## Firewall Configuration
+## Firewall
 
-Ensure ports are open:
+Ensure ports 80 and 443 are open:
 
 ```bash
-# Check firewall status
-sudo ufw status
-
-# Allow HTTP and HTTPS
 sudo ufw allow 80/tcp
 sudo ufw allow 443/tcp
-
-# Reload firewall
 sudo ufw reload
-```
-
----
-
-## Performance Optimization
-
-### Enable Caching (Optional)
-
-Add to Nginx config:
-```nginx
-location ~* \.(js|css|png|jpg|jpeg|gif|ico|svg)$ {
-    expires 1y;
-    add_header Cache-Control "public, immutable";
-}
-```
-
-### Enable HTTP/2 (Already in nginx config)
-
-Verify HTTP/2 is working:
-```bash
-curl -I --http2 https://aictig.org
+sudo ufw status
 ```
 
 ---
 
 ## Security Checklist
 
-- ✅ HTTPS enabled with valid SSL certificate
-- ✅ HTTP redirects to HTTPS
-- ✅ Firewall configured (ports 80, 443 open)
-- ✅ Security headers configured (X-Frame-Options, etc.)
-- ✅ Node.js app runs as non-root user
-- ✅ PM2 configured for auto-restart
-- ✅ Regular backups of /home/aictig directory
-
----
-
-## Quick Reference
-
-| Task | Command |
-|------|---------|
-| Check app status | `pm2 status` |
-| View logs | `pm2 logs aictig-website` |
-| Restart app | `pm2 restart aictig-website` |
-| Update code | `cd /home/aictig/public_html && git pull && npm install && npm run build && pm2 reload aictig-website` |
-| View website | `https://aictig.org` |
-| Test local app | `curl http://localhost:3001` |
-
----
-
-## Support
-
-If you encounter issues:
-
-1. Check PM2 logs: `pm2 logs aictig-website`
-2. Check web server logs (Apache/Nginx error logs)
-3. Verify domain DNS points to correct IP
-4. Ensure port 3001 is not blocked by firewall
-5. Test that other sites are still working
-
-For major issues, you can always:
-```bash
-# Stop the PM2 app
-pm2 stop aictig-website
-
-# This won't affect other sites on your server
-```
+- [x] HTTPS enforced (HTTP → HTTPS redirect)
+- [x] Security headers (X-Frame-Options, X-Content-Type-Options, etc.)
+- [x] Backend domain hidden behind reverse proxy
+- [x] No server-side process to manage (pure static files)
+- [x] WordPress admin only accessible on `be.aictig.org` (not proxied)
+- [x] Firewall configured (only 80/443 open)

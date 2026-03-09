@@ -2,7 +2,7 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/logo-aictig.png" />
+    <link rel="icon" type="image/png" href="/logo-aictig.png" />
     <link rel="manifest" href="/manifest.json" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="theme-color" content="#0A5BD3" />
@@ -20,12 +20,41 @@
     <meta property="og:description" content="Advancing cybersecurity governance across Africa through research, policy analysis, and regional cooperation." />
     <meta property="og:image" content="https://www.aictig.org/og-image.jpg" />
     
-    <!-- Twitter -->
-    <meta property="twitter:card" content="summary_large_image" />
-    <meta property="twitter:url" content="https://www.aictig.org/" />
-    <meta property="twitter:title" content="AICTiG - African Institute for Cybersecurity & Tele-Informatics Governance" />
-    <meta property="twitter:description" content="Advancing cybersecurity governance across Africa through research and policy analysis." />
-    <meta property="twitter:image" content="https://www.aictig.org/og-image.jpg" />
+    <!-- Canonical -->
+    <link rel="canonical" href="https://www.aictig.org/" />
+
+    <!-- Twitter (uses name= per spec) -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="AICTiG - African Institute for Cybersecurity & Tele-Informatics Governance" />
+    <meta name="twitter:description" content="Advancing cybersecurity governance across Africa through research and policy analysis." />
+    <meta name="twitter:image" content="https://www.aictig.org/og-image.jpg" />
+
+    <!-- JSON-LD: Organization -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      "name": "AICTiG",
+      "alternateName": "African Institute for Cybersecurity & Tele-Informatics Governance",
+      "url": "https://www.aictig.org",
+      "logo": "https://www.aictig.org/logo-aictig.png",
+      "description": "Advancing cybersecurity governance across Africa through research, policy analysis, and regional cooperation.",
+      "foundingDate": "2020",
+      "areaServed": "Africa",
+      "knowsAbout": ["Cybersecurity", "Tele-Informatics Governance", "Digital Policy", "ICT Regulation"]
+    }
+    </script>
+
+    <!-- JSON-LD: WebSite -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebSite",
+      "name": "AICTiG - African Institute for Cybersecurity & Tele-Informatics Governance",
+      "url": "https://www.aictig.org",
+      "inLanguage": ["en", "ar", "sw", "fr", "ru", "zh", "pt"]
+    }
+    </script>
   </head>
   <body>
     <div id="root"></div>
