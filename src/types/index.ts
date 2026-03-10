@@ -18,10 +18,12 @@ export interface Policy {
 export interface Publication {
   id: string;
   title: string;
+  slug: string;
   authors: string[];
   year: number;
   type: string;
   abstract: string;
+  content: string;
   fileUrl: string;
   cover: string;
   tags: string[];

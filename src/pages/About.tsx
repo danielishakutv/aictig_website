@@ -1,5 +1,5 @@
 import { useTranslation } from 'react-i18next';
-import { Link } from 'react-router-dom';
+// import { Link } from 'react-router-dom'; // Hidden until team thumbnails are restored
 import {
   AcademicCapIcon,
   GlobeAltIcon,
@@ -36,6 +36,7 @@ export default function About() {
     },
   ];
 
+  /* Team members data - hidden until proper team info is available
   const teamMembers = [
     {
       id: 1,
@@ -74,6 +75,7 @@ export default function About() {
       bio: 'Manages publications and knowledge dissemination across the continent.',
     },
   ];
+  */
 
   return (
     <>
@@ -102,9 +104,6 @@ export default function About() {
                 {t('about:about.title')}
               </h2>
               <div className="prose prose-lg max-w-none text-neutral-700 space-y-4">
-                <p className="leading-relaxed">
-                  {t('about:about.paragraph1')}
-                </p>
                 <p className="leading-relaxed">
                   {t('about:about.paragraph2')}
                 </p>
@@ -178,9 +177,12 @@ export default function About() {
             <h2 className="text-3xl font-bold text-neutral-900 mb-4 text-center">
               {t('about:team.title')}
             </h2>
-            <p className="text-lg text-neutral-600 text-center max-w-2xl mx-auto mb-12">
-              {t('about:team.subtitle')}
-            </p>
+            <div className="bg-white rounded-lg shadow-md p-8 md:p-12 max-w-3xl mx-auto text-center">
+              <p className="text-lg text-neutral-700 leading-relaxed">
+                Our team comprises seasoned professionals and experts from diverse industries including cybersecurity, telecommunications, law, public policy, academia, and technology. With deep expertise spanning research, regulatory affairs, capacity building, and digital governance, our multidisciplinary team is committed to advancing cybersecurity and ICT governance across Africa.
+              </p>
+            </div>
+            {/* Team member thumbnails hidden until proper team info is available
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               {teamMembers.map((member) => {
                 const initials = member.name
@@ -215,6 +217,7 @@ export default function About() {
                 );
               })}
             </div>
+            */}
           </div>
         </section>
       </main>

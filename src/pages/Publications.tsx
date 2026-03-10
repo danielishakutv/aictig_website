@@ -6,6 +6,7 @@ import PublicationCard from '../components/PublicationCard';
 import Pagination from '../components/Pagination';
 import EmptyState from '../components/EmptyState';
 import { CardSkeleton } from '../components/Skeleton';
+import { fetchPublications } from '../utils/graphql';
 import type { Publication } from '../types';
 
 const ITEMS_PER_PAGE = 12;
@@ -19,10 +20,9 @@ export default function Publications() {
   const [yearFilter, setYearFilter] = useState<string>('all');
   const [currentPage, setCurrentPage] = useState(1);
 
-  // Fetch publications
+  // Fetch publications from WordPress
   useEffect(() => {
-    fetch('/data/publications.json')
-      .then((r) => r.json())
+    fetchPublications()
       .then((data) => setPublications(data))
       .catch((err) => console.error('Failed to fetch publications:', err))
       .finally(() => setLoading(false));

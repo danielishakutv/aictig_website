@@ -37,7 +37,7 @@ export default function Home() {
         keywords={['cybersecurity', 'Africa', 'ICT governance', 'policy repository', 'digital transformation', 'data protection', 'AICTiG']}
       />
       
-      <main id="main-content">
+      <main>
         {/* Hero Section */}
         <section className="bg-gradient-to-br from-secondary-500 to-secondary-800 text-white py-20">
           <div className="container-custom">

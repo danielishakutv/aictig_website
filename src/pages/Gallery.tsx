@@ -92,9 +92,9 @@ export default function Gallery() {
                     <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity" />
                   </div>
                   <div className="p-4">
-                    <h3 className="font-semibold text-neutral-900 mb-2 line-clamp-2">
+                    <h2 className="font-semibold text-neutral-900 mb-2 line-clamp-2">
                       {image.title}
-                    </h3>
+                    </h2>
                     {image.caption && (
                       <p className="text-sm text-neutral-600 mb-3 line-clamp-2">
                         {image.caption}

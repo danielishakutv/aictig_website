@@ -7,12 +7,14 @@ import Footer from './components/Footer';
 import Toast from './components/Toast';
 import Home from './pages/Home';
 import { trackPageView } from './utils/analytics';
+import ErrorBoundary from './components/ErrorBoundary';
 
 // Lazy load pages for better performance
 import { lazy, Suspense } from 'react';
 const Repository = lazy(() => import('./pages/Repository'));
 const PolicyDetail = lazy(() => import('./pages/PolicyDetail'));
 const Publications = lazy(() => import('./pages/Publications'));
+const PublicationDetail = lazy(() => import('./pages/PublicationDetail'));
 const Gallery = lazy(() => import('./pages/Gallery'));
 const News = lazy(() => import('./pages/News'));
 const NewsDetail = lazy(() => import('./pages/NewsDetail'));
@@ -49,19 +51,20 @@ function AppRoutes() {
   return (
     <div className="flex flex-col min-h-screen">
       <Header />
-      <div className="flex-grow">
+      <div id="main-content" className="flex-grow">
+        <ErrorBoundary>
         <Suspense fallback={<LoadingFallback />}>
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/about" element={<About />} />
             <Route path="/experts/:id" element={<Expert />} />
             <Route path="/focus-areas" element={<FocusAreas />} />
-            <Route path="/focus-areas/:id" element={<PolicyDetail />} />
+            <Route path="/repository/:id" element={<PolicyDetail />} />
             <Route path="/consultancy" element={<Consultancy />} />
             <Route path="/repository" element={<Repository />} />
             <Route path="/repository/:id" element={<PolicyDetail />} />
             <Route path="/publications" element={<Publications />} />
-            <Route path="/publications/:id" element={<PolicyDetail />} />
+            <Route path="/publications/:slug" element={<PublicationDetail />} />
             <Route path="/gallery" element={<Gallery />} />
             <Route path="/news" element={<News />} />
             <Route path="/news/:slug" element={<NewsDetail />} />
@@ -70,6 +73,7 @@ function AppRoutes() {
             <Route path="*" element={<NotFound />} />
           </Routes>
         </Suspense>
+        </ErrorBoundary>
       </div>
       <Footer />
       <Toast />

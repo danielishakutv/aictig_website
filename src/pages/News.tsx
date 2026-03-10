@@ -9,6 +9,7 @@ import Tag from '../components/Tag';
 import Pagination from '../components/Pagination';
 import EmptyState from '../components/EmptyState';
 import { CardSkeleton } from '../components/Skeleton';
+import { fetchNewsArticles } from '../utils/graphql';
 import type { NewsArticle } from '../types';
 
 dayjs.extend(relativeTime);
@@ -21,17 +22,10 @@ export default function News() {
   const [loading, setLoading] = useState(true);
   const [currentPage, setCurrentPage] = useState(1);
 
+  // Fetch news from WordPress (published posts in "news" category, sorted by date)
   useEffect(() => {
-    fetch('/data/news.json')
-      .then((r) => r.json())
-      .then((data) => {
-        // Sort by date descending
-        const sorted = data.sort(
-          (a: NewsArticle, b: NewsArticle) =>
-            new Date(b.date).getTime() - new Date(a.date).getTime()
-        );
-        setArticles(sorted);
-      })
+    fetchNewsArticles()
+      .then((data) => setArticles(data))
       .catch((err) => console.error('Failed to fetch news:', err))
       .finally(() => setLoading(false));
   }, []);

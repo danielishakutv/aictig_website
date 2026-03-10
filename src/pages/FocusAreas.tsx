@@ -233,15 +233,15 @@ export default function FocusAreas() {
                 return (
                   <Link
                     key={area.id}
-                    to={`/focus-areas/${area.id}`}
+                    to={`/repository?theme=${encodeURIComponent(area.title)}`}
                     className={`bg-white rounded-lg shadow-md p-6 border-2 ${colors.border} ${colors.hover} transition-all hover:shadow-lg group`}
                   >
                     <div className={`w-12 h-12 ${colors.bg} rounded-lg flex items-center justify-center mb-4 group-hover:scale-110 transition-transform`}>
                       <area.icon className={`w-6 h-6 ${colors.icon}`} />
                     </div>
-                    <h3 className="text-lg font-semibold text-neutral-900 mb-2 group-hover:text-primary-600 transition-colors">
+                    <h2 className="text-lg font-semibold text-neutral-900 mb-2 group-hover:text-primary-600 transition-colors">
                       {area.title}
-                    </h3>
+                    </h2>
                     <p className="text-neutral-600 text-sm leading-relaxed">
                       {area.description}
                     </p>

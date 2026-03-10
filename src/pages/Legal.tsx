@@ -7,8 +7,17 @@ export default function Legal() {
   const { page } = useParams<{ page: string }>();
   const [content, setContent] = useState('');
   const [loading, setLoading] = useState(true);
+
+  const validPages = ['privacy', 'terms'];
+  const isValidPage = page && validPages.includes(page);
   
   useEffect(() => {
+    if (!isValidPage) {
+      setContent('# Not Found\n\nThe page you requested does not exist.');
+      setLoading(false);
+      return;
+    }
+
     const loadContent = async () => {
       try {
         const response = await fetch(`/content/${page}.md`);
@@ -23,7 +32,7 @@ export default function Legal() {
     };
     
     loadContent();
-  }, [page]);
+  }, [page, isValidPage]);
   
   const title = page === 'privacy' ? 'Privacy Policy' : 'Terms of Service';
   

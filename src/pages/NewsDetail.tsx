@@ -12,6 +12,7 @@ import Breadcrumbs from '../components/Breadcrumbs';
 import Tag from '../components/Tag';
 import { useToast } from '../context/UiContext';
 import { TextSkeleton } from '../components/Skeleton';
+import { fetchNewsArticleBySlug, fetchNewsArticles } from '../utils/graphql';
 import type { NewsArticle } from '../types';
 
 export default function NewsDetail() {
@@ -23,15 +24,19 @@ export default function NewsDetail() {
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    fetch('/data/news.json')
-      .then((r) => r.json())
-      .then((data: NewsArticle[]) => {
-        const found = data.find((a) => a.slug === slug);
-        setArticle(found || null);
+    if (!slug) return;
+
+    // Fetch the single article and related articles in parallel
+    Promise.all([
+      fetchNewsArticleBySlug(slug),
+      fetchNewsArticles(),
+    ])
+      .then(([found, allArticles]) => {
+        setArticle(found);
 
         // Find related articles by tags
         if (found) {
-          const related = data
+          const related = allArticles
             .filter(
               (a) =>
                 a.slug !== found.slug &&

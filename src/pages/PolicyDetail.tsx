@@ -15,7 +15,7 @@ import CountryFlag from '../components/CountryFlag';
 import Tag from '../components/Tag';
 import PolicyCard from '../components/PolicyCard';
 import { TextSkeleton } from '../components/Skeleton';
-import { fetchAllDocuments } from '../utils/graphql';
+import { fetchDocumentById, fetchAllDocuments } from '../utils/graphql';
 import type { Policy } from '../types';
 
 export default function PolicyDetail() {
@@ -26,22 +26,23 @@ export default function PolicyDetail() {
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    fetchAllDocuments()
-      .then((data) => {
-        const found = data.find((p) => p.id === id);
-        setPolicy(found || null);
-
-        // Find related policies (same country or themes)
+    if (!id) return;
+    fetchDocumentById(id)
+      .then((found) => {
+        setPolicy(found);
         if (found) {
-          const related = data
-            .filter(
-              (p) =>
-                p.id !== found.id &&
-                (p.countryCode === found.countryCode ||
-                  p.themes.some((theme) => found.themes.includes(theme)))
-            )
-            .slice(0, 3);
-          setRelatedPolicies(related);
+          // Fetch related policies by same country or themes
+          fetchAllDocuments().then((data) => {
+            const related = data
+              .filter(
+                (p) =>
+                  p.id !== found.id &&
+                  (p.countryCode === found.countryCode ||
+                    p.themes.some((theme) => found.themes.includes(theme)))
+              )
+              .slice(0, 3);
+            setRelatedPolicies(related);
+          });
         }
       })
       .catch((err) => console.error('Failed to fetch document:', err))
