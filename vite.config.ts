@@ -26,6 +26,9 @@ export default defineConfig({
       },
     },
   },
+  preview: {
+    allowedHosts: ['aictig.org', 'www.aictig.org'],
+  },
   test: {
     globals: true,
     environment: 'jsdom',
