@@ -17,7 +17,6 @@ export default function Repository() {
   const [policies, setPolicies] = useState<Policy[]>([]);
   const [loading, setLoading] = useState(true);
   const [searchQuery, setSearchQuery] = useState('');
-  const activeTab = 'all';
   const [activeFilters, setActiveFilters] = useState<Record<string, string[]>>({
     country: [],
     sector: [],
@@ -44,12 +43,6 @@ export default function Repository() {
   // Filter policies
   const filteredPolicies = useMemo(() => {
     let filtered = policies;
-
-    if (activeTab === 'regional') {
-      filtered = filtered.filter((policy) => policy.type === 'regional' || policy.organization);
-    } else if (activeTab === 'national') {
-      filtered = filtered.filter((policy) => policy.type === 'national' || !policy.organization);
-    }
 
     if (searchQuery) {
       const query = searchQuery.toLowerCase();
@@ -85,7 +78,7 @@ export default function Repository() {
     }
 
     return filtered;
-  }, [policies, searchQuery, activeFilters, activeTab]);
+  }, [policies, searchQuery, activeFilters]);
 
   const totalPages = Math.ceil(filteredPolicies.length / ITEMS_PER_PAGE);
   const paginatedPolicies = useMemo(() => {
