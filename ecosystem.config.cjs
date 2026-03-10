@@ -1,8 +1,8 @@
 module.exports = {
   apps: [{
     name: 'aictig-website',
-    script: 'npx',
-    args: 'vite preview --port 3001 --host 0.0.0.0',
+    script: 'node',
+    args: 'server.cjs',
     cwd: '/home/aictig/public_html',
     instances: 1,
     autorestart: true,
