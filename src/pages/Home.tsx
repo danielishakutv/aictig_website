@@ -1,33 +1,103 @@
 import { useTranslation } from 'react-i18next';
 import { Link } from 'react-router-dom';
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useCallback } from 'react';
+import { CalendarIcon } from '@heroicons/react/24/outline';
+import dayjs from 'dayjs';
 import Seo from '../components/Seo';
 import PolicyCard from '../components/PolicyCard';
 import PublicationCard from '../components/PublicationCard';
 import { SkeletonCard } from '../components/Skeleton';
-import { fetchAllDocuments } from '../utils/graphql';
-import { Policy, Publication } from '../types';
+import { fetchAllDocuments, fetchPublications, fetchNewsArticles } from '../utils/graphql';
+import { Policy, Publication, NewsArticle } from '../types';
+
+/* ── Lightweight localStorage cache (stale-while-revalidate) ──── */
+const CACHE_KEY = 'aictig_home_v1';
+const CACHE_TTL = 5 * 60 * 1000; // 5 minutes — after this, background refresh
+
+interface HomeCache {
+  ts: number;
+  policies: Policy[];
+  publications: Publication[];
+  news: NewsArticle[];
+  totalPolicies: number;
+  totalPublications: number;
+}
+
+function readCache(): HomeCache | null {
+  try {
+    const raw = localStorage.getItem(CACHE_KEY);
+    if (!raw) return null;
+    return JSON.parse(raw) as HomeCache;
+  } catch {
+    return null;
+  }
+}
+
+function writeCache(data: HomeCache) {
+  try {
+    localStorage.setItem(CACHE_KEY, JSON.stringify(data));
+  } catch { /* quota exceeded — ignore */ }
+}
 
 export default function Home() {
   const { t } = useTranslation(['home', 'common']);
   const [policies, setPolicies] = useState<Policy[]>([]);
   const [publications, setPublications] = useState<Publication[]>([]);
+  const [news, setNews] = useState<NewsArticle[]>([]);
   const [loading, setLoading] = useState(true);
+  const [totalPolicies, setTotalPolicies] = useState(0);
+  const [totalPublications, setTotalPublications] = useState(0);
+
+  const applyData = useCallback(
+    (policiesData: Policy[], pubsData: Publication[], newsData: NewsArticle[]) => {
+      setTotalPolicies(policiesData.length);
+      setTotalPublications(pubsData.length);
+      setPolicies(policiesData.slice(0, 3));
+      setPublications(pubsData.slice(0, 3));
+      setNews(newsData.slice(0, 3));
+
+      writeCache({
+        ts: Date.now(),
+        policies: policiesData.slice(0, 3),
+        publications: pubsData.slice(0, 3),
+        news: newsData.slice(0, 3),
+        totalPolicies: policiesData.length,
+        totalPublications: pubsData.length,
+      });
+    },
+    [],
+  );
   
   useEffect(() => {
+    const cached = readCache();
+
+    // Instantly hydrate from cache if available
+    if (cached) {
+      setPolicies(cached.policies);
+      setPublications(cached.publications);
+      setNews(cached.news);
+      setTotalPolicies(cached.totalPolicies);
+      setTotalPublications(cached.totalPublications);
+      setLoading(false);
+
+      // If cache is fresh, skip network request
+      if (Date.now() - cached.ts < CACHE_TTL) return;
+    }
+
+    // Fetch fresh data (foreground if no cache, background if stale)
     Promise.all([
       fetchAllDocuments(),
-      fetch('/data/publications.json').then((r) => r.json()),
+      fetchPublications(),
+      fetchNewsArticles(),
     ])
-      .then(([policiesData, pubsData]) => {
-        setPolicies(policiesData.slice(0, 3));
-        setPublications(pubsData.slice(0, 3));
+      .then(([policiesData, pubsData, newsData]) => {
+        applyData(policiesData, pubsData, newsData);
       })
       .catch((error) => {
         console.error('Error loading data:', error);
       })
       .finally(() => setLoading(false));
-  }, []);
+  }, [applyData]);
   
   return (
     <>
@@ -143,6 +213,61 @@ export default function Home() {
             </div>
           </div>
         </section>
+
+        {/* Latest News */}
+        <section className="py-16">
+          <div className="container-custom">
+            <div className="flex items-center justify-between mb-8">
+              <h2 className="text-3xl font-bold">{t('latestNews.title', 'Latest News')}</h2>
+              <Link to="/news" className="text-primary-600 hover:text-primary-700 font-medium">
+                {t('latestNews.viewAll', 'View All News')} →
+              </Link>
+            </div>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+              {loading ? (
+                <>
+                  <SkeletonCard />
+                  <SkeletonCard />
+                  <SkeletonCard />
+                </>
+              ) : (
+                news.map((article) => (
+                  <Link
+                    key={article.id}
+                    to={`/news/${article.slug}`}
+                    className="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-xl transition-shadow block"
+                  >
+                    <div className="aspect-[16/9] overflow-hidden bg-neutral-200">
+                      <img
+                        src={article.image}
+                        alt={article.title}
+                        loading="lazy"
+                        decoding="async"
+                        width="400"
+                        height="225"
+                        className="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
+                      />
+                    </div>
+                    <div className="p-6">
+                      <div className="flex items-center gap-2 text-sm text-neutral-500 mb-2">
+                        <CalendarIcon className="w-4 h-4" />
+                        <time dateTime={article.date}>
+                          {dayjs(article.date).format('MMM D, YYYY')}
+                        </time>
+                      </div>
+                      <h3 className="font-semibold text-lg text-neutral-900 mb-2 line-clamp-2">
+                        {article.title}
+                      </h3>
+                      <p className="text-sm text-neutral-600 line-clamp-2">
+                        {article.excerpt}
+                      </p>
+                    </div>
+                  </Link>
+                ))
+              )}
+            </div>
+          </div>
+        </section>
         
         {/* Stats Section */}
         <section className="py-16 bg-primary-600 text-white">
@@ -153,7 +278,7 @@ export default function Home() {
                 <div className="text-primary-100">{t('stats.countries')}</div>
               </div>
               <div>
-                <div className="text-4xl font-bold mb-2">150+</div>
+                <div className="text-4xl font-bold mb-2">{totalPolicies || '—'}</div>
                 <div className="text-primary-100">{t('stats.policies')}</div>
               </div>
               <div>
@@ -161,7 +286,7 @@ export default function Home() {
                 <div className="text-primary-100">{t('stats.languages')}</div>
               </div>
               <div>
-                <div className="text-4xl font-bold mb-2">50+</div>
+                <div className="text-4xl font-bold mb-2">{totalPublications || '—'}</div>
                 <div className="text-primary-100">{t('stats.publications')}</div>
               </div>
             </div>
