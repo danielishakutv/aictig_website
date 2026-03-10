@@ -17,7 +17,7 @@ export default function Repository() {
   const [policies, setPolicies] = useState<Policy[]>([]);
   const [loading, setLoading] = useState(true);
   const [searchQuery, setSearchQuery] = useState('');
-  const [activeTab, setActiveTab] = useState<'all' | 'regional' | 'national'>('all');
+  const activeTab = 'all';
   const [activeFilters, setActiveFilters] = useState<Record<string, string[]>>({
     country: [],
     sector: [],
@@ -193,40 +193,6 @@ export default function Repository() {
           <div className="mb-8">
             <h1 className="text-4xl font-bold text-neutral-900 mb-4">{t('repo:title')}</h1>
             <p className="text-lg text-neutral-600 max-w-3xl">{t('repo:subtitle')}</p>
-          </div>
-
-          <div className="mb-8">
-            <div className="overflow-x-auto">
-              <nav className="grid grid-cols-1 gap-2 sm:grid-cols-3 sm:gap-3 md:flex md:gap-4" aria-label="Tabs">
-                {[
-                  { id: 'all' as const, label: t('repo:tabs.all', { defaultValue: 'All Documents' }) },
-                  {
-                    id: 'regional' as const,
-                    label: t('repo:tabs.regional', { defaultValue: 'African Regional Instruments' }),
-                  },
-                  { id: 'national' as const, label: t('repo:tabs.national', { defaultValue: 'National Instruments' }) },
-                ].map((tab) => {
-                  const isActive = activeTab === tab.id;
-                  return (
-                    <button
-                      key={tab.id}
-                      onClick={() => {
-                        setActiveTab(tab.id);
-                        setCurrentPage(1);
-                      }}
-                      className={`inline-flex items-center justify-center rounded-lg px-4 py-3 text-sm font-semibold transition focus-ring whitespace-nowrap shadow-sm ${
-                        isActive
-                          ? 'bg-primary-600 text-white shadow-primary-200/60'
-                          : 'bg-white text-neutral-700 hover:text-primary-700 border border-neutral-200'
-                      }`}
-                      aria-current={isActive ? 'page' : undefined}
-                    >
-                      {tab.label}
-                    </button>
-                  );
-                })}
-              </nav>
-            </div>
           </div>
 
           <div className="flex flex-col gap-3 md:flex-row md:items-center md:justify-between mb-8">
