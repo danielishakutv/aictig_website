@@ -1,24 +1,33 @@
 {
-  "title": "News & Updates",
-  "subtitle": "Latest news, announcements, and insights from AICTiG",
+  "title": "Notícias e Atualizações",
+  "subtitle": "Últimas notícias, anúncios e análises do AICTiG",
+  "readMore": "Ler Mais",
+  "backToNews": "Voltar às Notícias",
+  "share": "Partilhar",
+  "shareCopied": "Ligação copiada para a área de transferência",
+  "relatedArticles": "Artigos Relacionados",
+  "meta": {
+    "title": "Notícias e Atualizações",
+    "description": "Mantenha-se atualizado com as últimas notícias e anúncios do AICTiG"
+  },
   "filters": {
-    "search": "Search news...",
-    "all": "All News"
+    "search": "Pesquisar notícias...",
+    "all": "Todas as Notícias"
   },
   "card": {
-    "readMore": "Read More",
-    "by": "By",
-    "tags": "Tags"
+    "readMore": "Ler Mais",
+    "by": "Por",
+    "tags": "Etiquetas"
   },
   "detail": {
-    "by": "By",
-    "publishedOn": "Published on",
-    "tags": "Tags",
-    "share": "Share this article",
-    "relatedNews": "Related News"
+    "by": "Por",
+    "publishedOn": "Publicado em",
+    "tags": "Etiquetas",
+    "share": "Partilhar este artigo",
+    "relatedNews": "Notícias Relacionadas"
   },
   "empty": {
-    "title": "No news articles found",
-    "description": "Check back later for updates"
+    "title": "Nenhum artigo encontrado",
+    "description": "Volte mais tarde para atualizações"
   }
 }

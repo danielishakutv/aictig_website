@@ -1,24 +1,33 @@
 {
-  "title": "News & Updates",
-  "subtitle": "Latest news, announcements, and insights from AICTiG",
+  "title": "Новости и обновления",
+  "subtitle": "Последние новости, объявления и аналитика от AICTiG",
+  "readMore": "Подробнее",
+  "backToNews": "Вернуться к новостям",
+  "share": "Поделиться",
+  "shareCopied": "Ссылка скопирована в буфер обмена",
+  "relatedArticles": "Связанные статьи",
+  "meta": {
+    "title": "Новости и обновления",
+    "description": "Следите за последними новостями и объявлениями от AICTiG"
+  },
   "filters": {
-    "search": "Search news...",
-    "all": "All News"
+    "search": "Поиск новостей...",
+    "all": "Все новости"
   },
   "card": {
-    "readMore": "Read More",
-    "by": "By",
-    "tags": "Tags"
+    "readMore": "Подробнее",
+    "by": "Автор",
+    "tags": "Теги"
   },
   "detail": {
-    "by": "By",
-    "publishedOn": "Published on",
-    "tags": "Tags",
-    "share": "Share this article",
-    "relatedNews": "Related News"
+    "by": "Автор",
+    "publishedOn": "Опубликовано",
+    "tags": "Теги",
+    "share": "Поделиться статьей",
+    "relatedNews": "Связанные новости"
   },
   "empty": {
-    "title": "No news articles found",
-    "description": "Check back later for updates"
+    "title": "Статьи не найдены",
+    "description": "Загляните позже для обновлений"
   }
 }

@@ -1,39 +1,43 @@
 {
   "hero": {
-    "title": "Advancing Cybersecurity Governance Across Africa",
-    "subtitle": "Research, policy analysis, and capacity building for digital resilience in the African continent",
+    "title": "非洲网络安全与\n电信信息治理研究所",
+    "subtitle": "通过研究、政策分析和能力建设推动非洲网络安全与信息通信技术治理",
     "cta": {
-      "repository": "Explore Repository",
-      "updates": "Read Updates"
+      "repository": "浏览政策库",
+      "updates": "阅读新闻"
     }
   },
   "features": {
-    "title": "What We Offer",
+    "title": "我们提供什么",
     "repository": {
-      "title": "Policy Repository",
-      "description": "Comprehensive database of cybersecurity policies, regulations, and frameworks from across Africa"
+      "title": "政策库",
+      "description": "覆盖全非洲的网络安全政策、法规和框架的综合数据库"
     },
     "multilingual": {
-      "title": "Consultancy services",
-      "description": "Tailored consultancy to help governments and organisations develop, adapt, and implement policies on digital governance, open data, and information management."
+      "title": "咨询服务",
+      "description": "为政府和组织提供量身定制的咨询，帮助制定、调整和实施数字治理、开放数据和信息管理政策。"
     },
     "openAccess": {
-      "title": "Open Access Research",
-      "description": "Free access to research publications, policy briefs, and technical reports"
+      "title": "开放获取研究",
+      "description": "免费获取研究出版物、政策简报和技术报告"
     }
   },
   "latestPublications": {
-    "title": "Latest Publications",
-    "viewAll": "View All Publications"
+    "title": "最新出版物",
+    "viewAll": "查看所有出版物"
   },
   "recentPolicies": {
-    "title": "Recent Policies & Regulations",
-    "viewAll": "View All Policies"
+    "title": "最新政策与法规",
+    "viewAll": "查看所有政策"
+  },
+  "latestNews": {
+    "title": "最新新闻",
+    "viewAll": "查看所有新闻"
   },
   "stats": {
-    "countries": "Countries Covered",
-    "policies": "Policies Indexed",
-    "languages": "Languages Supported",
-    "publications": "Research Publications"
+    "countries": "覆盖国家",
+    "policies": "收录政策",
+    "languages": "支持语言",
+    "publications": "研究出版物"
   }
 }

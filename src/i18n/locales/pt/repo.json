@@ -1,53 +1,93 @@
 {
-  "title": "Policy Repository",
-  "subtitle": "Explore cybersecurity policies and regulations from across Africa",
+  "title": "Repositório de Políticas",
+  "subtitle": "Explore políticas, regulamentos e instrumentos jurídicos de cibersegurança e TIC de toda a África",
+  "tabs": {
+    "all": "Todos os Documentos",
+    "regional": "Instrumentos Regionais Africanos",
+    "national": "Instrumentos Nacionais"
+  },
+  "regional": {
+    "title": "Instrumentos Regionais Africanos",
+    "subtitle": "Quadros políticos e jurídicos das organizações regionais africanas",
+    "organizations": {
+      "au": "União Africana (UA)",
+      "amu": "União do Magrebe Árabe (UMA)",
+      "ecowas": "Comunidade Económica dos Estados da África Ocidental (CEDEAO)",
+      "eccas": "Comunidade Económica dos Estados da África Central (CEEAC)",
+      "comesa": "Mercado Comum da África Oriental e Austral (COMESA)",
+      "sadc": "Comunidade para o Desenvolvimento da África Austral (SADC)",
+      "eac": "Comunidade da África Oriental (CAO)",
+      "igad": "Autoridade Intergovernamental para o Desenvolvimento (IGAD)"
+    }
+  },
+  "national": {
+    "title": "Instrumentos Nacionais",
+    "subtitle": "Políticas e legislação nacional sobre cibersegurança e TIC"
+  },
   "filters": {
-    "title": "Filters",
-    "search": "Search policies...",
-    "country": "Country",
-    "theme": "Theme/Sector",
-    "year": "Year Range",
-    "type": "Document Type",
-    "language": "Language",
-    "clearAll": "Clear All",
-    "apply": "Apply Filters"
+    "title": "Filtros",
+    "search": "Pesquisar políticas...",
+    "country": "País",
+    "organization": "Organização Regional",
+    "sector": "Tema/Setor",
+    "theme": "Tema/Setor",
+    "year": "Ano",
+    "type": "Tipo de Documento",
+    "language": "Idioma",
+    "clearAll": "Limpar Tudo",
+    "apply": "Aplicar Filtros"
+  },
+  "search": {
+    "placeholder": "Pesquisar políticas por título, país ou palavras-chave..."
+  },
+  "empty": {
+    "title": "Nenhuma política encontrada",
+    "description": "Tente ajustar os seus filtros ou pesquisa",
+    "action": "Limpar filtros"
+  },
+  "meta": {
+    "title": "Repositório de Políticas — Cibersegurança e Governança das TIC em África",
+    "description": "Pesquisar e explorar políticas, regulamentos e instrumentos jurídicos africanos de cibersegurança"
   },
   "sort": {
-    "label": "Sort by",
-    "newest": "Newest First",
-    "oldest": "Oldest First",
-    "title": "Title A-Z",
-    "country": "Country"
+    "label": "Ordenar por",
+    "newest": "Mais Recentes",
+    "oldest": "Mais Antigos",
+    "title": "Título A-Z",
+    "country": "País"
   },
   "types": {
-    "policy": "Policy",
-    "regulation": "Regulation",
-    "law": "Law",
-    "strategy": "Strategy",
-    "framework": "Framework",
-    "amendment": "Amendment"
+    "policy": "Política",
+    "regulation": "Regulamento",
+    "law": "Lei",
+    "strategy": "Estratégia",
+    "framework": "Quadro",
+    "amendment": "Emenda",
+    "convention": "Convenção",
+    "protocol": "Protocolo",
+    "directive": "Diretiva"
   },
   "card": {
-    "viewDetails": "View Details",
-    "download": "Download PDF",
-    "themes": "Themes",
-    "year": "Year",
-    "type": "Type",
-    "languages": "Available in"
+    "viewDetails": "Ver Detalhes",
+    "download": "Descarregar PDF",
+    "themes": "Temas",
+    "year": "Ano",
+    "type": "Tipo",
+    "languages": "Disponível em"
   },
   "detail": {
-    "summary": "Summary",
-    "keyPoints": "Key Points",
-    "relatedDocuments": "Related Documents",
-    "citation": "Citation",
-    "metadata": "Metadata",
-    "downloadPdf": "Download PDF",
-    "country": "Country",
-    "region": "Region",
-    "year": "Year",
-    "type": "Type",
-    "languages": "Languages",
-    "themes": "Themes",
-    "tags": "Tags"
+    "summary": "Resumo",
+    "keyPoints": "Pontos Principais",
+    "relatedDocuments": "Documentos Relacionados",
+    "citation": "Citação",
+    "metadata": "Metadados",
+    "downloadPdf": "Descarregar PDF",
+    "country": "País",
+    "region": "Região",
+    "year": "Ano",
+    "type": "Tipo",
+    "languages": "Idiomas",
+    "themes": "Temas",
+    "tags": "Etiquetas"
   }
 }

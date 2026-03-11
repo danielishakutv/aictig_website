@@ -1,30 +1,46 @@
 {
-  "title": "Publications & Research",
-  "subtitle": "Access our latest research, policy briefs, and reports",
+  "title": "Публикации и исследования",
+  "subtitle": "Доступ к нашим последним исследованиям, политическим запискам и отчетам",
+  "search": {
+    "label": "Поиск публикаций",
+    "placeholder": "Поиск по названию, автору или ключевым словам..."
+  },
   "filters": {
-    "type": "Publication Type",
-    "year": "Year",
-    "all": "All Types"
+    "type": "Тип публикации",
+    "year": "Год",
+    "all": "Все типы",
+    "allTypes": "Все типы",
+    "allYears": "Все годы"
+  },
+  "results": "Показано {{count}} публикаций",
+  "empty": {
+    "title": "Публикации не найдены",
+    "description": "Попробуйте изменить поисковый запрос или фильтры",
+    "action": "Очистить фильтры"
+  },
+  "meta": {
+    "title": "Публикации и исследования",
+    "description": "Просмотр исследовательских публикаций, политических записок и отчетов AICTiG"
   },
   "types": {
-    "brief": "Policy Brief",
-    "report": "Research Report",
-    "paper": "Research Paper",
-    "whitepaper": "White Paper"
+    "brief": "Политическая записка",
+    "report": "Исследовательский отчет",
+    "paper": "Научная статья",
+    "whitepaper": "Белая книга"
   },
   "card": {
-    "authors": "Authors",
-    "year": "Year",
-    "readMore": "Read More",
-    "download": "Download"
+    "authors": "Авторы",
+    "year": "Год",
+    "readMore": "Подробнее",
+    "download": "Скачать"
   },
   "detail": {
-    "abstract": "Abstract",
-    "authors": "Authors",
-    "year": "Year",
-    "type": "Type",
-    "tags": "Tags",
-    "downloadPdf": "Download PDF",
-    "relatedPublications": "Related Publications"
+    "abstract": "Аннотация",
+    "authors": "Авторы",
+    "year": "Год",
+    "type": "Тип",
+    "tags": "Теги",
+    "downloadPdf": "Скачать PDF",
+    "relatedPublications": "Связанные публикации"
   }
 }

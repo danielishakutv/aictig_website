@@ -1,40 +1,40 @@
 {
-  "title": "Contact Us",
-  "subtitle": "Get in touch with our team",
+  "title": "Свяжитесь с нами",
+  "subtitle": "Свяжитесь с нашей командой",
   "form": {
-    "name": "Your Name",
-    "namePlaceholder": "John Doe",
-    "email": "Email Address",
-    "emailPlaceholder": "john.doe@example.com",
-    "topic": "Topic",
-    "topicPlaceholder": "Select a topic",
-    "message": "Message",
-    "messagePlaceholder": "Tell us how we can help...",
-    "submit": "Send Message",
-    "submitting": "Sending..."
+    "name": "Ваше имя",
+    "namePlaceholder": "Иван Иванов",
+    "email": "Электронная почта",
+    "emailPlaceholder": "ivan.ivanov@example.com",
+    "topic": "Тема",
+    "topicPlaceholder": "Выберите тему",
+    "message": "Сообщение",
+    "messagePlaceholder": "Расскажите, чем мы можем помочь...",
+    "submit": "Отправить сообщение",
+    "submitting": "Отправка..."
   },
   "topics": {
-    "general": "General Inquiry",
-    "research": "Research Collaboration",
-    "training": "Training & Capacity Building",
-    "partnership": "Partnership Opportunities",
-    "media": "Media Inquiry",
-    "technical": "Technical Support"
+    "general": "Общий вопрос",
+    "research": "Научное сотрудничество",
+    "training": "Обучение и наращивание потенциала",
+    "partnership": "Возможности партнерства",
+    "media": "Запрос СМИ",
+    "technical": "Техническая поддержка"
   },
   "success": {
-    "title": "Message Sent!",
-    "message": "Thank you for contacting us. We'll get back to you soon."
+    "title": "Сообщение отправлено!",
+    "message": "Спасибо за обращение. Мы свяжемся с вами в ближайшее время."
   },
   "error": {
-    "title": "Error",
-    "message": "Failed to send message. Please try again."
+    "title": "Ошибка",
+    "message": "Не удалось отправить сообщение. Пожалуйста, попробуйте снова."
   },
   "info": {
-    "title": "Contact Information",
-    "email": "Email",
-    "phone": "Phone",
-    "address": "Address",
-    "hours": "Office Hours",
-    "hoursValue": "Monday - Friday, 9:00 AM - 5:00 PM (EAT)"
+    "title": "Контактная информация",
+    "email": "Эл. почта",
+    "phone": "Телефон",
+    "address": "Адрес",
+    "hours": "Часы работы",
+    "hoursValue": "Понедельник — Пятница, 9:00 — 17:00 (EAT)"
   }
 }

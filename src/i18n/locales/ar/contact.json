@@ -7,7 +7,7 @@
     "email": "البريد الإلكتروني",
     "emailPlaceholder": "ahmad.mohamed@example.com",
     "topic": "الموضوع",
-    "topicPlaceholder": "اختر موضوعًا",
+    "topicPlaceholder": "اختر موضوعاً",
     "message": "الرسالة",
     "messagePlaceholder": "أخبرنا كيف يمكننا المساعدة...",
     "submit": "إرسال الرسالة",
@@ -23,7 +23,7 @@
   },
   "success": {
     "title": "تم إرسال الرسالة!",
-    "message": "شكرًا لاتصالك بنا. سنرد عليك قريبًا."
+    "message": "شكراً لاتصالك بنا. سنرد عليك قريباً."
   },
   "error": {
     "title": "خطأ",
@@ -35,6 +35,6 @@
     "phone": "الهاتف",
     "address": "العنوان",
     "hours": "ساعات العمل",
-    "hoursValue": "الاثنين - الجمعة، 9:00 صباحًا - 5:00 مساءً (EAT)"
+    "hoursValue": "الاثنين - الجمعة، 9:00 صباحاً - 5:00 مساءً (EAT)"
   }
 }

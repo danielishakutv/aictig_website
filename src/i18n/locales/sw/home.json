@@ -1,7 +1,7 @@
 {
   "hero": {
-    "title": "Kuendeleza Utawala wa Usalama wa Mtandao Kote Afrika",
-    "subtitle": "Utafiti, uchambuzi wa sera, na ujenzi wa uwezo kwa ustahimilivu wa kidijitali katika bara la Afrika",
+    "title": "Taasisi ya Kiafrika ya Usalama wa Mtandao \nna Utawala wa Tele-Informatics",
+    "subtitle": "Kuendeleza usalama wa mtandao na utawala wa TEHAMA barani Afrika kupitia utafiti, uchambuzi wa sera na ujenzi wa uwezo",
     "cta": {
       "repository": "Chunguza Hifadhi",
       "updates": "Soma Masasisho"
@@ -14,8 +14,8 @@
       "description": "Hifadhidata kamili ya sera za usalama wa mtandao, kanuni, na mifumo kutoka kote Afrika"
     },
     "multilingual": {
-      "title": "Consultancy services",
-      "description": "Tailored consultancy to help governments and organisations develop, adapt, and implement policies on digital governance, open data, and information management."
+      "title": "Huduma za Ushauri",
+      "description": "Ushauri maalum wa kusaidia serikali na mashirika kuendeleza, kurekebisha na kutekeleza sera za utawala wa kidijitali, data wazi na usimamizi wa habari."
     },
     "openAccess": {
       "title": "Utafiti wa Ufikiaji Wazi",
@@ -29,6 +29,10 @@
   "recentPolicies": {
     "title": "Sera na Kanuni za Hivi Karibuni",
     "viewAll": "Tazama Sera Zote"
+  },
+  "latestNews": {
+    "title": "Habari za Hivi Karibuni",
+    "viewAll": "Tazama Habari Zote"
   },
   "stats": {
     "countries": "Nchi Zilizoshughulikiwa",

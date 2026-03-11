@@ -1,63 +1,136 @@
 {
   "siteName": "AICTiG",
-  "siteFullName": "African Institute for Cybersecurity & Tele-Informatics Governance",
+  "siteFullName": "Instituto Africano para a Cibersegurança e Governança da Teleinformática",
+  "tagline": "Pesquisa, Política e Excelência Jurídica em Cibersegurança e Governança das TIC",
+  "topBar": {
+    "updates": "Novas publicações e pesquisas disponíveis"
+  },
   "navigation": {
-    "home": "Home",
-    "repository": "Repository",
-    "publications": "Publications",
-    "gallery": "Gallery",
-    "news": "News",
-    "about": "About",
-    "contact": "Contact"
+    "home": "Início",
+    "about": "Sobre",
+    "focusAreas": "Áreas de Foco",
+    "consultancy": "Consultoria",
+    "repository": "Repositório",
+    "publications": "Publicações",
+    "news": "Notícias",
+    "contact": "Contacto"
   },
   "actions": {
-    "search": "Search",
-    "filter": "Filter",
-    "download": "Download",
-    "readMore": "Read More",
-    "viewAll": "View All",
-    "submit": "Submit",
-    "reset": "Reset",
-    "close": "Close",
-    "back": "Back",
-    "next": "Next",
-    "previous": "Previous",
-    "share": "Share",
-    "loading": "Loading...",
-    "skipToContent": "Skip to content"
+    "search": "Pesquisar",
+    "filter": "Filtrar",
+    "download": "Descarregar",
+    "readMore": "Ler mais",
+    "viewAll": "Ver tudo",
+    "submit": "Enviar",
+    "reset": "Reiniciar",
+    "close": "Fechar",
+    "back": "Voltar",
+    "next": "Seguinte",
+    "previous": "Anterior",
+    "share": "Partilhar",
+    "loading": "A carregar...",
+    "skipToContent": "Ir para o conteúdo"
   },
+  "notFound": "Não encontrado",
+  "backToRepository": "Voltar ao repositório",
+  "backToNews": "Voltar às notícias",
+  "loading": "A carregar...",
   "footer": {
-    "quickLinks": "Quick Links",
-    "contactInfo": "Contact Information",
-    "nigeriaOffice": "Escritório da Nigéria",
-    "southAfricaOffice": "Escritório da África do Sul",
-    "nigeriaAddress": "Abuja: 18 Bendel Street, Garki, Abuja, Nigeria\nLagos: 111B Ikeja Way, Dolphin Estate, Ikoyi, Lagos State",
-    "southAfricaAddress": "Suite 3B, Hatfield Bridge, Stanza Bopape St & Richard, Hatfield, Pretoria, 0147, South Africa",
+    "fullName": "Instituto Africano para a Cibersegurança e Governança da Teleinformática",
+    "tagline": "Promovendo a cibersegurança e a governança das TIC em África",
+    "quickLinks": "Ligações rápidas",
+    "contactInfo": "Informações de contacto",
+    "nigeriaOffice": "Escritório na Nigéria",
+    "southAfricaOffice": "Escritório na África do Sul",
+    "nigeriaAddress": "Abuja: 18 Bendel Street, Garki, Abuja, Nigéria\nLagos: 111B Ikeja Way, Dolphin Estate, Ikoyi, Estado de Lagos",
+    "southAfricaAddress": "Suite 3B, Hatfield Bridge, Stanza Bopape St & Richard, Hatfield, Pretória, 0147, África do Sul",
     "email": "E-mail",
-    "followUs": "Follow Us",
-    "copyright": "© {{year}} African Institute for Cybersecurity & Tele-Informatics Governance. All rights reserved.",
-    "privacy": "Privacy Policy",
-    "terms": "Terms of Service"
+    "followUs": "Siga-nos",
+    "copyright": "© {{year}} Instituto Africano para a Cibersegurança e Governança da Teleinformática. Todos os direitos reservados.",
+    "privacy": "Política de Privacidade",
+    "terms": "Termos de Utilização"
   },
   "languages": {
-    "en": "English",
-    "ar": "Arabic",
-    "sw": "Swahili",
-    "fr": "French",
-    "ru": "Russian",
-    "zh": "Chinese",
-    "pt": "Portuguese"
+    "en": "Inglês",
+    "ar": "Árabe",
+    "sw": "Suaíli",
+    "fr": "Francês",
+    "ru": "Russo",
+    "zh": "Chinês",
+    "pt": "Português"
   },
   "errors": {
-    "notFound": "Page not found",
-    "serverError": "Server error occurred",
-    "noResults": "No results found",
-    "tryAgain": "Please try again"
+    "notFound": "Página não encontrada",
+    "serverError": "Erro do servidor",
+    "noResults": "Nenhum resultado encontrado",
+    "tryAgain": "Por favor, tente novamente"
   },
   "pagination": {
-    "page": "Page",
-    "of": "of",
-    "showing": "Showing",
-    "results": "results"
+    "page": "Página",
+    "of": "de",
+    "showing": "A mostrar",
+    "results": "resultados"
+  },
+  "focusAreas": {
+    "meta": {
+      "title": "Áreas de Foco",
+      "description": "Explore as áreas de pesquisa e política do AICTiG em cibersegurança e governança das TIC"
+    },
+    "hero": {
+      "title": "As Nossas Áreas de Foco",
+      "subtitle": "O AICTiG adota uma abordagem multidisciplinar para produzir pesquisa orientada para políticas nas áreas-chave da cibersegurança e governança das TIC em África."
+    },
+    "learnMore": "Saber mais",
+    "ai": { "title": "Inteligência Artificial", "description": "Quadros de governança e formulação de políticas para sistemas de IA em África" },
+    "autonomousWeapons": { "title": "Armas Autónomas", "description": "Quadros jurídicos e éticos para sistemas de armas autónomas" },
+    "broadband": { "title": "Política de Banda Larga", "description": "Desenvolvimento de infraestrutura de banda larga e políticas de acesso universal" },
+    "5g": { "title": "Tecnologia 5G", "description": "Estratégias de implementação do 5G e quadros regulatórios" },
+    "cybersecurity": { "title": "Cibersegurança e Cibercrime", "description": "Políticas abrangentes de cibersegurança e legislação sobre cibercrime" },
+    "criticalInfrastructure": { "title": "Proteção de Infraestruturas Críticas", "description": "Quadros de proteção de infraestruturas nacionais críticas" },
+    "cyberwarfare": { "title": "Guerra Cibernética", "description": "Estratégias nacionais de ciberdefesa e normas internacionais no ciberespaço" },
+    "childProtection": { "title": "Proteção de Crianças Online", "description": "Proteção de crianças em ambientes digitais" },
+    "crypto": { "title": "Criptomoedas", "description": "Regulação e governança de moedas digitais e blockchain" },
+    "dataProtection": { "title": "Proteção de Dados", "description": "Leis de privacidade e quadros de proteção de dados" },
+    "digitalSovereignty": { "title": "Soberania Digital", "description": "Soberania nacional no ciberespaço e localização de dados" },
+    "digitalIdentity": { "title": "Identidade Digital", "description": "Sistemas de identidade digital e quadros de autenticação" },
+    "digitalTrade": { "title": "Comércio Digital", "description": "Comércio eletrónico transfronteiriço e acordos de comércio digital" },
+    "ecommerce": { "title": "Comércio Eletrónico", "description": "Regulação do comércio eletrónico e proteção do consumidor" },
+    "electronicEvidence": { "title": "Prova Eletrónica", "description": "Quadros jurídicos para prova eletrónica em processos judiciais" },
+    "digitalTaxation": { "title": "Tributação de Serviços Digitais", "description": "Políticas fiscais para a economia digital e serviços online" },
+    "telecom": { "title": "Telecomunicações", "description": "Regulação das telecomunicações e gestão do espectro" },
+    "techRights": { "title": "Tecnologia e Direitos Humanos", "description": "Direitos digitais, liberdade de expressão e privacidade" },
+    "space": { "title": "Política Espacial", "description": "Comunicações por satélite e governança de tecnologias espaciais" },
+    "regionalIntegration": { "title": "Integração Regional e TIC", "description": "Harmonização das políticas de TIC nas regiões africanas" },
+    "intlCooperation": { "title": "Cooperação Internacional contra o Cibercrime", "description": "Cooperação transfronteiriça na prevenção do cibercrime" },
+    "ict4d": { "title": "TIC para o Desenvolvimento (TIC4D)", "description": "Medir o impacto das TIC no desenvolvimento." },
+    "cta": {
+      "title": "Interessado na nossa pesquisa?",
+      "description": "Explore as nossas publicações e contacte-nos para saber mais sobre o nosso trabalho",
+      "publications": "Ver publicações",
+      "contact": "Contacte-nos"
+    }
+  },
+  "consultancy": {
+    "meta": { "title": "Serviços de Consultoria", "description": "Serviços de consultoria profissional em política de cibersegurança, direito das TIC e conformidade regulamentar" },
+    "hero": { "title": "Serviços de Consultoria", "subtitle": "O AICTiG fornece serviços de consultoria especializados a governos, organizações internacionais e entidades do setor privado em África e além." },
+    "overview": { "title": "Os Nossos Serviços", "description": "Oferecemos serviços de consultoria especializados em governança da cibersegurança e das TIC." },
+    "services": {
+      "policyDevelopment": { "title": "Desenvolvimento e Análise de Políticas", "description": "Assistência especializada no desenvolvimento e análise de quadros políticos de TIC e cibersegurança.", "feature1": "Desenvolvimento de políticas e estratégias nacionais de cibersegurança", "feature2": "Conceção de quadros políticos de TIC", "feature3": "Análise de lacunas e recomendações políticas" },
+      "legalAnalysis": { "title": "Análise Jurídica", "description": "Análise especializada de legislação nacional, regional e internacional em cibersegurança e TIC.", "feature1": "Análise de lacunas legislativas", "feature2": "Pesquisa jurídica comparada", "feature3": "Avaliação de conformidade" },
+      "legalDrafting": { "title": "Redação Jurídica", "description": "Redação de legislação, regulamentos e instrumentos jurídicos em cibersegurança e TIC.", "feature1": "Redação de leis de cibersegurança", "feature2": "Legislação de proteção de dados", "feature3": "Desenvolvimento de quadros regulamentares" },
+      "regulatoryCompliance": { "title": "Conformidade Regulamentar e Monitorização", "description": "Apoio à conformidade regulamentar e monitorização da implementação de regulamentos de TIC e cibersegurança.", "feature1": "Auditorias e avaliações de conformidade", "feature2": "Monitorização regulamentar", "feature3": "Apoio à implementação" },
+      "dataProtectionTraining": { "title": "Formação em Conformidade de Proteção de Dados", "description": "Programas de formação especializados sobre leis de proteção de dados nacionais, regionais e internacionais.", "feature1": "Formação em conformidade RGPD", "feature2": "Formação em conformidade NDPA", "feature3": "Avaliações de impacto na privacidade" },
+      "mappingStudies": { "title": "Estudos de Mapeamento", "description": "Mapeamento abrangente das paisagens de TIC e cibersegurança em países e regiões.", "feature1": "Mapeamento jurídico e regulamentar", "feature2": "Avaliações de capacidade institucional", "feature3": "Mapeamento das partes interessadas" },
+      "awarenessTraining": { "title": "Formação em Sensibilização Jurídica e Política", "description": "Programas de capacitação para facilitar a sensibilização das partes interessadas sobre desenvolvimentos políticos e regulamentares.", "feature1": "Programas de sensibilização para a cibersegurança", "feature2": "Facilitação de workshops políticos", "feature3": "Módulos de formação personalizados" },
+      "electronicEvidence": { "title": "Gestão de Prova Eletrónica", "description": "Formação e consultoria sobre gestão, preservação e apresentação de provas eletrónicas.", "feature1": "Procedimentos de análise forense digital", "feature2": "Protocolos de cadeia de custódia", "feature3": "Técnicas de apresentação em tribunal" },
+      "breachManagement": { "title": "Gestão de Violações de Dados e Mitigação de Riscos", "description": "Orientação estratégica sobre resposta a violações de dados, gestão de incidentes e mitigação de riscos.", "feature1": "Planeamento de resposta a incidentes", "feature2": "Procedimentos de notificação de violações", "feature3": "Avaliação e mitigação de riscos" }
+    },
+    "whyChoose": {
+      "title": "Porquê escolher o AICTiG?",
+      "expertise": { "title": "Experiência Profunda", "description": "A nossa equipa combina experiência jurídica, técnica e política com vasta experiência em contextos africanos e internacionais." },
+      "regional": { "title": "Conhecimento Regional", "description": "Compreensão profunda dos quadros nacionais e regionais africanos, desafios e oportunidades na governança das TIC e da cibersegurança." },
+      "evidenceBased": { "title": "Abordagem Baseada em Evidências", "description": "Os nossos serviços de consultoria são fundamentados em pesquisa rigorosa e recomendações políticas baseadas em evidências." }
+    },
+    "cta": { "title": "Pronto para trabalhar connosco?", "description": "Contacte-nos hoje para discutir como podemos apoiar as necessidades da sua organização em governança da cibersegurança e das TIC.", "button": "Contacte-nos" }
   }
 }

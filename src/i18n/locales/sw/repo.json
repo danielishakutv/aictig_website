@@ -1,12 +1,36 @@
 {
   "title": "Hifadhi ya Sera",
-  "subtitle": "Chunguza sera za usalama wa mtandao na kanuni kutoka kote Afrika",
+  "subtitle": "Chunguza sera, kanuni na vyombo vya kisheria vya usalama wa mtandao na TEHAMA kutoka kote Afrika",
+  "tabs": {
+    "all": "Hati Zote",
+    "regional": "Vyombo vya Kikanda vya Afrika",
+    "national": "Vyombo vya Kitaifa"
+  },
+  "regional": {
+    "title": "Vyombo vya Kikanda vya Afrika",
+    "subtitle": "Mifumo ya sera na kisheria kutoka mashirika ya kikanda ya Afrika",
+    "organizations": {
+      "au": "Umoja wa Afrika (AU)",
+      "amu": "Umoja wa Maghreb ya Kiarabu (AMU)",
+      "ecowas": "Jumuiya ya Kiuchumi ya Nchi za Afrika Magharibi (ECOWAS)",
+      "eccas": "Jumuiya ya Kiuchumi ya Nchi za Afrika ya Kati (ECCAS)",
+      "comesa": "Soko la Pamoja la Afrika Mashariki na Kusini (COMESA)",
+      "sadc": "Jumuiya ya Maendeleo ya Nchi za Kusini mwa Afrika (SADC)",
+      "eac": "Jumuiya ya Afrika Mashariki (EAC)",
+      "igad": "Mamlaka ya Kiserikali ya Maendeleo (IGAD)"
+    }
+  },
+  "national": {
+    "title": "Vyombo vya Kitaifa",
+    "subtitle": "Sera na sheria za kitaifa kuhusu usalama wa mtandao na TEHAMA"
+  },
   "filters": {
     "title": "Vichujio",
     "search": "Tafuta sera...",
     "country": "Nchi",
-    "sector": "Sekta",
-    "theme": "Sekta",
+    "organization": "Shirika la Kikanda",
+    "sector": "Mada/Sekta",
+    "theme": "Mada/Sekta",
     "year": "Mwaka",
     "type": "Aina ya Hati",
     "language": "Lugha",
@@ -22,8 +46,8 @@
     "action": "Futa vichujio"
   },
   "meta": {
-    "title": "Hifadhi ya Sera",
-    "description": "Vinjari na utafute sera na kanuni za usalama wa mtandao za Afrika"
+    "title": "Hifadhi ya Sera — Usalama wa Mtandao na Utawala wa TEHAMA Afrika",
+    "description": "Vinjari na utafute sera, kanuni na vyombo vya kisheria vya usalama wa mtandao vya Afrika"
   },
   "sort": {
     "label": "Panga kwa",
@@ -38,7 +62,10 @@
     "law": "Sheria",
     "strategy": "Mkakati",
     "framework": "Mfumo",
-    "amendment": "Marekebisho"
+    "amendment": "Marekebisho",
+    "convention": "Mkataba",
+    "protocol": "Itifaki",
+    "directive": "Maelekezo"
   },
   "card": {
     "viewDetails": "Tazama Maelezo",
@@ -53,7 +80,7 @@
     "keyPoints": "Vidokezo Muhimu",
     "relatedDocuments": "Hati Zinazohusiana",
     "citation": "Nukuu",
-    "metadata": "Data ya Metadata",
+    "metadata": "Metadata",
     "downloadPdf": "Pakua PDF",
     "country": "Nchi",
     "region": "Mkoa",

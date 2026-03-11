@@ -1,53 +1,93 @@
 {
-  "title": "Policy Repository",
-  "subtitle": "Explore cybersecurity policies and regulations from across Africa",
+  "title": "政策库",
+  "subtitle": "浏览全非洲的网络安全与信息通信技术政策、法规和法律文书",
+  "tabs": {
+    "all": "所有文件",
+    "regional": "非洲区域文书",
+    "national": "国家文书"
+  },
+  "regional": {
+    "title": "非洲区域文书",
+    "subtitle": "非洲区域组织的政策和法律框架",
+    "organizations": {
+      "au": "非洲联盟（AU）",
+      "amu": "阿拉伯马格里布联盟（AMU）",
+      "ecowas": "西非国家经济共同体（ECOWAS）",
+      "eccas": "中非国家经济共同体（ECCAS）",
+      "comesa": "东南非共同市场（COMESA）",
+      "sadc": "南部非洲发展共同体（SADC）",
+      "eac": "东非共同体（EAC）",
+      "igad": "政府间发展组织（IGAD）"
+    }
+  },
+  "national": {
+    "title": "国家文书",
+    "subtitle": "各国网络安全与信息通信技术政策和法律"
+  },
   "filters": {
-    "title": "Filters",
-    "search": "Search policies...",
-    "country": "Country",
-    "theme": "Theme/Sector",
-    "year": "Year Range",
-    "type": "Document Type",
-    "language": "Language",
-    "clearAll": "Clear All",
-    "apply": "Apply Filters"
+    "title": "筛选",
+    "search": "搜索政策...",
+    "country": "国家",
+    "organization": "区域组织",
+    "sector": "主题/领域",
+    "theme": "主题/领域",
+    "year": "年份",
+    "type": "文件类型",
+    "language": "语言",
+    "clearAll": "全部清除",
+    "apply": "应用筛选"
+  },
+  "search": {
+    "placeholder": "按标题、国家或关键词搜索政策..."
+  },
+  "empty": {
+    "title": "未找到政策",
+    "description": "请尝试调整筛选条件或搜索关键词",
+    "action": "清除筛选"
+  },
+  "meta": {
+    "title": "政策库 — 非洲网络安全与信息通信技术治理",
+    "description": "浏览和搜索非洲网络安全政策、法规和法律文书"
   },
   "sort": {
-    "label": "Sort by",
-    "newest": "Newest First",
-    "oldest": "Oldest First",
-    "title": "Title A-Z",
-    "country": "Country"
+    "label": "排序方式",
+    "newest": "最新优先",
+    "oldest": "最早优先",
+    "title": "标题 A-Z",
+    "country": "国家"
   },
   "types": {
-    "policy": "Policy",
-    "regulation": "Regulation",
-    "law": "Law",
-    "strategy": "Strategy",
-    "framework": "Framework",
-    "amendment": "Amendment"
+    "policy": "政策",
+    "regulation": "法规",
+    "law": "法律",
+    "strategy": "战略",
+    "framework": "框架",
+    "amendment": "修正案",
+    "convention": "公约",
+    "protocol": "议定书",
+    "directive": "指令"
   },
   "card": {
-    "viewDetails": "View Details",
-    "download": "Download PDF",
-    "themes": "Themes",
-    "year": "Year",
-    "type": "Type",
-    "languages": "Available in"
+    "viewDetails": "查看详情",
+    "download": "下载PDF",
+    "themes": "主题",
+    "year": "年份",
+    "type": "类型",
+    "languages": "可用语言"
   },
   "detail": {
-    "summary": "Summary",
-    "keyPoints": "Key Points",
-    "relatedDocuments": "Related Documents",
-    "citation": "Citation",
-    "metadata": "Metadata",
-    "downloadPdf": "Download PDF",
-    "country": "Country",
-    "region": "Region",
-    "year": "Year",
-    "type": "Type",
-    "languages": "Languages",
-    "themes": "Themes",
-    "tags": "Tags"
+    "summary": "摘要",
+    "keyPoints": "要点",
+    "relatedDocuments": "相关文件",
+    "citation": "引用",
+    "metadata": "元数据",
+    "downloadPdf": "下载PDF",
+    "country": "国家",
+    "region": "地区",
+    "year": "年份",
+    "type": "类型",
+    "languages": "语言",
+    "themes": "主题",
+    "tags": "标签"
   }
 }

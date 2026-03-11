@@ -1,30 +1,46 @@
 {
-  "title": "Publications & Research",
-  "subtitle": "Access our latest research, policy briefs, and reports",
+  "title": "Publicações e Pesquisa",
+  "subtitle": "Aceda às nossas pesquisas mais recentes, notas de política e relatórios",
+  "search": {
+    "label": "Pesquisar publicações",
+    "placeholder": "Pesquisar por título, autor ou palavras-chave..."
+  },
   "filters": {
-    "type": "Publication Type",
-    "year": "Year",
-    "all": "All Types"
+    "type": "Tipo de Publicação",
+    "year": "Ano",
+    "all": "Todos os Tipos",
+    "allTypes": "Todos os Tipos",
+    "allYears": "Todos os Anos"
+  },
+  "results": "A mostrar {{count}} publicações",
+  "empty": {
+    "title": "Nenhuma publicação encontrada",
+    "description": "Tente ajustar a sua pesquisa ou filtros",
+    "action": "Limpar filtros"
+  },
+  "meta": {
+    "title": "Publicações e Pesquisa",
+    "description": "Explore publicações de pesquisa, notas de política e relatórios do AICTiG"
   },
   "types": {
-    "brief": "Policy Brief",
-    "report": "Research Report",
-    "paper": "Research Paper",
-    "whitepaper": "White Paper"
+    "brief": "Nota de Política",
+    "report": "Relatório de Pesquisa",
+    "paper": "Artigo de Pesquisa",
+    "whitepaper": "Livro Branco"
   },
   "card": {
-    "authors": "Authors",
-    "year": "Year",
-    "readMore": "Read More",
-    "download": "Download"
+    "authors": "Autores",
+    "year": "Ano",
+    "readMore": "Ler Mais",
+    "download": "Descarregar"
   },
   "detail": {
-    "abstract": "Abstract",
-    "authors": "Authors",
-    "year": "Year",
-    "type": "Type",
-    "tags": "Tags",
-    "downloadPdf": "Download PDF",
-    "relatedPublications": "Related Publications"
+    "abstract": "Resumo",
+    "authors": "Autores",
+    "year": "Ano",
+    "type": "Tipo",
+    "tags": "Etiquetas",
+    "downloadPdf": "Descarregar PDF",
+    "relatedPublications": "Publicações Relacionadas"
   }
 }

@@ -1,33 +1,47 @@
 {
-  "title": "About AICTiG",
-  "mission": {
-    "title": "Our Mission",
-    "content": "To advance cybersecurity governance and tele-informatics across Africa through research, policy analysis, capacity building, and regional cooperation."
-    ,
-    "repository": {
-      "title": "Policy Creation",
-      "description": "Supporting the development and curation of policy documents, legislation, and implementation guidance to assist governments and institutions."
-    }
+  "title": "关于AICTiG",
+  "hero": {
+    "title": "关于AICTiG",
+    "subtitle": "非洲网络安全与电信信息治理研究所（AICTiG）是一个研究智库和教育机构，致力于推动有关网络安全和信息通信技术在非洲的政策、法律和监管问题的前沿研究。"
+  },
+  "about": {
+    "title": "关于研究所",
+    "paragraph1": "非洲网络安全与电信信息治理研究所（AICTiG）是一个独立的研究智库和教育机构，获授权在非洲地区推动、开展和传播有关网络安全和信息通信技术（ICT）政策、法律和监管问题的前沿研究。",
+    "paragraph2": "AICTiG采用多学科方法开展面向政策的研究，其重点领域包括人工智能治理、网络安全、网络犯罪、电信、关键基础设施保护、加密货币、数据保护、数字权利、数字身份、数字贸易、电子商务、数字服务税、信息通信技术促进发展（ICT4D）和区域一体化。",
+    "paragraph3": "该研究所开展信息通信技术和网络安全治理方面的培训和教育项目，旨在增强非洲地区的能力建设，并为国家和国际组织以及私营部门组织提供咨询服务。",
+    "incorporation": "AICTiG于2025年由尼日利亚联邦共和国公司事务委员会注册为担保有限公司。"
   },
   "vision": {
-    "title": "Our Vision",
-    "content": "A digitally secure and resilient Africa where effective governance frameworks enable safe and inclusive digital transformation."
+    "title": "我们的愿景",
+    "description": "将AICTiG定位为非洲网络安全与信息通信技术治理领域前沿循证研究和教育的领先机构。"
   },
-  "values": {
-    "title": "Our Values",
-    "excellence": "Excellence in research and analysis",
-    "collaboration": "Collaboration across borders and sectors",
-    "independence": "Independence and objectivity",
-    "inclusion": "Inclusion and accessibility",
-    "innovation": "Innovation and forward thinking"
+  "mission": {
+    "title": "我们的使命",
+    "intro": "AICTiG的使命包括多个战略目标，例如促进非洲网络安全和信息通信技术治理的能力建设；以及为非洲区域平台提供有关网络安全和信息通信技术治理新兴问题的研究和传播。",
+    "research": {
+      "title": "研究传播",
+      "description": "开展和传播高质量的面向政策的网络安全和信息通信技术治理研究"
+    },
+    "repository": {
+      "title": "政策制定",
+      "description": "支持政策文件、立法和实施指南的开发和整理，以协助政府和机构。"
+    },
+    "capacity": {
+      "title": "能力建设",
+      "description": "提供培训和教育项目以加强区域专业能力"
+    },
+    "publications": {
+      "title": "出版物",
+      "description": "出版期刊、政策简报、博客和思想领导力内容"
+    }
   },
   "team": {
-    "title": "Our Team",
-    "leadership": "Leadership",
-    "researchers": "Researchers"
+    "title": "我们的团队",
+    "subtitle": "认识推动我们使命的专家",
+    "comingSoon": "团队资料即将推出"
   },
-  "partners": {
-    "title": "Our Partners",
-    "subtitle": "Working together to strengthen cybersecurity governance across Africa"
+  "meta": {
+    "title": "关于AICTiG — 非洲网络安全与电信信息治理研究所",
+    "description": "了解AICTiG通过研究、政策分析和能力建设推动非洲网络安全与信息通信技术治理的使命"
   }
 }

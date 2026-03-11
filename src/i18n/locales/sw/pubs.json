@@ -1,10 +1,26 @@
 {
   "title": "Machapisho na Utafiti",
   "subtitle": "Fikia utafiti wetu wa hivi karibuni, muhtasari wa sera, na ripoti",
+  "search": {
+    "label": "Tafuta machapisho",
+    "placeholder": "Tafuta kwa kichwa, mwandishi, au maneno muhimu..."
+  },
   "filters": {
     "type": "Aina ya Chapisho",
     "year": "Mwaka",
-    "all": "Aina Zote"
+    "all": "Aina Zote",
+    "allTypes": "Aina Zote",
+    "allYears": "Miaka Yote"
+  },
+  "results": "Inaonyesha machapisho {{count}}",
+  "empty": {
+    "title": "Hakuna machapisho yaliyopatikana",
+    "description": "Jaribu kurekebisha utafutaji au vichujio vyako",
+    "action": "Futa vichujio"
+  },
+  "meta": {
+    "title": "Machapisho na Utafiti",
+    "description": "Vinjari machapisho ya utafiti, muhtasari wa sera na ripoti kutoka AICTiG"
   },
   "types": {
     "brief": "Muhtasari wa Sera",

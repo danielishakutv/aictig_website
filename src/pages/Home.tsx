@@ -103,7 +103,7 @@ export default function Home() {
     <>
       <Seo
         title={t('common:navigation.home')}
-        description="African Institute for Cybersecurity & Tele-Informatics Governance - Advancing cybersecurity governance across Africa through research, policy analysis, and regional cooperation."
+        description={t('home:hero.subtitle')}
         keywords={['cybersecurity', 'Africa', 'ICT governance', 'policy repository', 'digital transformation', 'data protection', 'AICTiG']}
       />
       
@@ -218,9 +218,9 @@ export default function Home() {
         <section className="py-16">
           <div className="container-custom">
             <div className="flex items-center justify-between mb-8">
-              <h2 className="text-3xl font-bold">{t('latestNews.title', 'Latest News')}</h2>
+              <h2 className="text-3xl font-bold">{t('home:latestNews.title')}</h2>
               <Link to="/news" className="text-primary-600 hover:text-primary-700 font-medium">
-                {t('latestNews.viewAll', 'View All News')} →
+                {t('home:latestNews.viewAll')} →
               </Link>
             </div>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">

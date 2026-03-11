@@ -1,53 +1,93 @@
 {
-  "title": "Policy Repository",
-  "subtitle": "Explore cybersecurity policies and regulations from across Africa",
+  "title": "Репозиторий политик",
+  "subtitle": "Изучите политики, нормативные акты и правовые инструменты в области кибербезопасности и ИКТ со всей Африки",
+  "tabs": {
+    "all": "Все документы",
+    "regional": "Африканские региональные инструменты",
+    "national": "Национальные инструменты"
+  },
+  "regional": {
+    "title": "Африканские региональные инструменты",
+    "subtitle": "Политические и правовые рамки африканских региональных организаций",
+    "organizations": {
+      "au": "Африканский союз (АС)",
+      "amu": "Союз арабского Магриба (САМ)",
+      "ecowas": "Экономическое сообщество западноафриканских государств (ЭКОВАС)",
+      "eccas": "Экономическое сообщество центральноафриканских государств (ЭСЦАГ)",
+      "comesa": "Общий рынок Восточной и Южной Африки (КОМЕСА)",
+      "sadc": "Сообщество развития Юга Африки (САДК)",
+      "eac": "Восточноафриканское сообщество (ВАС)",
+      "igad": "Межправительственная организация по развитию (ИГАД)"
+    }
+  },
+  "national": {
+    "title": "Национальные инструменты",
+    "subtitle": "Национальные политики и законодательство в области кибербезопасности и ИКТ"
+  },
   "filters": {
-    "title": "Filters",
-    "search": "Search policies...",
-    "country": "Country",
-    "theme": "Theme/Sector",
-    "year": "Year Range",
-    "type": "Document Type",
-    "language": "Language",
-    "clearAll": "Clear All",
-    "apply": "Apply Filters"
+    "title": "Фильтры",
+    "search": "Поиск политик...",
+    "country": "Страна",
+    "organization": "Региональная организация",
+    "sector": "Тема/Сектор",
+    "theme": "Тема/Сектор",
+    "year": "Год",
+    "type": "Тип документа",
+    "language": "Язык",
+    "clearAll": "Очистить все",
+    "apply": "Применить фильтры"
+  },
+  "search": {
+    "placeholder": "Поиск политик по названию, стране или ключевым словам..."
+  },
+  "empty": {
+    "title": "Политики не найдены",
+    "description": "Попробуйте изменить фильтры или поисковый запрос",
+    "action": "Очистить фильтры"
+  },
+  "meta": {
+    "title": "Репозиторий политик — Кибербезопасность и управление ИКТ в Африке",
+    "description": "Просмотр и поиск африканских политик, нормативных актов и правовых инструментов в области кибербезопасности"
   },
   "sort": {
-    "label": "Sort by",
-    "newest": "Newest First",
-    "oldest": "Oldest First",
-    "title": "Title A-Z",
-    "country": "Country"
+    "label": "Сортировать по",
+    "newest": "Сначала новые",
+    "oldest": "Сначала старые",
+    "title": "Название А-Я",
+    "country": "Страна"
   },
   "types": {
-    "policy": "Policy",
-    "regulation": "Regulation",
-    "law": "Law",
-    "strategy": "Strategy",
-    "framework": "Framework",
-    "amendment": "Amendment"
+    "policy": "Политика",
+    "regulation": "Нормативный акт",
+    "law": "Закон",
+    "strategy": "Стратегия",
+    "framework": "Рамочный документ",
+    "amendment": "Поправка",
+    "convention": "Конвенция",
+    "protocol": "Протокол",
+    "directive": "Директива"
   },
   "card": {
-    "viewDetails": "View Details",
-    "download": "Download PDF",
-    "themes": "Themes",
-    "year": "Year",
-    "type": "Type",
-    "languages": "Available in"
+    "viewDetails": "Подробнее",
+    "download": "Скачать PDF",
+    "themes": "Темы",
+    "year": "Год",
+    "type": "Тип",
+    "languages": "Доступно на"
   },
   "detail": {
-    "summary": "Summary",
-    "keyPoints": "Key Points",
-    "relatedDocuments": "Related Documents",
-    "citation": "Citation",
-    "metadata": "Metadata",
-    "downloadPdf": "Download PDF",
-    "country": "Country",
-    "region": "Region",
-    "year": "Year",
-    "type": "Type",
-    "languages": "Languages",
-    "themes": "Themes",
-    "tags": "Tags"
+    "summary": "Краткое содержание",
+    "keyPoints": "Ключевые моменты",
+    "relatedDocuments": "Связанные документы",
+    "citation": "Цитирование",
+    "metadata": "Метаданные",
+    "downloadPdf": "Скачать PDF",
+    "country": "Страна",
+    "region": "Регион",
+    "year": "Год",
+    "type": "Тип",
+    "languages": "Языки",
+    "themes": "Темы",
+    "tags": "Теги"
   }
 }

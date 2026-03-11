@@ -1,13 +1,18 @@
 {
   "siteName": "AICTiG",
   "siteFullName": "Taasisi ya Kiafrika ya Usalama wa Mtandao na Utawala wa Tele-Informatics",
+  "tagline": "Utafiti, Sera na Ubora wa Kisheria katika Usalama wa Mtandao na Utawala wa TEHAMA",
+  "topBar": {
+    "updates": "Machapisho na utafiti mpya unapatikana sasa"
+  },
   "navigation": {
     "home": "Nyumbani",
+    "about": "Kuhusu",
+    "focusAreas": "Maeneo ya Kuzingatia",
+    "consultancy": "Ushauri",
     "repository": "Hifadhi",
     "publications": "Machapisho",
-    "gallery": "Picha",
     "news": "Habari",
-    "about": "Kuhusu",
     "contact": "Wasiliana"
   },
   "actions": {
@@ -26,18 +31,24 @@
     "loading": "Inapakia...",
     "skipToContent": "Ruka kwenda maudhui"
   },
+  "notFound": "Haijapatikana",
+  "backToRepository": "Rudi kwenye Hifadhi",
+  "backToNews": "Rudi kwenye Habari",
+  "loading": "Inapakia...",
   "footer": {
+    "fullName": "Taasisi ya Kiafrika ya Usalama wa Mtandao na Utawala wa Tele-Informatics",
+    "tagline": "Kuendeleza usalama wa mtandao na utawala wa TEHAMA barani Afrika",
     "quickLinks": "Viungo vya Haraka",
     "contactInfo": "Maelezo ya Mawasiliano",
     "nigeriaOffice": "Ofisi ya Nigeria",
     "southAfricaOffice": "Ofisi ya Afrika Kusini",
-    "nigeriaAddress": "Abuja: 18 Bendel Street, Garki, Abuja, Nigeria\nLagos: 111B Ikeja Way, Dolphin Estate, Ikoyi, Lagos State",
-    "southAfricaAddress": "Suite 3B, Hatfield Bridge, Stanza Bopape St & Richard, Hatfield, Pretoria, 0147, South Africa",
+    "nigeriaAddress": "Abuja: 18 Bendel Street, Garki, Abuja, Nigeria\nLagos: 111B Ikeja Way, Dolphin Estate, Ikoyi, Jimbo la Lagos",
+    "southAfricaAddress": "Suite 3B, Hatfield Bridge, Stanza Bopape St & Richard, Hatfield, Pretoria, 0147, Afrika Kusini",
     "email": "Barua pepe",
     "followUs": "Tufuate",
     "copyright": "© {{year}} Taasisi ya Kiafrika ya Usalama wa Mtandao na Utawala wa Tele-Informatics. Haki zote zimehifadhiwa.",
     "privacy": "Sera ya Faragha",
-    "terms": "Masharti ya Huduma"
+    "terms": "Masharti ya Matumizi"
   },
   "languages": {
     "en": "Kiingereza",
@@ -59,5 +70,67 @@
     "of": "wa",
     "showing": "Inaonyesha",
     "results": "matokeo"
+  },
+  "focusAreas": {
+    "meta": {
+      "title": "Maeneo ya Kuzingatia",
+      "description": "Chunguza maeneo ya utafiti na sera ya AICTiG katika usalama wa mtandao na utawala wa TEHAMA"
+    },
+    "hero": {
+      "title": "Maeneo Yetu ya Kuzingatia",
+      "subtitle": "AICTiG inatumia mbinu ya taaluma mbalimbali kuzalisha utafiti unaoelekezwa kwenye sera katika maeneo muhimu ya usalama wa mtandao na utawala wa TEHAMA barani Afrika."
+    },
+    "learnMore": "Jifunze Zaidi",
+    "ai": { "title": "Akili Bandia", "description": "Mifumo ya utawala na uundaji sera kwa mifumo ya AI barani Afrika" },
+    "autonomousWeapons": { "title": "Silaha za Kujiendesha", "description": "Mifumo ya kisheria na kimaadili kwa mifumo ya silaha za kujiendesha" },
+    "broadband": { "title": "Sera ya Broadband", "description": "Maendeleo ya miundombinu ya broadband na sera za ufikiaji wa wote" },
+    "5g": { "title": "Teknolojia ya 5G", "description": "Mikakati ya kupeleka 5G na mifumo ya udhibiti" },
+    "cybersecurity": { "title": "Usalama wa Mtandao na Uhalifu wa Mtandao", "description": "Sera kamili za usalama wa mtandao na sheria za uhalifu wa mtandao" },
+    "criticalInfrastructure": { "title": "Ulinzi wa Miundombinu Muhimu", "description": "Mifumo ya ulinzi wa miundombinu muhimu ya kitaifa" },
+    "cyberwarfare": { "title": "Vita vya Mtandao", "description": "Mikakati ya ulinzi wa mtandao ya kitaifa na kanuni za kimataifa za anga la mtandao" },
+    "childProtection": { "title": "Ulinzi wa Watoto Mtandaoni", "description": "Kuwalinda watoto katika mazingira ya kidijitali" },
+    "crypto": { "title": "Sarafu za Kidijitali", "description": "Udhibiti na utawala wa sarafu za kidijitali na blockchain" },
+    "dataProtection": { "title": "Ulinzi wa Data", "description": "Sheria za faragha na mifumo ya ulinzi wa data" },
+    "digitalSovereignty": { "title": "Uhuru wa Kidijitali", "description": "Uhuru wa kitaifa katika anga la mtandao na ujanibishaji wa data" },
+    "digitalIdentity": { "title": "Utambulisho wa Kidijitali", "description": "Mifumo ya utambulisho wa kidijitali na uthibitishaji" },
+    "digitalTrade": { "title": "Biashara ya Kidijitali", "description": "Biashara ya kielektroniki ya kimataifa na makubaliano ya biashara ya kidijitali" },
+    "ecommerce": { "title": "Biashara ya Kielektroniki", "description": "Udhibiti wa biashara ya kielektroniki na ulinzi wa walaji" },
+    "electronicEvidence": { "title": "Ushahidi wa Kielektroniki", "description": "Mifumo ya kisheria kwa ushahidi wa kielektroniki katika taratibu za mahakama" },
+    "digitalTaxation": { "title": "Kodi ya Huduma za Kidijitali", "description": "Sera za kodi kwa uchumi wa kidijitali na huduma za mtandaoni" },
+    "telecom": { "title": "Mawasiliano", "description": "Udhibiti wa mawasiliano na usimamizi wa spektramu" },
+    "techRights": { "title": "Teknolojia na Haki za Binadamu", "description": "Haki za kidijitali, uhuru wa kujieleza na faragha" },
+    "space": { "title": "Sera ya Anga", "description": "Mawasiliano ya setilaiti na utawala wa teknolojia ya anga" },
+    "regionalIntegration": { "title": "Muungano wa Kikanda na TEHAMA", "description": "Upatanisho wa sera za TEHAMA katika maeneo ya Afrika" },
+    "intlCooperation": { "title": "Ushirikiano wa Kimataifa dhidi ya Uhalifu wa Mtandao", "description": "Ushirikiano wa kimataifa katika kuzuia uhalifu wa mtandao" },
+    "ict4d": { "title": "TEHAMA kwa Maendeleo (ICT4D)", "description": "Kupima athari za TEHAMA katika maendeleo." },
+    "cta": {
+      "title": "Unavutiwa na utafiti wetu?",
+      "description": "Chunguza machapisho yetu na wasiliana nasi kujifunza zaidi kuhusu kazi yetu",
+      "publications": "Tazama machapisho",
+      "contact": "Wasiliana nasi"
+    }
+  },
+  "consultancy": {
+    "meta": { "title": "Huduma za Ushauri", "description": "Huduma za ushauri wa kitaalamu katika sera ya usalama wa mtandao, sheria ya TEHAMA na utiifu wa kanuni" },
+    "hero": { "title": "Huduma za Ushauri", "subtitle": "AICTiG inatoa huduma za ushauri wa kitaalamu kwa serikali, mashirika ya kimataifa na taasisi za sekta binafsi barani Afrika na zaidi." },
+    "overview": { "title": "Huduma Zetu", "description": "Tunatoa huduma za ushauri wa kitaalamu katika utawala wa usalama wa mtandao na TEHAMA." },
+    "services": {
+      "policyDevelopment": { "title": "Uendelezaji na Uchambuzi wa Sera", "description": "Msaada wa kitaalamu katika kuendeleza na kuchambua mifumo ya sera ya TEHAMA na usalama wa mtandao.", "feature1": "Uendelezaji wa sera na mikakati ya kitaifa ya usalama wa mtandao", "feature2": "Muundo wa mifumo ya sera ya TEHAMA", "feature3": "Uchambuzi wa mapungufu na mapendekezo ya sera" },
+      "legalAnalysis": { "title": "Uchambuzi wa Kisheria", "description": "Uchambuzi wa kitaalamu wa sheria za kitaifa, kikanda na kimataifa za usalama wa mtandao na TEHAMA.", "feature1": "Uchambuzi wa mapungufu ya sheria", "feature2": "Utafiti wa kisheria linganishi", "feature3": "Tathmini ya utiifu" },
+      "legalDrafting": { "title": "Uandishi wa Kisheria", "description": "Kutunga sheria, kanuni na vyombo vya kisheria katika usalama wa mtandao na TEHAMA.", "feature1": "Kutunga sheria za usalama wa mtandao", "feature2": "Sheria za ulinzi wa data", "feature3": "Uendelezaji wa mifumo ya udhibiti" },
+      "regulatoryCompliance": { "title": "Utiifu wa Kanuni na Ufuatiliaji", "description": "Msaada wa utiifu wa kanuni na ufuatiliaji wa utekelezaji wa kanuni za TEHAMA na usalama wa mtandao.", "feature1": "Ukaguzi na tathmini za utiifu", "feature2": "Ufuatiliaji wa kanuni", "feature3": "Msaada wa utekelezaji" },
+      "dataProtectionTraining": { "title": "Mafunzo ya Utiifu wa Ulinzi wa Data", "description": "Programu za mafunzo maalum kuhusu sheria za ulinzi wa data za kitaifa, kikanda na kimataifa.", "feature1": "Mafunzo ya utiifu wa GDPR", "feature2": "Mafunzo ya utiifu wa NDPA", "feature3": "Tathmini za athari za faragha" },
+      "mappingStudies": { "title": "Masomo ya Uchoraji Ramani", "description": "Uchoraji ramani kamili wa mazingira ya TEHAMA na usalama wa mtandao katika nchi na maeneo.", "feature1": "Uchoraji ramani wa kisheria na kanuni", "feature2": "Tathmini za uwezo wa kitaasisi", "feature3": "Uchoraji ramani wa wadau" },
+      "awarenessTraining": { "title": "Mafunzo ya Uhamasishaji wa Kisheria na Sera", "description": "Programu za kujenga uwezo ili kurahisisha ufahamu wa wadau kuhusu maendeleo ya sera na kanuni.", "feature1": "Programu za uhamasishaji wa usalama wa mtandao", "feature2": "Urahisishaji wa warsha za sera", "feature3": "Moduli za mafunzo maalum" },
+      "electronicEvidence": { "title": "Usimamizi wa Ushahidi wa Kielektroniki", "description": "Mafunzo na ushauri juu ya usimamizi, uhifadhi na uwasilishaji wa ushahidi wa kielektroniki.", "feature1": "Taratibu za uchunguzi wa kidijitali", "feature2": "Itifaki za mlolongo wa uhifadhi", "feature3": "Mbinu za uwasilishaji mahakamani" },
+      "breachManagement": { "title": "Usimamizi wa Uvujaji wa Data na Kupunguza Hatari", "description": "Mwongozo wa kimkakati kuhusu kukabiliana na uvujaji wa data, usimamizi wa matukio na kupunguza hatari.", "feature1": "Mipango ya kukabiliana na matukio", "feature2": "Taratibu za arifa za uvujaji", "feature3": "Tathmini na upunguzaji wa hatari" }
+    },
+    "whyChoose": {
+      "title": "Kwa Nini Kuchagua AICTiG?",
+      "expertise": { "title": "Utaalamu wa Kina", "description": "Timu yetu inachanganya utaalamu wa kisheria, kiufundi na kisera na uzoefu mpana katika muktadha wa Kiafrika na kimataifa." },
+      "regional": { "title": "Maarifa ya Kikanda", "description": "Uelewa wa kina wa mifumo ya kitaifa na kikanda ya Afrika, changamoto na fursa katika utawala wa TEHAMA na usalama wa mtandao." },
+      "evidenceBased": { "title": "Mbinu Inayotegemea Ushahidi", "description": "Huduma zetu za ushauri zinategemea utafiti mkali na mapendekezo ya sera yanayotegemea ushahidi." }
+    },
+    "cta": { "title": "Uko tayari kufanya kazi nasi?", "description": "Wasiliana nasi leo kujadili jinsi tunavyoweza kusaidia mahitaji ya shirika lako katika utawala wa usalama wa mtandao na TEHAMA.", "button": "Wasiliana nasi" }
   }
 }

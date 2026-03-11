@@ -1,63 +1,136 @@
 {
   "siteName": "AICTiG",
-  "siteFullName": "African Institute for Cybersecurity & Tele-Informatics Governance",
+  "siteFullName": "非洲网络安全与电信信息治理研究所",
+  "tagline": "网络安全与信息通信技术治理领域的研究、政策与法律卓越",
+  "topBar": {
+    "updates": "新出版物和研究成果现已发布"
+  },
   "navigation": {
-    "home": "Home",
-    "repository": "Repository",
-    "publications": "Publications",
-    "gallery": "Gallery",
-    "news": "News",
-    "about": "About",
-    "contact": "Contact"
+    "home": "首页",
+    "about": "关于我们",
+    "focusAreas": "重点领域",
+    "consultancy": "咨询服务",
+    "repository": "政策库",
+    "publications": "出版物",
+    "news": "新闻",
+    "contact": "联系我们"
   },
   "actions": {
-    "search": "Search",
-    "filter": "Filter",
-    "download": "Download",
-    "readMore": "Read More",
-    "viewAll": "View All",
-    "submit": "Submit",
-    "reset": "Reset",
-    "close": "Close",
-    "back": "Back",
-    "next": "Next",
-    "previous": "Previous",
-    "share": "Share",
-    "loading": "Loading...",
-    "skipToContent": "Skip to content"
+    "search": "搜索",
+    "filter": "筛选",
+    "download": "下载",
+    "readMore": "阅读更多",
+    "viewAll": "查看全部",
+    "submit": "提交",
+    "reset": "重置",
+    "close": "关闭",
+    "back": "返回",
+    "next": "下一页",
+    "previous": "上一页",
+    "share": "分享",
+    "loading": "加载中...",
+    "skipToContent": "跳转到内容"
   },
+  "notFound": "未找到",
+  "backToRepository": "返回政策库",
+  "backToNews": "返回新闻",
+  "loading": "加载中...",
   "footer": {
-    "quickLinks": "Quick Links",
-    "contactInfo": "Contact Information",
+    "fullName": "非洲网络安全与电信信息治理研究所",
+    "tagline": "推动非洲网络安全与信息通信技术治理",
+    "quickLinks": "快速链接",
+    "contactInfo": "联系信息",
     "nigeriaOffice": "尼日利亚办事处",
     "southAfricaOffice": "南非办事处",
-    "nigeriaAddress": "Abuja: 18 Bendel Street, Garki, Abuja, Nigeria\nLagos: 111B Ikeja Way, Dolphin Estate, Ikoyi, Lagos State",
-    "southAfricaAddress": "Suite 3B, Hatfield Bridge, Stanza Bopape St & Richard, Hatfield, Pretoria, 0147, South Africa",
+    "nigeriaAddress": "阿布贾：18 Bendel Street, Garki, Abuja, 尼日利亚\n拉各斯：111B Ikeja Way, Dolphin Estate, Ikoyi, 拉各斯州",
+    "southAfricaAddress": "Suite 3B, Hatfield Bridge, Stanza Bopape St & Richard, Hatfield, 比勒陀利亚, 0147, 南非",
     "email": "电子邮件",
-    "followUs": "Follow Us",
-    "copyright": "© {{year}} African Institute for Cybersecurity & Tele-Informatics Governance. All rights reserved.",
-    "privacy": "Privacy Policy",
-    "terms": "Terms of Service"
+    "followUs": "关注我们",
+    "copyright": "© {{year}} 非洲网络安全与电信信息治理研究所。保留所有权利。",
+    "privacy": "隐私政策",
+    "terms": "使用条款"
   },
   "languages": {
-    "en": "English",
-    "ar": "Arabic",
-    "sw": "Swahili",
-    "fr": "French",
-    "ru": "Russian",
-    "zh": "Chinese",
-    "pt": "Portuguese"
+    "en": "英语",
+    "ar": "阿拉伯语",
+    "sw": "斯瓦希里语",
+    "fr": "法语",
+    "ru": "俄语",
+    "zh": "中文",
+    "pt": "葡萄牙语"
   },
   "errors": {
-    "notFound": "Page not found",
-    "serverError": "Server error occurred",
-    "noResults": "No results found",
-    "tryAgain": "Please try again"
+    "notFound": "页面未找到",
+    "serverError": "服务器错误",
+    "noResults": "未找到结果",
+    "tryAgain": "请重试"
   },
   "pagination": {
-    "page": "Page",
-    "of": "of",
-    "showing": "Showing",
-    "results": "results"
+    "page": "页",
+    "of": "/",
+    "showing": "显示",
+    "results": "条结果"
+  },
+  "focusAreas": {
+    "meta": {
+      "title": "重点领域",
+      "description": "探索AICTiG在网络安全与信息通信技术治理方面的研究和政策领域"
+    },
+    "hero": {
+      "title": "我们的重点领域",
+      "subtitle": "AICTiG采用多学科方法，在非洲网络安全与信息通信技术治理的关键领域开展面向政策的研究。"
+    },
+    "learnMore": "了解更多",
+    "ai": { "title": "人工智能", "description": "非洲人工智能系统的治理框架与政策制定" },
+    "autonomousWeapons": { "title": "自主武器", "description": "自主武器系统的法律与伦理框架" },
+    "broadband": { "title": "宽带政策", "description": "宽带基础设施发展与普遍接入政策" },
+    "5g": { "title": "5G技术", "description": "5G部署策略与监管框架" },
+    "cybersecurity": { "title": "网络安全与网络犯罪", "description": "全面的网络安全政策与网络犯罪立法" },
+    "criticalInfrastructure": { "title": "关键基础设施保护", "description": "国家关键基础设施保护框架" },
+    "cyberwarfare": { "title": "网络战争", "description": "国家网络防御策略与国际网络空间规范" },
+    "childProtection": { "title": "在线儿童保护", "description": "数字环境中的儿童保护" },
+    "crypto": { "title": "加密货币", "description": "数字货币与区块链的监管与治理" },
+    "dataProtection": { "title": "数据保护", "description": "隐私法律与数据保护框架" },
+    "digitalSovereignty": { "title": "数字主权", "description": "网络空间中的国家主权与数据本地化" },
+    "digitalIdentity": { "title": "数字身份", "description": "数字身份系统与身份验证框架" },
+    "digitalTrade": { "title": "数字贸易", "description": "跨境电子商务与数字贸易协定" },
+    "ecommerce": { "title": "电子商务", "description": "电子商务监管与消费者保护" },
+    "electronicEvidence": { "title": "电子证据", "description": "司法程序中电子证据的法律框架" },
+    "digitalTaxation": { "title": "数字服务税", "description": "数字经济与在线服务的税收政策" },
+    "telecom": { "title": "电信", "description": "电信监管与频谱管理" },
+    "techRights": { "title": "技术与人权", "description": "数字权利、言论自由与隐私" },
+    "space": { "title": "空间政策", "description": "卫星通信与空间技术治理" },
+    "regionalIntegration": { "title": "区域一体化与信息通信技术", "description": "非洲各地区信息通信技术政策协调" },
+    "intlCooperation": { "title": "打击网络犯罪国际合作", "description": "预防网络犯罪的跨境合作" },
+    "ict4d": { "title": "信息通信技术促进发展", "description": "衡量信息通信技术对发展的影响。" },
+    "cta": {
+      "title": "对我们的研究感兴趣？",
+      "description": "浏览我们的出版物并联系我们了解更多关于我们工作的信息",
+      "publications": "查看出版物",
+      "contact": "联系我们"
+    }
+  },
+  "consultancy": {
+    "meta": { "title": "咨询服务", "description": "网络安全政策、信息通信技术法律与法规合规方面的专业咨询服务" },
+    "hero": { "title": "咨询服务", "subtitle": "AICTiG为非洲及其他地区的政府、国际组织和私营部门实体提供专家咨询服务。" },
+    "overview": { "title": "我们的服务", "description": "我们提供网络安全与信息通信技术治理方面的专家咨询服务。" },
+    "services": {
+      "policyDevelopment": { "title": "政策制定与分析", "description": "在制定和分析信息通信技术及网络安全政策框架方面提供专家协助。", "feature1": "国家网络安全政策和战略制定", "feature2": "信息通信技术政策框架设计", "feature3": "差距分析与政策建议" },
+      "legalAnalysis": { "title": "法律分析", "description": "对国家、区域和国际网络安全与信息通信技术法律的专家分析。", "feature1": "立法差距分析", "feature2": "比较法律研究", "feature3": "合规评估" },
+      "legalDrafting": { "title": "法律起草", "description": "起草网络安全与信息通信技术领域的立法、法规和法律文书。", "feature1": "网络安全法律起草", "feature2": "数据保护立法", "feature3": "监管框架开发" },
+      "regulatoryCompliance": { "title": "法规合规与监测", "description": "支持信息通信技术和网络安全法规的合规与实施监测。", "feature1": "合规审计与评估", "feature2": "法规监测", "feature3": "实施支持" },
+      "dataProtectionTraining": { "title": "数据保护合规培训", "description": "关于国家、区域和国际数据保护法律的专业培训项目。", "feature1": "GDPR合规培训", "feature2": "NDPA合规培训", "feature3": "隐私影响评估" },
+      "mappingStudies": { "title": "调研分析", "description": "对各国和各地区信息通信技术和网络安全格局的全面调研。", "feature1": "法律与监管绘图", "feature2": "机构能力评估", "feature3": "利益相关者绘图" },
+      "awarenessTraining": { "title": "法律与政策意识培训", "description": "能力建设项目，促进利益相关方了解政策和监管动态。", "feature1": "网络安全意识项目", "feature2": "政策研讨会协助", "feature3": "定制培训模块" },
+      "electronicEvidence": { "title": "电子证据管理", "description": "电子证据管理、保全和出示方面的培训与咨询。", "feature1": "数字取证程序", "feature2": "证据保管链协议", "feature3": "法庭出示技术" },
+      "breachManagement": { "title": "数据泄露管理与风险缓解", "description": "数据泄露响应、事件管理和风险缓解的战略指导。", "feature1": "事件响应规划", "feature2": "泄露通知程序", "feature3": "风险评估与缓解" }
+    },
+    "whyChoose": {
+      "title": "为什么选择AICTiG？",
+      "expertise": { "title": "深厚专业知识", "description": "我们的团队结合了法律、技术和政策专业知识，拥有丰富的非洲和国际背景经验。" },
+      "regional": { "title": "区域知识", "description": "深入了解非洲国家和区域框架、信息通信技术和网络安全治理方面的挑战与机遇。" },
+      "evidenceBased": { "title": "循证方法", "description": "我们的咨询服务以严格的研究和基于证据的政策建议为基础。" }
+    },
+    "cta": { "title": "准备与我们合作？", "description": "立即联系我们，讨论我们如何支持贵组织在网络安全与信息通信技术治理方面的需求。", "button": "联系我们" }
   }
 }

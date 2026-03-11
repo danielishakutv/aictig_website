@@ -1,39 +1,43 @@
 {
   "hero": {
-    "title": "Advancing Cybersecurity Governance Across Africa",
-    "subtitle": "Research, policy analysis, and capacity building for digital resilience in the African continent",
+    "title": "Instituto Africano para a Cibersegurança \ne Governança da Teleinformática",
+    "subtitle": "Avançando a cibersegurança e a governança das TIC em África através de pesquisa, análise de políticas e capacitação",
     "cta": {
-      "repository": "Explore Repository",
-      "updates": "Read Updates"
+      "repository": "Explorar repositório",
+      "updates": "Ler notícias"
     }
   },
   "features": {
-    "title": "What We Offer",
+    "title": "O Que Oferecemos",
     "repository": {
-      "title": "Policy Repository",
-      "description": "Comprehensive database of cybersecurity policies, regulations, and frameworks from across Africa"
+      "title": "Repositório de Políticas",
+      "description": "Base de dados abrangente de políticas, regulamentos e quadros de cibersegurança de toda a África"
     },
     "multilingual": {
-      "title": "Consultancy services",
-      "description": "Tailored consultancy to help governments and organisations develop, adapt, and implement policies on digital governance, open data, and information management."
+      "title": "Serviços de Consultoria",
+      "description": "Consultoria personalizada para ajudar governos e organizações a desenvolver, adaptar e implementar políticas de governança digital, dados abertos e gestão de informação."
     },
     "openAccess": {
-      "title": "Open Access Research",
-      "description": "Free access to research publications, policy briefs, and technical reports"
+      "title": "Pesquisa de Acesso Aberto",
+      "description": "Acesso gratuito a publicações de pesquisa, notas de política e relatórios técnicos"
     }
   },
   "latestPublications": {
-    "title": "Latest Publications",
-    "viewAll": "View All Publications"
+    "title": "Publicações Recentes",
+    "viewAll": "Ver Todas as Publicações"
   },
   "recentPolicies": {
-    "title": "Recent Policies & Regulations",
-    "viewAll": "View All Policies"
+    "title": "Políticas e Regulamentos Recentes",
+    "viewAll": "Ver Todas as Políticas"
+  },
+  "latestNews": {
+    "title": "Últimas Notícias",
+    "viewAll": "Ver Todas as Notícias"
   },
   "stats": {
-    "countries": "Countries Covered",
-    "policies": "Policies Indexed",
-    "languages": "Languages Supported",
-    "publications": "Research Publications"
+    "countries": "Países Cobertos",
+    "policies": "Políticas Indexadas",
+    "languages": "Idiomas Suportados",
+    "publications": "Publicações de Pesquisa"
   }
 }

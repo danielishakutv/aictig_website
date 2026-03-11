@@ -1,53 +1,93 @@
 {
-  "title": "Policy Repository",
-  "subtitle": "Explore cybersecurity policies and regulations from across Africa",
+  "title": "Dépôt de politiques",
+  "subtitle": "Explorez les politiques, réglementations et instruments juridiques en cybersécurité et TIC à travers l'Afrique",
+  "tabs": {
+    "all": "Tous les documents",
+    "regional": "Instruments régionaux africains",
+    "national": "Instruments nationaux"
+  },
+  "regional": {
+    "title": "Instruments régionaux africains",
+    "subtitle": "Cadres politiques et juridiques des organisations régionales africaines",
+    "organizations": {
+      "au": "Union Africaine (UA)",
+      "amu": "Union du Maghreb Arabe (UMA)",
+      "ecowas": "Communauté Économique des États de l'Afrique de l'Ouest (CEDEAO)",
+      "eccas": "Communauté Économique des États de l'Afrique Centrale (CEEAC)",
+      "comesa": "Marché Commun de l'Afrique Orientale et Australe (COMESA)",
+      "sadc": "Communauté de Développement de l'Afrique Australe (SADC)",
+      "eac": "Communauté d'Afrique de l'Est (CAE)",
+      "igad": "Autorité Intergouvernementale pour le Développement (IGAD)"
+    }
+  },
+  "national": {
+    "title": "Instruments nationaux",
+    "subtitle": "Politiques et législations nationales en matière de cybersécurité et de TIC"
+  },
   "filters": {
-    "title": "Filters",
-    "search": "Search policies...",
-    "country": "Country",
-    "theme": "Theme/Sector",
-    "year": "Year Range",
-    "type": "Document Type",
-    "language": "Language",
-    "clearAll": "Clear All",
-    "apply": "Apply Filters"
+    "title": "Filtres",
+    "search": "Rechercher des politiques...",
+    "country": "Pays",
+    "organization": "Organisation régionale",
+    "sector": "Thème/Secteur",
+    "theme": "Thème/Secteur",
+    "year": "Année",
+    "type": "Type de document",
+    "language": "Langue",
+    "clearAll": "Tout effacer",
+    "apply": "Appliquer les filtres"
+  },
+  "search": {
+    "placeholder": "Rechercher des politiques par titre, pays ou mots-clés..."
+  },
+  "empty": {
+    "title": "Aucune politique trouvée",
+    "description": "Essayez de modifier vos filtres ou votre recherche",
+    "action": "Effacer les filtres"
+  },
+  "meta": {
+    "title": "Dépôt de politiques - Cybersécurité et gouvernance des TIC en Afrique",
+    "description": "Parcourir et rechercher les politiques, réglementations et instruments juridiques africains en matière de cybersécurité"
   },
   "sort": {
-    "label": "Sort by",
-    "newest": "Newest First",
-    "oldest": "Oldest First",
-    "title": "Title A-Z",
-    "country": "Country"
+    "label": "Trier par",
+    "newest": "Plus récents",
+    "oldest": "Plus anciens",
+    "title": "Titre A-Z",
+    "country": "Pays"
   },
   "types": {
-    "policy": "Policy",
-    "regulation": "Regulation",
-    "law": "Law",
-    "strategy": "Strategy",
-    "framework": "Framework",
-    "amendment": "Amendment"
+    "policy": "Politique",
+    "regulation": "Réglementation",
+    "law": "Loi",
+    "strategy": "Stratégie",
+    "framework": "Cadre",
+    "amendment": "Amendement",
+    "convention": "Convention",
+    "protocol": "Protocole",
+    "directive": "Directive"
   },
   "card": {
-    "viewDetails": "View Details",
-    "download": "Download PDF",
-    "themes": "Themes",
-    "year": "Year",
+    "viewDetails": "Voir les détails",
+    "download": "Télécharger le PDF",
+    "themes": "Thèmes",
+    "year": "Année",
     "type": "Type",
-    "languages": "Available in"
+    "languages": "Disponible en"
   },
   "detail": {
-    "summary": "Summary",
-    "keyPoints": "Key Points",
-    "relatedDocuments": "Related Documents",
+    "summary": "Résumé",
+    "keyPoints": "Points clés",
+    "relatedDocuments": "Documents connexes",
     "citation": "Citation",
-    "metadata": "Metadata",
-    "downloadPdf": "Download PDF",
-    "country": "Country",
-    "region": "Region",
-    "year": "Year",
+    "metadata": "Métadonnées",
+    "downloadPdf": "Télécharger le PDF",
+    "country": "Pays",
+    "region": "Région",
+    "year": "Année",
     "type": "Type",
-    "languages": "Languages",
-    "themes": "Themes",
-    "tags": "Tags"
+    "languages": "Langues",
+    "themes": "Thèmes",
+    "tags": "Étiquettes"
   }
 }

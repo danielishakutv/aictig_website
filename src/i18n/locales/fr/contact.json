@@ -1,40 +1,40 @@
 {
-  "title": "Contact Us",
-  "subtitle": "Get in touch with our team",
+  "title": "Contactez-nous",
+  "subtitle": "Prenez contact avec notre équipe",
   "form": {
-    "name": "Your Name",
-    "namePlaceholder": "John Doe",
-    "email": "Email Address",
-    "emailPlaceholder": "john.doe@example.com",
-    "topic": "Topic",
-    "topicPlaceholder": "Select a topic",
+    "name": "Votre nom",
+    "namePlaceholder": "Jean Dupont",
+    "email": "Adresse e-mail",
+    "emailPlaceholder": "jean.dupont@exemple.com",
+    "topic": "Sujet",
+    "topicPlaceholder": "Sélectionnez un sujet",
     "message": "Message",
-    "messagePlaceholder": "Tell us how we can help...",
-    "submit": "Send Message",
-    "submitting": "Sending..."
+    "messagePlaceholder": "Dites-nous comment nous pouvons vous aider...",
+    "submit": "Envoyer le message",
+    "submitting": "Envoi en cours..."
   },
   "topics": {
-    "general": "General Inquiry",
-    "research": "Research Collaboration",
-    "training": "Training & Capacity Building",
-    "partnership": "Partnership Opportunities",
-    "media": "Media Inquiry",
-    "technical": "Technical Support"
+    "general": "Demande générale",
+    "research": "Collaboration de recherche",
+    "training": "Formation et renforcement des capacités",
+    "partnership": "Opportunités de partenariat",
+    "media": "Demande média",
+    "technical": "Support technique"
   },
   "success": {
-    "title": "Message Sent!",
-    "message": "Thank you for contacting us. We'll get back to you soon."
+    "title": "Message envoyé !",
+    "message": "Merci de nous avoir contactés. Nous vous répondrons bientôt."
   },
   "error": {
-    "title": "Error",
-    "message": "Failed to send message. Please try again."
+    "title": "Erreur",
+    "message": "Échec de l'envoi du message. Veuillez réessayer."
   },
   "info": {
-    "title": "Contact Information",
-    "email": "Email",
-    "phone": "Phone",
-    "address": "Address",
-    "hours": "Office Hours",
-    "hoursValue": "Monday - Friday, 9:00 AM - 5:00 PM (EAT)"
+    "title": "Coordonnées",
+    "email": "E-mail",
+    "phone": "Téléphone",
+    "address": "Adresse",
+    "hours": "Heures d'ouverture",
+    "hoursValue": "Lundi - Vendredi, 9h00 - 17h00 (EAT)"
   }
 }

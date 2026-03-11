@@ -1,6 +1,15 @@
 {
   "title": "Habari na Masasisho",
   "subtitle": "Habari za hivi karibuni, matangazo, na maarifa kutoka AICTiG",
+  "readMore": "Soma Zaidi",
+  "backToNews": "Rudi kwenye Habari",
+  "share": "Shiriki",
+  "shareCopied": "Kiungo kimenakiliwa kwenye ubao wa kunakili",
+  "relatedArticles": "Makala Yanayohusiana",
+  "meta": {
+    "title": "Habari na Masasisho",
+    "description": "Kaa na habari za hivi karibuni na matangazo kutoka AICTiG"
+  },
   "filters": {
     "search": "Tafuta habari...",
     "all": "Habari Zote"
@@ -19,6 +28,6 @@
   },
   "empty": {
     "title": "Hakuna makala ya habari zilizopatikana",
-    "description": "Angalia tena baadaye kwa masasisho"
+    "description": "Rudi tena baadaye kwa masasisho"
   }
 }

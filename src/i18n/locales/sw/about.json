@@ -1,33 +1,47 @@
 {
   "title": "Kuhusu AICTiG",
-  "mission": {
-    "title": "Dhamira Yetu",
-    "content": "Kuendeleza utawala wa usalama wa mtandao na tele-informatics kote Afrika kupitia utafiti, uchambuzi wa sera, ujenzi wa uwezo, na ushirikiano wa kikanda."
-    ,
-    "repository": {
-      "title": "Policy Creation",
-      "description": "Supporting the development and curation of policy documents, legislation, and implementation guidance to assist governments and institutions."
-    }
+  "hero": {
+    "title": "Kuhusu AICTiG",
+    "subtitle": "Taasisi ya Kiafrika ya Usalama wa Mtandao na Utawala wa Tele-Informatics (AICTiG) ni kituo cha utafiti na taasisi ya kielimu inayoendeleza utafiti wa hali ya juu kuhusu masuala ya sera, kisheria na udhibiti yanayoathiri usalama wa mtandao na TEHAMA barani Afrika."
+  },
+  "about": {
+    "title": "Kuhusu Taasisi",
+    "paragraph1": "Taasisi ya Kiafrika ya Usalama wa Mtandao na Utawala wa Tele-Informatics (AICTiG) ni kituo cha utafiti huru na taasisi ya kielimu iliyoidhinishwa kuendeleza, kufanya na kusambaza utafiti wa hali ya juu kuhusu masuala ya sera, kisheria na udhibiti yanayoathiri usalama wa mtandao na Teknolojia ya Habari na Mawasiliano (TEHAMA) katika eneo la Afrika.",
+    "paragraph2": "AICTiG inatumia mbinu ya taaluma mbalimbali kuzalisha utafiti unaoelekezwa kwenye sera na maeneo yake ya kuzingatia ni pamoja na utawala wa akili bandia, usalama wa mtandao, uhalifu wa mtandao, mawasiliano, ulinzi wa miundombinu muhimu, sarafu za kidijitali, ulinzi wa data, haki za kidijitali, utambulisho wa kidijitali, biashara ya kidijitali, biashara ya kielektroniki, kodi ya huduma za kidijitali, TEHAMA kwa maendeleo (ICT4D) na muungano wa kikanda.",
+    "paragraph3": "Taasisi inafanya programu za mafunzo na elimu kuhusu utawala wa TEHAMA na usalama wa mtandao kwa lengo la kujenga uwezo katika eneo la Afrika, na inatoa huduma za ushauri kwa mashirika ya kitaifa na kimataifa, na mashirika ya sekta binafsi.",
+    "incorporation": "AICTiG imesajiliwa kama Kampuni Iliyodhaminiwa na Kamisheni ya Masuala ya Mashirika ya Jamhuri ya Shirikisho ya Nigeria mwaka 2025."
   },
   "vision": {
     "title": "Dira Yetu",
-    "content": "Afrika salama na imara kidijitali ambapo mifumo ya utawala madhubuti huwezesha mabadiliko ya kidijitali salama na jumuishi."
+    "description": "Kuweka AICTiG kama taasisi inayoongoza katika utafiti wa hali ya juu unaotegemea ushahidi na elimu kuhusu utawala wa usalama wa mtandao na TEHAMA barani Afrika."
   },
-  "values": {
-    "title": "Maadili Yetu",
-    "excellence": "Ubora katika utafiti na uchambuzi",
-    "collaboration": "Ushirikiano kuvuka mipaka na sekta",
-    "independence": "Uhuru na ukweli",
-    "inclusion": "Ujumuishaji na ufikiaji",
-    "innovation": "Ubunifu na mawazo ya mbele"
+  "mission": {
+    "title": "Dhamira Yetu",
+    "intro": "Dhamira ya AICTiG inajumuisha malengo mengi ya kimkakati kama vile kuendeleza ujenzi wa uwezo kwa utawala wa usalama wa mtandao na TEHAMA barani Afrika; na kutoa jukwaa la kikanda la Afrika kwa kufanya na kusambaza utafiti kuhusu masuala yanayojitokeza yanayoathiri utawala wa usalama wa mtandao na TEHAMA.",
+    "research": {
+      "title": "Usambazaji wa Utafiti",
+      "description": "Kufanya na kusambaza utafiti wa hali ya juu, unaoelekezwa kwenye sera, kuhusu usalama wa mtandao na utawala wa TEHAMA"
+    },
+    "repository": {
+      "title": "Uundaji wa Sera",
+      "description": "Kusaidia uendelezaji na usimamizi wa hati za sera, sheria na mwongozo wa utekelezaji ili kusaidia serikali na taasisi."
+    },
+    "capacity": {
+      "title": "Ujenzi wa Uwezo",
+      "description": "Kutoa programu za mafunzo na elimu ili kuimarisha utaalamu wa kikanda"
+    },
+    "publications": {
+      "title": "Machapisho",
+      "description": "Kuchapisha majarida, muhtasari wa sera, blogu na maudhui ya uongozi wa mawazo"
+    }
   },
   "team": {
     "title": "Timu Yetu",
-    "leadership": "Uongozi",
-    "researchers": "Watafiti"
+    "subtitle": "Kutana na wataalamu wanaoendeleza dhamira yetu",
+    "comingSoon": "Wasifu wa timu utakuja hivi karibuni"
   },
-  "partners": {
-    "title": "Washirika Wetu",
-    "subtitle": "Kufanya kazi pamoja kuimarisha utawala wa usalama wa mtandao kote Afrika"
+  "meta": {
+    "title": "Kuhusu AICTiG — Taasisi ya Kiafrika ya Usalama wa Mtandao na Utawala wa Tele-Informatics",
+    "description": "Jifunze kuhusu dhamira ya AICTiG ya kuendeleza usalama wa mtandao na utawala wa TEHAMA barani Afrika kupitia utafiti, uchambuzi wa sera na ujenzi wa uwezo"
   }
 }

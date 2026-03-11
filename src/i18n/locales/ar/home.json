@@ -1,7 +1,7 @@
 {
   "hero": {
-    "title": "تعزيز حوكمة الأمن السيبراني في أفريقيا",
-    "subtitle": "البحث وتحليل السياسات وبناء القدرات من أجل المرونة الرقمية في القارة الأفريقية",
+    "title": "المعهد الأفريقي للأمن السيبراني \nوحوكمة المعلوماتية الاتصالية",
+    "subtitle": "تعزيز الأمن السيبراني وحوكمة تكنولوجيا المعلومات والاتصالات في أفريقيا من خلال البحث وتحليل السياسات وبناء القدرات",
     "cta": {
       "repository": "استكشف المستودع",
       "updates": "اقرأ التحديثات"
@@ -14,8 +14,8 @@
       "description": "قاعدة بيانات شاملة لسياسات الأمن السيبراني واللوائح والأطر من جميع أنحاء أفريقيا"
     },
     "multilingual": {
-      "title": "Consultancy services",
-      "description": "Tailored consultancy to help governments and organisations develop, adapt, and implement policies on digital governance, open data, and information management."
+      "title": "خدمات الاستشارات",
+      "description": "استشارات مخصصة لمساعدة الحكومات والمنظمات على تطوير وتكييف وتنفيذ سياسات الحوكمة الرقمية والبيانات المفتوحة وإدارة المعلومات."
     },
     "openAccess": {
       "title": "البحث المفتوح الوصول",
@@ -29,6 +29,10 @@
   "recentPolicies": {
     "title": "السياسات واللوائح الأخيرة",
     "viewAll": "عرض جميع السياسات"
+  },
+  "latestNews": {
+    "title": "آخر الأخبار",
+    "viewAll": "عرض جميع الأخبار"
   },
   "stats": {
     "countries": "الدول المشمولة",

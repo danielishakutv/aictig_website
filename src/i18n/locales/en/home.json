@@ -30,6 +30,10 @@
     "title": "Recent Policies & Regulations",
     "viewAll": "View All Policies"
   },
+  "latestNews": {
+    "title": "Latest News",
+    "viewAll": "View All News"
+  },
   "stats": {
     "countries": "Countries Covered",
     "policies": "Policies Indexed",
