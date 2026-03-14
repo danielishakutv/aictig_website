@@ -35,6 +35,25 @@ app.use('/documents', createProxyMiddleware({
   pathRewrite: { '^/': '/wp-content/uploads/' },
 }));
 
+// ─── Matomo analytics proxy: /m/* → analytics.aictig.org ─────────
+// Proxying through the main domain avoids ad-blocker interference.
+const MATOMO_BACKEND = 'https://analytics.aictig.org';
+
+app.use('/m/matomo.js', createProxyMiddleware({
+  target: MATOMO_BACKEND + '/matomo.js',
+  changeOrigin: true,
+  secure: false,
+  ignorePath: true,
+}));
+
+app.use('/m/matomo.php', createProxyMiddleware({
+  target: MATOMO_BACKEND + '/matomo.php',
+  changeOrigin: true,
+  secure: false,
+  ignorePath: false,
+  pathRewrite: { '^/m/matomo.php': '/matomo.php' },
+}));
+
 // ─── Static files from Vite build ────────────────────────────────
 app.use(express.static(path.join(__dirname, 'dist')));
 

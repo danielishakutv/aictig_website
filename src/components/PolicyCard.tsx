@@ -3,6 +3,7 @@ import { ArrowDownTrayIcon, EyeIcon } from '@heroicons/react/24/outline';
 import Tag from './Tag';
 import CountryFlag from './CountryFlag';
 import { Policy } from '../types';
+import { trackDownload, trackPreview } from '../utils/analytics';
 
 interface PolicyCardProps {
   policy: Policy;
@@ -56,6 +57,7 @@ export default function PolicyCard({ policy, variant = 'grid' }: PolicyCardProps
                 rel="noopener noreferrer"
                 className="inline-flex items-center gap-1 text-xs font-medium text-primary-600 hover:text-primary-700 rounded px-1.5 py-1 hover:bg-primary-50 transition-colors"
                 title="Preview document"
+                onClick={() => trackPreview(policy.title)}
               >
                 <EyeIcon className="h-3.5 w-3.5" />
                 <span className="hidden sm:inline">Preview</span>
@@ -65,6 +67,7 @@ export default function PolicyCard({ policy, variant = 'grid' }: PolicyCardProps
                 download
                 className="inline-flex items-center gap-1 text-xs font-medium text-primary-600 hover:text-primary-700 rounded px-1.5 py-1 hover:bg-primary-50 transition-colors"
                 title="Download PDF"
+                onClick={() => trackDownload(policy.title, policy.fileUrl)}
               >
                 <ArrowDownTrayIcon className="h-3.5 w-3.5" />
                 <span>PDF</span>
@@ -128,6 +131,7 @@ export default function PolicyCard({ policy, variant = 'grid' }: PolicyCardProps
                 rel="noopener noreferrer"
                 className="inline-flex items-center gap-1 text-xs font-medium text-primary-600 hover:text-primary-700 rounded px-1.5 py-1 hover:bg-primary-50 transition-colors"
                 title="Preview document"
+                onClick={() => trackPreview(policy.title)}
               >
                 <EyeIcon className="h-3.5 w-3.5" />
                 <span className="hidden sm:inline">Preview</span>
@@ -137,6 +141,7 @@ export default function PolicyCard({ policy, variant = 'grid' }: PolicyCardProps
                 download
                 className="inline-flex items-center gap-1 text-xs font-medium text-primary-600 hover:text-primary-700 rounded px-1.5 py-1 hover:bg-primary-50 transition-colors"
                 title="Download PDF"
+                onClick={() => trackDownload(policy.title, policy.fileUrl)}
               >
                 <ArrowDownTrayIcon className="h-3.5 w-3.5" />
                 <span>PDF</span>

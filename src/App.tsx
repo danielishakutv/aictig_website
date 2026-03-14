@@ -6,7 +6,7 @@ import Header from './components/Header';
 import Footer from './components/Footer';
 import Toast from './components/Toast';
 import Home from './pages/Home';
-import { trackPageView } from './utils/analytics';
+import { trackPageView, initAnalytics } from './utils/analytics';
 import ErrorBoundary from './components/ErrorBoundary';
 
 // Lazy load pages for better performance
@@ -24,6 +24,9 @@ const FocusAreas = lazy(() => import('./pages/FocusAreas'));
 const Consultancy = lazy(() => import('./pages/Consultancy'));
 const Contact = lazy(() => import('./pages/Contact'));
 const Legal = lazy(() => import('./pages/Legal'));
+
+// Initialize Matomo analytics (once, on app boot)
+initAnalytics();
 
 function ScrollToTop() {
   const { pathname } = useLocation();

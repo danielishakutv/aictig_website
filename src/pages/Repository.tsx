@@ -8,6 +8,7 @@ import Pagination from '../components/Pagination';
 import EmptyState from '../components/EmptyState';
 import { CardSkeleton } from '../components/Skeleton';
 import { fetchAllDocuments } from '../utils/graphql';
+import { trackSearch, trackFilter } from '../utils/analytics';
 import type { Policy } from '../types';
 
 const ITEMS_PER_PAGE = 9;
@@ -201,6 +202,7 @@ export default function Repository() {
     setActiveFilters((prev) => {
       const current = prev[filterId] || [];
       const isActive = current.includes(value);
+      if (!isActive) trackFilter(filterId, value);
       return {
         ...prev,
         [filterId]: isActive ? current.filter((v) => v !== value) : [...current, value],
@@ -224,6 +226,9 @@ export default function Repository() {
   const handleSearch = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     setCurrentPage(1);
+    if (searchQuery.trim()) {
+      trackSearch(searchQuery, filteredPolicies.length);
+    }
   };
 
   return (
