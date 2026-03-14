@@ -34,6 +34,11 @@
     "year": "Ano",
     "type": "Tipo de Documento",
     "language": "Idioma",
+    "level": "Nível do Documento",
+    "levelNational": "Nacional",
+    "levelRegional": "Regional",
+    "levelContinental": "Continental",
+    "levelInternational": "Internacional",
     "clearAll": "Limpar Tudo",
     "apply": "Aplicar Filtros"
   },
@@ -88,6 +93,8 @@
     "type": "Tipo",
     "languages": "Idiomas",
     "themes": "Temas",
-    "tags": "Etiquetas"
+    "tags": "Etiquetas",
+    "organization": "Organização",
+    "level": "Nível do Documento"
   }
 }

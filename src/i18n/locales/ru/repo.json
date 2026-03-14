@@ -34,6 +34,11 @@
     "year": "Год",
     "type": "Тип документа",
     "language": "Язык",
+    "level": "Уровень документа",
+    "levelNational": "Национальный",
+    "levelRegional": "Региональный",
+    "levelContinental": "Континентальный",
+    "levelInternational": "Международный",
     "clearAll": "Очистить все",
     "apply": "Применить фильтры"
   },
@@ -88,6 +93,8 @@
     "type": "Тип",
     "languages": "Языки",
     "themes": "Темы",
-    "tags": "Теги"
+    "tags": "Теги",
+    "organization": "Организация",
+    "level": "Уровень документа"
   }
 }

@@ -34,6 +34,11 @@
     "year": "年份",
     "type": "文件类型",
     "language": "语言",
+    "level": "文件级别",
+    "levelNational": "国家",
+    "levelRegional": "区域",
+    "levelContinental": "大陆",
+    "levelInternational": "国际",
     "clearAll": "全部清除",
     "apply": "应用筛选"
   },
@@ -88,6 +93,8 @@
     "type": "类型",
     "languages": "语言",
     "themes": "主题",
-    "tags": "标签"
+    "tags": "标签",
+    "organization": "组织",
+    "level": "文件级别"
   }
 }

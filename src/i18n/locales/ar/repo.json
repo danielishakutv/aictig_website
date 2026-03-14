@@ -34,6 +34,11 @@
     "year": "السنة",
     "type": "نوع الوثيقة",
     "language": "اللغة",
+    "level": "مستوى الوثيقة",
+    "levelNational": "وطني",
+    "levelRegional": "إقليمي",
+    "levelContinental": "قاري",
+    "levelInternational": "دولي",
     "clearAll": "مسح الكل",
     "apply": "تطبيق التصفية"
   },
@@ -88,6 +93,8 @@
     "type": "النوع",
     "languages": "اللغات",
     "themes": "المواضيع",
-    "tags": "الوسوم"
+    "tags": "الوسوم",
+    "organization": "المنظمة",
+    "level": "مستوى الوثيقة"
   }
 }

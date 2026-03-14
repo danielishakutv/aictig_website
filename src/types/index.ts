@@ -7,7 +7,9 @@ export interface Policy {
   region: string;
   year: number;
   type: string;
-  organization?: string; // For regional instruments: 'au', 'ecowas', 'sadc', etc.
+  level: 'national' | 'regional' | 'continental' | 'international';
+  organization?: string; // Display label: 'African Union', 'ECOWAS', 'SADC', etc.
+  organizationKey?: string; // Lookup key: 'au', 'ecowas', 'sadc', etc.
   languages: string[];
   summary: string;
   themes: string[];

@@ -99,11 +99,31 @@ const AFRICAN_COUNTRIES: Record<string, { iso2: string; region: string }> = {
 const YEAR_REGEX = /^\d{4}$/;
 const SKIP_CATEGORIES = new Set(['uncategorized']);
 
-/* ── Regional organization names (for tab classification) ─────── */
-const REGIONAL_ORGS = new Set([
-  'african union', 'au', 'ecowas', 'sadc', 'eac', 'igad', 'comesa',
-  'eccas', 'amu', 'cen-sad', 'auc', 'nepad', 'afdb',
-]);
+/* ── Organization names → level + display label ───────────────── */
+const ORGANIZATIONS: Record<string, { level: 'continental' | 'regional' | 'international'; label: string; key: string }> = {
+  // Continental (African Union family)
+  'african union':  { level: 'continental', label: 'African Union',  key: 'au' },
+  'au':             { level: 'continental', label: 'African Union',  key: 'au' },
+  'auc':            { level: 'continental', label: 'African Union',  key: 'au' },
+  'nepad':          { level: 'continental', label: 'NEPAD',          key: 'nepad' },
+  'afdb':           { level: 'continental', label: 'AfDB',           key: 'afdb' },
+  // Regional Economic Communities
+  'ecowas':         { level: 'regional', label: 'ECOWAS',           key: 'ecowas' },
+  'sadc':           { level: 'regional', label: 'SADC',             key: 'sadc' },
+  'eac':            { level: 'regional', label: 'EAC',              key: 'eac' },
+  'igad':           { level: 'regional', label: 'IGAD',             key: 'igad' },
+  'comesa':         { level: 'regional', label: 'COMESA',           key: 'comesa' },
+  'eccas':          { level: 'regional', label: 'ECCAS',            key: 'eccas' },
+  'amu':            { level: 'regional', label: 'AMU',              key: 'amu' },
+  'cen-sad':        { level: 'regional', label: 'CEN-SAD',          key: 'cen-sad' },
+  'asean':          { level: 'regional', label: 'ASEAN',            key: 'asean' },
+  'arab league':    { level: 'regional', label: 'Arab League',      key: 'arab-league' },
+  // International
+  'international':  { level: 'international', label: 'International', key: 'international' },
+  'itu':            { level: 'international', label: 'ITU',           key: 'itu' },
+  'united nations': { level: 'international', label: 'United Nations', key: 'un' },
+  'un':             { level: 'international', label: 'United Nations', key: 'un' },
+};
 
 /* ── GraphQL types ─────────────────────────────────────────────── */
 interface GraphQLMediaNode {
@@ -214,7 +234,9 @@ function parseCategories(categoryNodes: Array<{ name: string }>) {
   let countryCode = '';
   let countryName = '';
   let region = '';
-  let isRegional = false;
+  let orgLabel = '';
+  let orgKey = '';
+  let orgLevel: 'continental' | 'regional' | 'international' | '' = '';
 
   for (const { name } of categoryNodes) {
     const trimmed = name.trim();
@@ -231,12 +253,19 @@ function parseCategories(categoryNodes: Array<{ name: string }>) {
       countryCode = info.iso2;
       countryName = trimmed;
       region = info.region;
-    } else if (REGIONAL_ORGS.has(lower)) {
-      isRegional = true;
+    } else if (ORGANIZATIONS[lower]) {
+      const org = ORGANIZATIONS[lower];
+      orgLabel = org.label;
+      orgKey = org.key;
+      orgLevel = org.level;
     } else {
       themes.push(trimmed);
     }
   }
+
+  // Determine document level: org-level if an org was found, otherwise national
+  const level: 'national' | 'regional' | 'continental' | 'international' =
+    orgLevel || (countryCode ? 'national' : 'national');
 
   return {
     year: years.length > 0 ? Math.max(...years) : new Date().getFullYear(),
@@ -245,7 +274,9 @@ function parseCategories(categoryNodes: Array<{ name: string }>) {
     region,
     languages: languages.length > 0 ? languages : ['en'],
     themes,
-    isRegional,
+    level,
+    orgLabel,
+    orgKey,
   };
 }
 
@@ -269,8 +300,10 @@ function transformMediaNode(node: GraphQLMediaNode): Policy {
     countryCode: parsed.countryCode,
     region: parsed.region,
     year: parsed.year,
-    type: parsed.isRegional ? 'regional' : 'national',
-    organization: parsed.isRegional ? 'regional' : undefined,
+    type: parsed.level === 'national' ? 'national' : parsed.level,
+    level: parsed.level,
+    organization: parsed.orgLabel || undefined,
+    organizationKey: parsed.orgKey || undefined,
     languages: parsed.languages,
     summary,
     themes: parsed.themes,
@@ -299,8 +332,8 @@ function isRepositoryDocument(node: GraphQLMediaNode): boolean {
     if (KNOWN_LANGUAGES.has(lower)) return true;
     // Country
     if (AFRICAN_COUNTRIES[lower]) return true;
-    // Regional org
-    if (REGIONAL_ORGS.has(lower)) return true;
+    // Organization (continental / regional / international)
+    if (ORGANIZATIONS[lower]) return true;
     // Any other non-skipped category counts as a theme
     return true;
   }
@@ -560,4 +593,74 @@ export async function fetchNewsArticleBySlug(
   } catch {
     return null;
   }
+}
+
+/* ══════════════════════════════════════════════════════════════════
+   Latest updates ticker (cached, merges all content types)
+   ══════════════════════════════════════════════════════════════════ */
+
+const UPDATES_CACHE_KEY = 'aictig_updates';
+const UPDATES_CACHE_TTL = 15 * 60 * 1000; // 15 minutes
+
+interface CachedUpdates {
+  ts: number;
+  items: { text: string; link: string }[];
+}
+
+/**
+ * Return the N most recent items across news, publications, and repository
+ * documents. Results are cached in sessionStorage for 15 min so the backend
+ * is hit at most once per browser tab per 15 min window.
+ */
+export async function fetchLatestUpdates(
+  count = 10,
+): Promise<{ text: string; link: string }[]> {
+  // 1. Try sessionStorage cache
+  try {
+    const raw = sessionStorage.getItem(UPDATES_CACHE_KEY);
+    if (raw) {
+      const cached: CachedUpdates = JSON.parse(raw);
+      if (Date.now() - cached.ts < UPDATES_CACHE_TTL) return cached.items;
+    }
+  } catch { /* ignore corrupted cache */ }
+
+  // 2. Fetch all three sources in parallel
+  const [news, pubs, docs] = await Promise.all([
+    fetchNewsArticles().catch(() => [] as NewsArticle[]),
+    fetchPublications().catch(() => [] as Publication[]),
+    fetchAllDocuments().catch(() => [] as Policy[]),
+  ]);
+
+  // 3. Normalise into a common shape with a sortable timestamp
+  const merged: { text: string; link: string; date: number }[] = [
+    ...news.map((a) => ({
+      text: a.title,
+      link: `/news/${a.slug}`,
+      date: new Date(a.date).getTime(),
+    })),
+    ...pubs.map((p) => ({
+      text: p.title,
+      link: `/publications/${p.slug}`,
+      date: new Date(`${p.year}-01-01`).getTime(),
+    })),
+    ...docs.map((d) => ({
+      text: d.title,
+      link: `/repository/${d.id}`,
+      date: new Date(`${d.year}-01-01`).getTime(),
+    })),
+  ];
+
+  // 4. Sort newest-first, take the top N
+  merged.sort((a, b) => b.date - a.date);
+  const items = merged.slice(0, count).map(({ text, link }) => ({ text, link }));
+
+  // 5. Cache
+  try {
+    sessionStorage.setItem(
+      UPDATES_CACHE_KEY,
+      JSON.stringify({ ts: Date.now(), items } satisfies CachedUpdates),
+    );
+  } catch { /* quota exceeded — no big deal */ }
+
+  return items;
 }

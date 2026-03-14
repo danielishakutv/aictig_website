@@ -3,9 +3,10 @@ import { useTranslation } from 'react-i18next';
 import { Disclosure } from '@headlessui/react';
 import { Bars3Icon, XMarkIcon, MagnifyingGlassIcon } from '@heroicons/react/24/outline';
 import LanguageSwitcher from './LanguageSwitcher';
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useRef, useCallback } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { getSocialLinks } from '../utils/socialLinks';
+import { fetchLatestUpdates } from '../utils/graphql';
 
 export default function Header() {
   const { t } = useTranslation('common');
@@ -13,24 +14,28 @@ export default function Header() {
   const [isSearchOpen, setIsSearchOpen] = useState(false);
   const [searchResults, setSearchResults] = useState<any[]>([]);
   const [currentUpdateIndex, setCurrentUpdateIndex] = useState(0);
+  const [updates, setUpdates] = useState<{ text: string; link: string }[]>([]);
   const navigate = useNavigate();
   const socialLinks = getSocialLinks('h-5 w-5');
-  
-  const updates = [
-    { text: 'New cybersecurity policy framework published for African nations', link: '/publications' },
-    { text: 'Latest research on AI governance in Africa now available', link: '/repository' },
-    { text: 'Data protection compliance training sessions announced', link: '/news' },
-    { text: 'Regional consultation on digital sovereignty begins', link: '/news' },
-    { text: 'New policy briefs on telecommunications regulation released', link: '/publications' },
-  ];
+  const tickerRef = useRef<number | null>(null);
+
+  // Fetch latest updates (cached, from news + publications + repository)
+  useEffect(() => {
+    fetchLatestUpdates(10).then((items) => {
+      if (items.length > 0) setUpdates(items);
+    });
+  }, []);
+
+  // Continuous ticker rotation
+  const tick = useCallback(() => {
+    setCurrentUpdateIndex((prev) => (prev + 1) % updates.length);
+  }, [updates.length]);
 
   useEffect(() => {
-    const interval = setInterval(() => {
-      setCurrentUpdateIndex((prevIndex) => (prevIndex + 1) % updates.length);
-    }, 5000); // Change every 5 seconds
-
-    return () => clearInterval(interval);
-  }, [updates.length]);
+    if (updates.length < 2) return;
+    tickerRef.current = window.setInterval(tick, 5000);
+    return () => { if (tickerRef.current) clearInterval(tickerRef.current); };
+  }, [updates.length, tick]);
 
   // Mock search data - replace with actual data fetching
   const performSearch = (query: string) => {
@@ -222,22 +227,26 @@ export default function Header() {
             <div className="container-custom">
               <div className="flex h-10 justify-between items-center">
                 <div className="flex items-center text-sm min-w-0 flex-1 overflow-hidden">
-                  <span className="font-medium text-white flex-shrink-0 mr-2">Updates:</span>
-                  <div className="relative flex-1 overflow-hidden h-5">
-                    {updates.map((update, index) => (
-                      <Link
-                        key={index}
-                        to={update.link}
-                        className="absolute top-0 left-0 w-full whitespace-nowrap hover:text-white transition-all duration-500 ease-in-out overflow-hidden text-ellipsis"
-                        style={{
-                          transform: `translateY(${(index - currentUpdateIndex) * 100}%)`,
-                          opacity: index === currentUpdateIndex ? 1 : 0,
-                        }}
-                      >
-                        {update.text}
-                      </Link>
-                    ))}
-                  </div>
+                  {updates.length > 0 && (
+                    <>
+                      <span className="font-medium text-white flex-shrink-0 mr-2">Updates:</span>
+                      <div className="relative flex-1 overflow-hidden h-5">
+                        {updates.map((update, index) => (
+                          <Link
+                            key={index}
+                            to={update.link}
+                            className="absolute top-0 left-0 w-full whitespace-nowrap hover:text-white transition-all duration-500 ease-in-out overflow-hidden text-ellipsis"
+                            style={{
+                              transform: `translateY(${(index - currentUpdateIndex) * 100}%)`,
+                              opacity: index === currentUpdateIndex ? 1 : 0,
+                            }}
+                          >
+                            {update.text}
+                          </Link>
+                        ))}
+                      </div>
+                    </>
+                  )}
                 </div>
                 <div className="hidden md:flex items-center space-x-3 flex-shrink-0 ml-4">
                   {socialLinks.map((social) => (

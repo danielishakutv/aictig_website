@@ -1,6 +1,6 @@
 import { useState, useEffect, useMemo } from 'react';
 import { useTranslation } from 'react-i18next';
-import { MagnifyingGlassIcon, XMarkIcon } from '@heroicons/react/24/outline';
+import { MagnifyingGlassIcon, XMarkIcon, Squares2X2Icon, ListBulletIcon } from '@heroicons/react/24/outline';
 import Seo from '../components/Seo';
 import FilterSidebar from '../components/FilterSidebar';
 import PolicyCard from '../components/PolicyCard';
@@ -18,14 +18,16 @@ export default function Repository() {
   const [loading, setLoading] = useState(true);
   const [searchQuery, setSearchQuery] = useState('');
   const [activeFilters, setActiveFilters] = useState<Record<string, string[]>>({
+    level: [],
+    organization: [],
     country: [],
     sector: [],
     year: [],
     language: [],
-    organization: [],
   });
   const [currentPage, setCurrentPage] = useState(1);
   const [isMobileFiltersOpen, setIsMobileFiltersOpen] = useState(false);
+  const [viewMode, setViewMode] = useState<'grid' | 'list'>('grid');
 
   const activeFilterCount = useMemo(
     () => Object.values(activeFilters).reduce((acc, values) => acc + values.length, 0),
@@ -55,14 +57,18 @@ export default function Repository() {
       );
     }
 
-    if (activeFilters.country.length > 0) {
-      filtered = filtered.filter((policy) => activeFilters.country.includes(policy.countryCode));
+    if (activeFilters.level.length > 0) {
+      filtered = filtered.filter((policy) => activeFilters.level.includes(policy.level));
     }
 
-    if (activeFilters.organization && activeFilters.organization.length > 0) {
+    if (activeFilters.organization.length > 0) {
       filtered = filtered.filter(
-        (policy) => policy.organization && activeFilters.organization.includes(policy.organization)
+        (policy) => policy.organizationKey && activeFilters.organization.includes(policy.organizationKey)
       );
+    }
+
+    if (activeFilters.country.length > 0) {
+      filtered = filtered.filter((policy) => activeFilters.country.includes(policy.countryCode));
     }
 
     if (activeFilters.sector.length > 0) {
@@ -88,6 +94,29 @@ export default function Repository() {
 
   const filterGroups = useMemo(() => {
     if (loading) return [];
+
+    // Build document-level counts
+    const levelMap = new Map<string, number>();
+    policies.forEach((p) => {
+      levelMap.set(p.level, (levelMap.get(p.level) || 0) + 1);
+    });
+    const LEVEL_LABELS: Record<string, string> = {
+      national: t('repo:filters.levelNational', { defaultValue: 'National' }),
+      regional: t('repo:filters.levelRegional', { defaultValue: 'Regional' }),
+      continental: t('repo:filters.levelContinental', { defaultValue: 'Continental' }),
+      international: t('repo:filters.levelInternational', { defaultValue: 'International' }),
+    };
+    const LEVEL_ORDER = ['national', 'regional', 'continental', 'international'];
+
+    // Build organization options
+    const orgMap = new Map<string, { label: string; count: number }>();
+    policies.forEach((p) => {
+      if (p.organizationKey && p.organization) {
+        const existing = orgMap.get(p.organizationKey);
+        if (existing) existing.count++;
+        else orgMap.set(p.organizationKey, { label: p.organization, count: 1 });
+      }
+    });
 
     // Build country options from the data itself
     const countryMap = new Map<string, { name: string; count: number }>();
@@ -121,6 +150,24 @@ export default function Repository() {
     });
 
     return [
+      {
+        id: 'level',
+        label: t('repo:filters.level', { defaultValue: 'Document Level' }),
+        options: LEVEL_ORDER
+          .filter((lvl) => levelMap.has(lvl))
+          .map((lvl) => ({
+            label: LEVEL_LABELS[lvl] || lvl,
+            value: lvl,
+            count: levelMap.get(lvl) || 0,
+          })),
+      },
+      {
+        id: 'organization',
+        label: t('repo:filters.organization'),
+        options: Array.from(orgMap.entries())
+          .sort(([, a], [, b]) => a.label.localeCompare(b.label))
+          .map(([key, { label, count }]) => ({ label, value: key, count })),
+      },
       {
         id: 'country',
         label: t('repo:filters.country'),
@@ -164,11 +211,12 @@ export default function Repository() {
 
   const handleClearFilters = () => {
     setActiveFilters({
+      level: [],
+      organization: [],
       country: [],
       sector: [],
       year: [],
       language: [],
-      organization: [],
     });
     setCurrentPage(1);
   };
@@ -202,19 +250,49 @@ export default function Repository() {
               </div>
             </form>
 
-            <div className="md:hidden">
-              <button
-                type="button"
-                onClick={() => setIsMobileFiltersOpen(true)}
-                className="inline-flex items-center gap-2 rounded-lg border border-neutral-300 bg-white px-4 py-3 text-sm font-medium text-neutral-800 shadow-sm transition hover:border-primary-400 hover:text-primary-700"
-              >
-                {t('repo:filters.title', { defaultValue: 'Filters' })}
-                {activeFilterCount > 0 && (
-                  <span className="ml-1 rounded-full bg-primary-100 px-2 py-0.5 text-xs font-semibold text-primary-700">
-                    {activeFilterCount}
-                  </span>
-                )}
-              </button>
+            <div className="flex items-center gap-2">
+              {/* View toggle */}
+              <div className="hidden md:flex items-center rounded-lg border border-neutral-300 bg-white p-0.5">
+                <button
+                  type="button"
+                  onClick={() => setViewMode('grid')}
+                  className={`rounded-md p-2 transition-colors ${
+                    viewMode === 'grid'
+                      ? 'bg-primary-100 text-primary-700'
+                      : 'text-neutral-500 hover:text-neutral-700'
+                  }`}
+                  aria-label="Grid view"
+                >
+                  <Squares2X2Icon className="h-4 w-4" />
+                </button>
+                <button
+                  type="button"
+                  onClick={() => setViewMode('list')}
+                  className={`rounded-md p-2 transition-colors ${
+                    viewMode === 'list'
+                      ? 'bg-primary-100 text-primary-700'
+                      : 'text-neutral-500 hover:text-neutral-700'
+                  }`}
+                  aria-label="List view"
+                >
+                  <ListBulletIcon className="h-4 w-4" />
+                </button>
+              </div>
+
+              <div className="md:hidden">
+                <button
+                  type="button"
+                  onClick={() => setIsMobileFiltersOpen(true)}
+                  className="inline-flex items-center gap-2 rounded-lg border border-neutral-300 bg-white px-4 py-3 text-sm font-medium text-neutral-800 shadow-sm transition hover:border-primary-400 hover:text-primary-700"
+                >
+                  {t('repo:filters.title', { defaultValue: 'Filters' })}
+                  {activeFilterCount > 0 && (
+                    <span className="ml-1 rounded-full bg-primary-100 px-2 py-0.5 text-xs font-semibold text-primary-700">
+                      {activeFilterCount}
+                    </span>
+                  )}
+                </button>
+              </div>
             </div>
           </div>
 
@@ -247,11 +325,19 @@ export default function Repository() {
                 />
               ) : (
                 <>
-                  <div className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-3 gap-6 mb-8">
-                    {paginatedPolicies.map((policy) => (
-                      <PolicyCard key={policy.id} policy={policy} />
-                    ))}
-                  </div>
+                  {viewMode === 'grid' ? (
+                    <div className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-3 gap-6 mb-8">
+                      {paginatedPolicies.map((policy) => (
+                        <PolicyCard key={policy.id} policy={policy} variant="grid" />
+                      ))}
+                    </div>
+                  ) : (
+                    <div className="flex flex-col gap-3 mb-8">
+                      {paginatedPolicies.map((policy) => (
+                        <PolicyCard key={policy.id} policy={policy} variant="list" />
+                      ))}
+                    </div>
+                  )}
 
                   {totalPages > 1 && (
                     <div className="flex justify-center">

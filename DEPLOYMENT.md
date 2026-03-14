@@ -1,3 +1,9 @@
+cd /home/aictig/public_html && git pull origin main && npm run build && pm2 restart aictig-website
+
+
+cd /home/aictig/public_html && git stash && git pull origin main && npm install && npm run build && pm2 restart aictig-website
+
+
 # AICTiG Website — Deployment Guide
 
 **Stack:** Vite + React SPA → Express + PM2 (port 3001) → Apache reverse proxy (Virtualmin) → Contabo VPS  

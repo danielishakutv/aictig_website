@@ -34,6 +34,11 @@
     "year": "Mwaka",
     "type": "Aina ya Hati",
     "language": "Lugha",
+    "level": "Kiwango cha Hati",
+    "levelNational": "Kitaifa",
+    "levelRegional": "Kikanda",
+    "levelContinental": "Bara",
+    "levelInternational": "Kimataifa",
     "clearAll": "Futa Yote",
     "apply": "Tekeleza Vichujio"
   },
@@ -88,6 +93,8 @@
     "type": "Aina",
     "languages": "Lugha",
     "themes": "Mada",
-    "tags": "Lebo"
+    "tags": "Lebo",
+    "organization": "Shirika",
+    "level": "Kiwango cha Hati"
   }
 }

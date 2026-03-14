@@ -65,7 +65,7 @@ export default function FilterSidebar({
       {/* Filter groups */}
       <div className="space-y-4">
         {filters.map((filterGroup) => (
-          <Disclosure key={filterGroup.id} defaultOpen>
+          <Disclosure key={filterGroup.id}>
             {({ open }: { open: boolean }) => (
               <>
                 <Disclosure.Button className="flex w-full items-center justify-between text-left">

@@ -3,6 +3,7 @@ import { useParams, Link } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
 import {
   ArrowDownTrayIcon,
+  BuildingLibraryIcon,
   CalendarIcon,
   DocumentTextIcon,
   EyeIcon,
@@ -187,6 +188,26 @@ export default function PolicyDetail() {
 
                 {/* Metadata */}
                 <dl className="space-y-4 text-sm">
+                  {policy.organization && (
+                    <div>
+                      <dt className="flex items-center gap-2 text-neutral-600 mb-1">
+                        <BuildingLibraryIcon className="w-4 h-4" />
+                        {t('repo:detail.organization', { defaultValue: 'Organization' })}
+                      </dt>
+                      <dd className="font-medium text-neutral-900">{policy.organization}</dd>
+                    </div>
+                  )}
+
+                  {policy.level && policy.level !== 'national' && (
+                    <div>
+                      <dt className="flex items-center gap-2 text-neutral-600 mb-1">
+                        <GlobeAltIcon className="w-4 h-4" />
+                        {t('repo:detail.level', { defaultValue: 'Document Level' })}
+                      </dt>
+                      <dd className="font-medium text-neutral-900 capitalize">{policy.level}</dd>
+                    </div>
+                  )}
+
                   <div>
                     <dt className="flex items-center gap-2 text-neutral-600 mb-1">
                       <CalendarIcon className="w-4 h-4" />

@@ -34,6 +34,11 @@
     "year": "Year",
     "type": "Document Type",
     "language": "Language",
+    "level": "Document Level",
+    "levelNational": "National",
+    "levelRegional": "Regional",
+    "levelContinental": "Continental",
+    "levelInternational": "International",
     "clearAll": "Clear All",
     "apply": "Apply Filters"
   },
@@ -88,6 +93,8 @@
     "type": "Type",
     "languages": "Languages",
     "themes": "Themes",
-    "tags": "Tags"
+    "tags": "Tags",
+    "organization": "Organization",
+    "level": "Document Level"
   }
 }
