@@ -100,9 +100,6 @@ export default function About() {
         <section className="py-16">
           <div className="container-custom">
             <div className="bg-white rounded-lg shadow-lg p-8 md:p-12">
-              <h2 className="text-3xl font-bold text-neutral-900 mb-6">
-                {t('about:about.title')}
-              </h2>
               <div className="prose prose-lg max-w-none text-neutral-700 space-y-4">
                 <p className="leading-relaxed">
                   {t('about:about.paragraph2')}

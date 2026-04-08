@@ -323,7 +323,11 @@ export default function Header() {
               {/* Logo */}
               <div className="flex items-center">
                 <Link to="/" className="flex items-center focus-ring rounded-md">
-                  <span className="text-2xl md:text-3xl font-extrabold text-primary-600 tracking-tight">AICTiG</span>
+                  <img
+                    src="/AICTiG%20logo%20text.svg"
+                    alt="AICTiG"
+                    className="h-14 w-auto"
+                  />
                 </Link>
               </div>
               
