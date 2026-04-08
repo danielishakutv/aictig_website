@@ -324,7 +324,7 @@ export default function Header() {
               <div className="flex items-center">
                 <Link to="/" className="flex items-center focus-ring rounded-md">
                   <img
-                    src="/AICTiG%20logo%20text.svg"
+                    src="/aictig-logo-text.svg"
                     alt="AICTiG"
                     className="h-14 w-auto"
                   />
